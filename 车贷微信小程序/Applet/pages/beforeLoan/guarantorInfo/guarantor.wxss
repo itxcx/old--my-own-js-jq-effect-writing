@@ -1,0 +1,7 @@
+form{
+    display: block;
+    margin-top:20rpx;
+}
+.btnBox button{
+    margin-bottom:20rpx;
+}

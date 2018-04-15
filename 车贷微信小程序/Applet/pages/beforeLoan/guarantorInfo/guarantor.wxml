@@ -1,0 +1,31 @@
+<form bindsubmit='formSubmit'>
+<view class='inputbox'>
+    <view class='ub'>
+        <view class="name">关系</view>
+        <view class='ub-f1'>
+            <picker name='EmergencyContactRelation'  bindchange="bingChange" range="{{relation}}" value="{{ind}}" disabled="{{disabled}}">
+                <view class="picker" style="color:{{c1}}">
+                    {{relation[ind]}}
+                </view>
+                <icon wx:if="{{!disabled}}" class='iconfont icon-down'></icon>
+            </picker>
+        </view>
+    </view>
+    <view class='ub'>
+        <view class="name">姓名</view>
+        <view class='ub-f1'>
+                <input name="EmergencyContactName" type='text' placeholder='请输入紧急联系人姓名' value="{{info.EmergencyContactName}}" disabled="{{disabled}}"></input>
+        </view>
+    </view>
+    <view class='ub'>
+        <view class="name">手机号码</view>
+        <view class='ub-f1'>
+                <input name="EmergencyContactMobile" type='number' placeholder='请输入紧急联系人手机号码' value='{{info.EmergencyContactMobile}}' disabled="{{disabled}}"></input>
+        </view>
+    </view>
+</view>
+<view class='btnBox' wx:if="{{!disabled}}">
+<button type='primary' form-type='submit'>保存</button>
+ <button wx:if="{{show}}" type='warn' bindtap='deleteInfo'>删除</button>
+</view>
+</form>

@@ -1,0 +1,60 @@
+<view class='gt container flex flex-col'>
+  <form class='fg-1'>
+    <view class='inputbox'>
+      <view class='ub'>
+        <view class="name">担保人姓名</view>
+        <view class='ub-f1'>
+          <input value='{{myData.GuarantorName}}' disabled='true' type='text' placeholder='' placeholder-class='c999'></input>
+        </view>
+      </view>
+      <view class='ub'>
+        <view class="name">身份证号</view>
+        <view class='ub-f1'>
+          <input value='{{myData.GuarantorIDcard}}' disabled='true' type='text' placeholder='' placeholder-class='c999'></input>
+        </view>
+      </view>
+      <view class='ub'>
+        <view class="name">性别</view>
+        <view class='ub-f1'>
+        <text>{{myData.GuarantorGender==0?'男':(myData.GuarantorGender==1?'女':'')}}</text>
+        </view>
+      </view>
+      <view class='ub'>
+        <view class="name">手机号码</view>
+        <view class='ub-f1'>
+          <input value='{{myData.GuarantorMobile}}' disabled='true' type='text' placeholder='' placeholder-class='c999'></input>
+        </view>
+      </view>
+    </view>
+    <view class='inputbox'>
+      <view class='ub ub-ac'>
+          <view class="name">户籍地址</view>
+          <view class='ub-f1 myAddress'>
+            {{live.address+live.mess}}
+          </view>
+        </view>
+       
+        <view class='ub ub-ac'>
+          <view class="name">居住地址</view>
+          <view class='ub-f1 myAddress'>
+             {{work.address+work.mess}}
+          </view>
+        </view>
+        
+    </view>
+    <view class='upPis'>
+      <view class='title'>身份证照片</view>
+      <view class='mid flex flex-wrap jc-sb'>
+        <block wx:for="{{imgs}}">    
+          <view class='pic' data-index='{{index}}'>
+            <image class='pic01' src='{{item.src}}' mode="widthFix"></image>
+            <text>{{item.name}}</text>
+          </view>      
+        </block>
+      </view>
+    </view>
+  </form>
+  <view class='btnBox'>
+  <button type="primary" bindtap='navBack'>返回</button>
+  </view>
+</view>

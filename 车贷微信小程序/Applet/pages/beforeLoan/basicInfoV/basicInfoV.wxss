@@ -1,0 +1,23 @@
+/* pages/beforeLoan/basicInfoV/basicInfoV.wxss */
+
+form {
+  display: block;
+}
+.title {  
+  padding:20rpx;
+  color: #666;
+  position: relative;
+}
+
+.title .iconfont {
+  position: absolute;
+  right: 24rpx;
+  top: 20rpx;
+  line-height: 100%;
+  color: #9cabcd;
+  font-size: 40rpx;
+}
+.inputbox .ub .ub-f1 text{line-height:48rpx;}
+.bottomFill{height:92rpx;}
+.bottom{position: fixed;bottom:0;width:100%;left:0;z-index: 20;}
+.bottom button{border-radius: 0;}

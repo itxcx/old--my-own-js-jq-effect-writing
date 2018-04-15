@@ -1,0 +1,31 @@
+<!--pages/beforeLoan/idAuthen/idAuthen.wxml-->
+<view class='iA'>
+  <view class='up flex flex-col'>
+    <text>拍摄您的二代身份证原件及手持身份证照片</text>
+    <text>请确认图片清晰、四角完整</text>
+  </view>
+  <view class='mid'> 
+      <view class='pic ub ub-ver'  bindtap='addPic'  data-id='{{imgs[0].id}}' data-type='IDCardPoriginalpath'>
+        <view class="ub-f1">
+        <image class='pic01'  src='{{imgs[0].url}}'   mode='aspectFit'></image>
+        </view>
+        <text>拍摄人像页</text>
+      </view>      
+       <view class='pic ub ub-ver' bindtap='addPic'  data-id='{{imgs[1].id}}' data-type='IDCardOoriginalpath'>
+       <view class="ub-f1">
+        <image class='pic02'  src='{{imgs[1].url}}' mode='aspectFit'></image>
+        </view>
+        <text>拍摄国徽页</text>
+      </view>      
+       <!-- <view class='pic ub ub-ver' bindtap='addPic' data-name='2' data-type='IDCardHoriginalpath'>
+          <view class="ub-f1">
+        <image class='pic03'  src='{{imgs[2]}}' mode='aspectFit'></image>
+        </view>
+        <text>手持身份证照片</text>
+      </view>       -->
+  </view>
+  <!-- <view class='bottomFill'></view> -->
+   <view class="btnBox">     
+    <button type='primary'  class='' bindtap='savePic'>保存</button>  
+   </view> 
+</view>

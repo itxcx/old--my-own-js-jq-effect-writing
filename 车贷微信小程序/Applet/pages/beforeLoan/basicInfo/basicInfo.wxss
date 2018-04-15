@@ -1,0 +1,29 @@
+/* pages/beforeLoan/basicInfo/basicInfo.wxss */
+
+form {
+  display: block;
+}
+.title {  
+  padding:20rpx;
+  color: #666;
+  position: relative;
+}
+
+.title .iconfont {
+  position: absolute;
+  right: 24rpx;
+  top: 20rpx;
+  line-height: 100%;
+  color: #9cabcd;
+  font-size: 40rpx;
+}
+.inputbox .ub-f1 .mess{
+    padding: 0 88rpx 0 0;  
+}
+.bottomFill{height:92rpx;}
+.bottom{position: fixed;bottom:0;width:100%;left:0;z-index:20;}
+.bottom button{border-radius: 0;}
+.inputbox .ub .name .icon-jia1{color:#c7c7cc;margin-right:24rpx;}
+.inputbox1{border-bottom:0;margin-bottom:10rpx;position: relative;}
+.inputbox1 .icon-cha1{position: absolute;right:-4rpx;top:-32rpx;color:#e64340;font-weight:bold;z-index:20;}
+.inputbox .ub .inp text{padding:0 88rpx 0 0;line-height: 88rpx;}

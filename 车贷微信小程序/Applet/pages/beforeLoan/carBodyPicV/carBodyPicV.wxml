@@ -1,0 +1,24 @@
+<!--pages/beforeLoan/carBodyPic/carBodyPic.wxml-->
+<view class='cbpWrap flex jc-sb flex-wrap'>
+  <block wx:for='{{cbp_pic}}'>
+    <view class='cbpp_wrap'>
+      <view class='cbp_pic' bindtap='boxPop' data-index='{{index}}'>
+        <image src='{{item.imgSrc}}' style='{{item.style}}'></image>
+      </view>
+      <text class='cbpp_tit db'>{{item.picName}}</text>
+    </view>    
+  </block>  
+</view>
+<view class='bottomFill'></view>
+<view class="bottom">
+  <button type='primary' disabled='{{submit}}' class='' bindtap='nextStep'>返回</button>
+</view>
+<!--遮罩  -->
+<view class='layer' hidden='{{layer}}' bindtap='layerHide'></view>
+<!--弹窗  -->
+<view class='box flex flex-col' animation="{{boxAnimation}}">
+  <image src='{{ex_pic}}'></image>
+  <text>• 请按照示例图提交照片</text>
+  <text>• 照片要四角对齐，如有模糊、遮挡、无法识别等情况则不予认证</text>
+  <button type='primary' class='' bindtap='uploadPic'>上传图片</button>
+</view>

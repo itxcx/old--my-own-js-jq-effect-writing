@@ -1,0 +1,99 @@
+<!--pages/beforeLoan/addInfo/addInfo.wxml-->
+<view class='cbpWrap'>
+    <view wx:if="{{!disabled}}" class='cbpW_tit' animation="{{closeAnimation}}">
+        上传附加证明材料，可以有效提升借款额度哦！
+        <icon class='iconfont icon-cha' bindtap='titClose'></icon>
+    </view>
+    <view class='title'>
+        <text>财产证明照片</text>
+    </view>
+    <view class='cbppw_all flex jc-sb flex-wrap'>
+        <block wx:for='{{cusPic}}' wx:key=''>
+            <view class='cbpp_wrap'>
+                <view class='cbp_pic'  bindtap='uploadPic' data-index='{{index}}' data-type='{{item.picType}}' data-id='{{item.picId}}' data-form='{{item.imgFrom}}'>
+                    <image src='{{item.imgSrc}}' mode='aspectFit'></image>
+                </view>
+                <text class='cbpp_tit db'>{{item.picName}}</text>
+            </view>
+        </block>
+    </view>
+    <view class='title'>
+        <text>银行流水</text>
+    </view>
+    <view class='cbppw_all flex jc-sb flex-wrap'>
+        <block wx:for='{{bankPic}}' wx:key=''>
+            <view class='cbpp_wrap'>
+                <view class='cbp_pic' bindtap='picOper' data-name='bankPic' data-index='{{index}}' data-id="{{item.BankFlowId}}" data-type='BankFlow'>
+                    <image src='{{item.Original_path}}'  mode='aspectFit'></image>
+                </view>
+            </view>
+        </block>
+        <view class='cbpp_wrap' wx:if="{{!disabled}}">
+            <view class='cbp_pic' bindtap='uploadPic' data-type='BankFlow' data-form='AdditionalInformation' data-id=''>
+                <image src='{{camare}}' mode='aspectFit'></image>
+            </view>
+        </view>
+    </view>
+    <view class='title'>
+        <text>人行征信</text>
+    </view>
+    <view class='cbppw_all flex jc-sb flex-wrap'>
+        <block wx:for='{{creditPic}}' wx:key=''>
+            <view class='cbpp_wrap'>
+                <view class='cbp_pic' bindtap='picOper' data-name='creditPic' data-index='{{index}}' data-id="{{item.CreditInvestigationId}}" data-type='CreditInvestigation'>
+                    <image src='{{item.Original_path}}'  mode='aspectFit'></image>
+                </view>
+            </view>
+        </block>
+         <view class='cbpp_wrap'  wx:if="{{!disabled}}">
+            <view class='cbp_pic' bindtap='uploadPic'  data-type='CreditInvestigation' data-form='AdditionalInformation'  data-id=''>
+                <image src='{{camare}}' mode='aspectFit'></image>
+            </view>
+        </view>
+    </view>
+    <view class='title'>
+        <text>家访证明照片</text>
+    </view>
+    <view class='cbppw_all flex jc-sb flex-wrap'>
+        <block wx:for='{{homePic}}' wx:key=''>
+            <view class='cbpp_wrap'>
+                <view class='cbp_pic' bindtap='picOper' data-name='homePic' data-index='{{index}}' data-id="{{item.InvestigationId}}" data-type='Investigation'>
+                    <image src='{{item.Original_path}}'  mode='aspectFit'></image>
+                </view>
+            </view>
+        </block>
+         <view class='cbpp_wrap'  wx:if="{{!disabled}}">
+            <view class='cbp_pic' bindtap='uploadPic'  data-type='Investigation' data-form='AdditionalInformation'  data-id=''>
+                <image src='{{camare}}' mode='aspectFit'></image>
+            </view>
+        </view>
+    </view>
+</view>
+<view class='bottomFill'></view>
+<view class="bottom">
+    <button  wx:if="{{!disabled}}" type='primary' class='' bindtap='nextStep'>保存</button>
+    <button  wx:else type='primary' bindtap='navBack'>返回</button>
+</view>
+<!--遮罩  -->
+<view class='layer' hidden='{{layer}}' bindtap='layerHide'></view>
+<!--弹窗  -->
+<view class='box flex flex-col'>
+     <image src='{{ex_data.ex_pic}}'></image> 
+     <text>• 请按照示例图提交照片</text>
+    <text>• 照片要四角对齐，如有模糊、遮挡、无法识别等情况则不予认证</text> 
+    <button type='primary' class='' bindtap='uploadPic'>上传图片</button>
+</view>
+
+<view wx:if="{{swiper.show}}" class='shadeBox ub ub-ver ub-ac'>
+  <view bindtap='closeSwiper' class='ub-f1'></view>
+  <view class='shadeMain swiper'>
+    <swiper indicator-dots="true" autoplay="false" current="{{swiper.current}}" indicator-color='#eee' indicator-active-color='#d20000'>
+      <block wx:for="{{swiper.imgs}}" wx:key="*this" wx:for-item="src">
+        <swiper-item>
+          <image src='{{src}}' mode='aspectFit'></image>
+        </swiper-item>
+      </block>
+    </swiper>
+  </view>
+  <view bindtap='closeSwiper' class='ub-f1'></view>
+</view>

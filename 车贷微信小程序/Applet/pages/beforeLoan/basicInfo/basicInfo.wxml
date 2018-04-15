@@ -1,0 +1,81 @@
+<!--pages/beforeLoan/basicInfo/basicInfo.wxml-->
+<form bindsubmit='saveInfo' class="hasBottom">
+    <view class='title'>
+        <text>个人基本信息</text>
+    </view>
+    <view class='inputbox'>
+        <navigator url='../idCardMess/idCardMess' class='ub'>
+            <view class="name">身份认证</view>
+            <view class='ub-f1'>
+                <input class="mess text-right" type='idcard'  disabled='true' value='{{personInfo.IDcard}}' placeholder='请输入手机号码'></input>
+                <icon class='iconfont icon-right more'></icon>
+            </view>
+        </navigator>
+        <view class='ub'>
+            <view class="name">手机号码</view>
+            <view class='ub-f1'>
+                <input name="telephone" class="mess text-right" type='number' placeholder=''  value='{{personInfo.Mobile}}'></input>
+            </view>
+        </view>
+        <navigator url='/pages/beforeLoan/marriageInfo/marriageInfo' class='ub'>
+            <view class="name">婚姻状态<text class="c999 fs12">(必填)</text></view>
+            <view class='ub-f1 text-right inp'>
+                <text wx:if="{{personInfo.MaritalStatus==2}}">已婚</text>
+                <text wx:elif="{{personInfo.MaritalStatus==3}}">离异</text>
+                <text wx:elif="{{personInfo.MaritalStatus==1}}">未婚</text>
+                <input name='MaritalStatus' wx:else class="c999" placeholder='请选择婚姻状况' disabled='true' style="padding-right:88rpx;"></input>
+                <icon class='iconfont icon-right more'></icon>
+            </view>
+        </navigator>
+        <navigator url='/pages/beforeLoan/resAddress/resAddress' class='ub ub-ac'>
+            <view class="name">居住地址<text class="c999 fs12">(必填)</text></view>
+            <view class='ub-f1'>
+                <input name="workAddress" class="mess text-right" type='text' placeholder='请添加居住地址' disabled='true' value='{{workAddress.ProvinceName}}{{workAddress.CityName}}{{workAddress.DistrictName}}{{workAddress.Address}}'></input>
+                <icon class='iconfont icon-right more'></icon>
+            </view>
+        </navigator>
+        <navigator url='/pages/beforeLoan/workUnit/workUnit' class='ub'>
+            <view class="name">工作单位</view>
+            <view class='ub-f1'>
+                <input name="workName" class="mess text-right" type='text' placeholder='请添加工作单位' disabled='true' value='{{WorkUnit}}'></input>
+                <icon class='iconfont icon-right more'></icon>
+            </view>
+        </navigator>
+    </view>
+    <view class='title'>
+        <text>担保人信息</text>
+    </view>
+    <view class='inputbox'>
+        <navigator url='/pages/beforeLoan/Guarantee/Guarantee' class='ub'>
+            <view class="name">担保人<text class="c999 fs12">(选填)</text></view>
+            <view class='ub-f1'>
+                <input name="GuarantorName" class="mess text-right" type='text' placeholder='请添加担保人信息' disabled='true' value='{{personInfo.GuarantorName}}'></input>
+                <icon class='iconfont icon-right more'></icon>
+            </view>
+        </navigator>
+    </view>
+    <view class='title'>
+        <text>紧急联系人（至少二个）</text>
+    </view>
+    <view class='inputbox'>
+        <navigator wx:if="{{show}}" url='/pages/beforeLoan/guarantorInfo/guarantor' class='ub'>
+            <view class="name">紧急联系人<text class="c999 fs12">(必填)</text></view>
+            <view class='ub-f1'>
+                <input class="mess text-right" type='text' placeholder='添加紧急联系人' disabled='true' value=''></input>
+                <icon class='iconfont icon-jia1 more  blue'></icon>
+            </view>
+        </navigator>
+        <block wx:for='{{GuarantorInfo}}' wx:key="*this">
+            <navigator url='/pages/beforeLoan/guarantorInfo/guarantor?id={{item.EmergencyContactId}}&index={{index}}' class='ub ub-ac'>
+                <view class="name">联系人</view>
+                <view class='ub-f1 text-right'>
+                    <text>{{item.EmergencyContactName}}（{{item.EmergencyContactRelation}}）</text>
+                    <icon class='iconfont icon-right more'></icon>
+                </view>
+            </navigator>
+        </block>
+    </view>
+    <view class="bottom">
+        <button type='primary' form-type='submit'>保存</button>
+    </view>
+</form>

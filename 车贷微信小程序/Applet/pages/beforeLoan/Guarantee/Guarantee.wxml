@@ -1,0 +1,100 @@
+<view class='container'>
+    <form bindsubmit='formSubmit'>
+        <view class='inputbox'>
+         <view class='ub'>
+                <view class="name">身份证号</view>
+                <view class='ub-f1'>
+                <text wx:if="{{disabled}}">{{myData.GuarantorIDcard}}</text>
+                    <input type='idcard' class="distinguish" placeholder='输入身份证号' placeholder-class='c999' value='{{idcard.Value}}' name='GuarantorIDcard'  wx:else></input>
+                    <icon bindtap='getCardPhoto' data-id="idcard" class='iconfont icon-icon04'></icon>
+                </view>
+            </view>
+            <view class='ub'>
+                <view class="name">担保人</view>
+                <view class='ub-f1'>
+                <text wx:if="{{disabled}}">{{myData.GuarantorName}}</text>
+                    <input type='text' placeholder='输入姓名' placeholder-class='c999' value='{{idcard.Name}}' name='GuarantorName'  wx:else></input>
+                </view>
+            </view>
+            <view class='ub ub-ac'>
+                <view class="name">性别</view>
+                <view class='ub-f1'>
+                    <radio-group name='GuarantorGender' class="radio-group" bindchange="sexChange" wx:if="{{!disabled}}">
+                        <label class="radio">
+                            <radio value="0"  checked='{{myData.GuarantorGender==0?true:false}}'/>男
+                        </label>
+                        <label class="radio">
+                            <radio value="1"  checked='{{myData.GuarantorGender==1?true:false}}'/>女
+                        </label>
+                    </radio-group>
+                    <text wx:else>{{myData.GuarantorGender==0?'男':'女'}}</text>
+                </view>
+            </view>
+            <view class='ub'>
+                <view class="name">手机号码</view>
+                <view class='ub-f1'>
+                <text wx:if="{{disabled}}">{{myData.GuarantorMobile}}</text>
+                    <input wx:else type='number' placeholder='输入手机号码' placeholder-class='c999' value='{{myData.GuarantorMobile}}' name='GuarantorMobile'></input>
+                </view>
+            </view>
+        </view>
+        <view class='inputbox'>
+            <view class='ub'>
+                <view class="name">户籍地址</view>
+                    <view class='ub-f1 chooseMore' data-name="live" bindtap='showPickerArea'>
+                           <input name='live' style="color:#444;" disabled='disabled'  type="text" placeholder='请选择户籍地址' value="{{live.address}}"></input>
+                            <icon class='iconfont icon-down'></icon>
+                    </view>
+            </view>
+            <view class='ub'>
+                <view class='ub-f1'>
+                    <input bindblur='changeMess' data-name='liveMess' name='liveMess' type='text' placeholder='详细地址' placeholder-class='c999' value='{{live.mess}}'></input>
+                </view>
+            </view>
+            <view class='ub'>
+                <view class="name">居住地址</view>
+                      <view class='ub-f1 chooseMore' data-name="work"  bindtap='showPickerArea'>
+                           <input name='work' style="color:#444;" disabled='disabled'  type="text" placeholder='请选择居住地址' value="{{work.address}}"></input>
+                            <icon class='iconfont icon-down'></icon>
+                    </view>
+            </view>
+            <view class='ub'>
+                <view class='ub-f1'>
+                 <input  bindblur='changeMess' data-name='workMess' name='workMess' type='text' placeholder='详细地址' placeholder-class='c999' value='{{work.mess}}'></input>
+                </view>
+            </view>
+        </view>
+        <view class='upPis'>
+            <view class='title'>身份证照片</view>
+            <view class="picList">
+                <view class="item" wx:for="{{imgs}}"   wx:key="">
+                    <view>
+                        <image bindtap='getPhoto' data-name='{{index}}' data-id='{{item.id}}' data-type='{{item.picType}}' src='{{item.src}}' mode='widthFix'></image>
+                    </view>
+                </view>
+            </view>
+        </view>
+        <view class='btnBox'>
+            <button wx:if="{{disabled}}" bindtap='navBack' type="primary">返回</button>
+            <button wx:else type="primary" form-type='submit'>确定</button>
+        </view>
+    </form>
+</view>
+<view wx:if="{{isShow}}" class="picker-shadow"></view>
+<view animation="{{myAnimation}}"  class="picker-view">
+<view class="btnBox">
+<button size='mini' bindtap='hidePicker'>取消</button>
+<button size='mini' bindtap='confirmAddress' class="float-right" type="primary">确定</button>
+</view>
+<picker-view indicator-style="height: 40px;" style="width: 100%; height:200px;" value="{{value}}" bindchange="bindChange">
+  <picker-view-column>
+    <view wx:for="{{proviceData}}" wx:key="" class="addr-item">{{item.AreaName}}</view>
+  </picker-view-column>
+  <picker-view-column>
+    <view wx:for="{{cityData}}" wx:key="" class="addr-item">{{item.AreaName}}</view>
+  </picker-view-column>
+  <picker-view-column>
+    <view wx:for="{{districtData}}"  wx:key="" class="addr-item">{{item.AreaName}}</view>
+  </picker-view-column>
+</picker-view>
+</view>

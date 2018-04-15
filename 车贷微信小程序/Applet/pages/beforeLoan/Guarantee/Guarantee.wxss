@@ -1,0 +1,41 @@
+.container{
+  padding:0;
+}
+.inputbox{
+  margin-top:20rpx;
+}
+.inputbox .ub-f1 text{
+    line-height: 88rpx;
+    padding:0;
+    height:88rpx;
+}
+.upPis{
+  background: #fff;
+  margin-top:20rpx;
+  padding:0 20rpx;
+}
+.upPis .title{
+  padding:20rpx 0;
+}
+.picList{
+  overflow: hidden;
+}
+.item{
+  float:left;
+  width: 50%;
+  padding:0 20rpx 20rpx;
+}
+.item view{
+  min-height:200rpx;
+  border:1px solid #e5e5e5;
+  border-radius: 0.3em;
+  -webkit-border-radius: 0.3em;
+  padding:20rpx;
+}
+.item image{
+  width: 100%;
+}
+label.radio{
+    margin-right:40rpx;
+}
+.btnBox{background: #fff;}

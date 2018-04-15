@@ -1,0 +1,50 @@
+
+.inputbox .name{
+    width: 200rpx;
+}
+.inputbox .myAddress{
+    padding:20rpx 40rpx 20rpx 0;
+}
+.container{
+  padding:0;
+}
+.inputbox{
+  margin-top:20rpx;
+}
+.upPis{
+  background: #fff;
+  margin-top:20rpx;
+  padding:0 20rpx;
+}
+.upPis .title{
+  padding:20rpx 0;
+}
+.picList{
+  overflow: hidden;
+}
+.item{
+  float:left;
+  width: 50%;
+  padding:0 20rpx 20rpx;
+}
+.item view{
+  min-height:200rpx;
+  border:1px solid #e5e5e5;
+  border-radius: 0.3em;
+  -webkit-border-radius: 0.3em;
+}
+.item image{
+  width: 100%;
+}
+.inputbox .ub .ub-f1 text{height:88rpx;line-height:48rpx;}
+.mid{}
+.mid .pic{width:296rpx;height:184rpx;background: #fff;border:2rpx solid #e5e5e5;border-radius: 10rpx;position: relative;margin: 0 25rpx 20rpx;}
+.mid .pic image{position: absolute;margin: auto;left:0;right:0;top:0;bottom:0;max-width: 100%;max-height: 100%;}
+.mid .pic .pic01{width:256rpx;height:130rpx;}
+.mid .pic .pic02{width:354rpx;height:187rpx;}
+.mid .pic .pic03{width:210rpx;height:217rpx;}
+.mid .pic text{font-size: 24rpx;color:#353535;margin: 128rpx auto 0;display: block;text-align: center;position:relative;}
+.gt{height:100%;}
+.gt form{display: block;overflow:auto;}
+.btnBox{padding: 0;}
+.btnBox button{border-radius: 0;}

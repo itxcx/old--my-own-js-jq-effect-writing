@@ -1,0 +1,14 @@
+/* pages/beforeLoan/idAuthen/idAuthen.wxss */
+.iA{}
+.iA .up{margin: 30rpx auto;}
+.iA .up text{text-align: center;font-size: 28rpx;color:#888;}
+.mid .pic{width:418rpx;height:320rpx;background: #fff;border:2rpx solid #e5e5e5;border-radius: 10rpx;margin: 0 auto 35rpx;padding:20rpx;}
+.mid .pic .ub-f1{position: relative;}
+.mid .pic image{max-width: 100%;max-height: 100%;height:100%;position: absolute;top:0;}
+.mid .pic text{font-size: 28rpx;margin: 20rpx auto 0;display: block;text-align: center;position:relative;color:#4e8dee;}
+.bottom button{border-radius: 0;}
+.bottomFill{height:92rpx;}
+.bottom{position: fixed;bottom:0;width:100%;left:0;}
+.btnBox {
+    padding-top:0;
+}

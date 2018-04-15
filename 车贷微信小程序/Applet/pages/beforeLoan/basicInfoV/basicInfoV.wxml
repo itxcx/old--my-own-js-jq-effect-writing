@@ -1,0 +1,77 @@
+<!--pages/beforeLoan/basicInfoV/basicInfoV.wxml-->
+<form>
+  <view class='title'>
+    <text>个人基本信息</text>    
+  </view>  
+  <view class='inputbox'>    
+    <navigator url='../idCardMess/idCardMess?a=1' class='ub'>
+      <view class="name">身份认证</view>
+      <view class='ub-f1'>
+        <text class>{{myData.RealName}}</text>        
+        <icon class='iconfont icon-right more'></icon>
+      </view>
+    </navigator>
+    <view class='ub'>
+      <view class="name">手机号码</view>
+      <view class='ub-f1'>
+        <text class>{{myData.Mobile}}</text>                
+      </view>
+    </view>
+    <navigator url='../marriageInfoV/marriageInfoV' class='ub' wx:if='{{myData.MaritalStatus==2}}'>
+      <view class="name">婚姻状态</view>
+      <view class='ub-f1'>
+        <text class>{{myData.MaritalStatus==1?'未婚':(myData.MaritalStatus==2?'已婚':(myData.MaritalStatus==3?'离异':''))}}</text>        
+        <icon class='iconfont icon-right more'></icon>
+      </view>
+    </navigator>
+    <view class='ub' wx:elif='{{myData.MaritalStatus==1||3}}'>
+      <view class="name">婚姻状态</view>
+      <view class='ub-f1'>
+        <text class>{{myData.MaritalStatus==1?'未婚':(myData.MaritalStatus==2?'已婚':(myData.MaritalStatus==3?'离异':''))}}</text>                
+      </view>
+    </view>
+    <view class='ub'>
+      <view class="name">居住地址</view>
+      <view class='ub-f1'>
+        <text class>{{workAddress.ProvinceName}}{{workAddress.CityName}}{{workAddress.DistrictName}}{{workAddress.Address}}</text>              
+      </view>
+    </view>
+    <view class='ub'>
+      <view class="name">工作单位</view>
+      <view class='ub-f1'>
+        <text class>{{WorkUnit}}</text>              
+      </view>
+    </view>
+  </view>  
+  <view class='title'>
+    <text>担保人信息</text>    
+  </view>
+  <view class='inputbox'>
+    <navigator url='../GuaranteeV/GuaranteeV' class='ub'>
+      <view class="name">担保人姓名</view>
+      <view class='ub-f1'>
+        <text class="text-right">{{myData.GuarantorName}}</text>        
+        <icon class='iconfont icon-right more'></icon>
+      </view>
+    </navigator>    
+  </view>
+  <view class='title'>
+    <text>紧急联系人</text>    
+  </view>
+  <view class='inputbox'>    
+   <block wx:for='{{GuarantorInfo}}' wx:key="*this">
+            <navigator url='/pages/beforeLoan/guarantorInfo/guarantor?index={{index}}&info=true' class='ub ub-ac'>
+                <view class="name">联系人</view>
+                <view class='ub-f1 text-right'>
+                    <text>{{item.EmergencyContactName}}（{{item.EmergencyContactRelation}}）</text>
+                    <icon class='iconfont icon-right more'></icon>
+                </view>
+            </navigator>
+        </block>
+  </view>
+ 
+</form>
+<view class='bottomFill'></view>
+<view class="bottom">
+  <button type='primary' class='' bindtap='nBack'>返回</button>
+</view>
