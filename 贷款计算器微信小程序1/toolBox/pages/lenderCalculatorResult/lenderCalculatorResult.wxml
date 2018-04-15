@@ -1,0 +1,20 @@
+<view class='tit'>
+  租金还款计算结果
+</view>
+<view class='total'>
+  <text class='n'>合计应还：</text>
+  <text class='p'>{{myData.TotalAmount}} 元</text>
+</view>
+<view class='input' hidden='{{length==0}}'>
+  <view class='lists flex jc-sb' wx:for='{{myData.Info}}'>
+    <view class='left flex ac-c flex-wrap'>
+      <text class='p'>{{item.RepaymentAmount}} 元</text>
+      <text class='d'>{{item.RepaymentDate}} 还款日</text>
+    </view>    
+    <text class='right'>第 {{index+1}} 期</text>
+  </view>
+</view>
+<view class='block'>
+  <button type='primary' class='calcuBtn' open-type='share'>分享给好友</button>
+  <button type='primary' class='calcuBtn re' bindtap='backCal'>重新计算</button>
+</view>

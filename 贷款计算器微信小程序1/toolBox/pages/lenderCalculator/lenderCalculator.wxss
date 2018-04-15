@@ -1,0 +1,11 @@
+.tit{height:120rpx;line-height:120rpx;background: #fff;font-size: 64rpx;color:#2b2b2b;padding: 0 50rpx;}
+.input{height:100rpx;line-height:100rpx;border-top:1px solid #e1e1e1;border-bottom:1px solid #e1e1e1;background: #fff;margin-top: 40rpx;padding: 0 50rpx;}
+.input text{font-size: 32rpx;}
+.input input{height:100rpx;line-height:100rpx;padding: 0 30rpx;}
+.inputP{font-size:28rpx;color:#b9b9b9;}
+.bb0{border-bottom: 0;}
+.terms{background: #fff;height:93rpx;padding: 0 50rpx;border-bottom:1px solid #e1e1e1;}
+.terms view{width:132rpx;height:56rpx;line-height:56rpx;background: #eee;margin-right: 36rpx;font-size: 28rpx;color:#3d4245;text-align: center;border-radius:3px;}
+.terms view.cur{color:#fff;background: #51b2fc;}
+button.calcuBtn{width:580rpx;height:100rpx;line-height:100rpx;margin-top: 130rpx;border-radius:50rpx;background:#5cadf2;letter-spacing:42rpx;text-indent:28rpx;box-shadow:0 14rpx 24rpx #c9e6ff;}
+.inp{width:400rpx;}

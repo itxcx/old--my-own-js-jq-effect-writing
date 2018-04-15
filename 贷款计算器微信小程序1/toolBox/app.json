@@ -1,0 +1,21 @@
+{
+  "pages": [            
+    "pages/lenderCalculator/lenderCalculator",
+    "pages/lenderCalculatorResult/lenderCalculatorResult"
+  ],
+  "window": {
+    "backgroundColor": "#666",
+    "navigationBarBackgroundColor": "#fff",    
+    "navigationBarTitleText": "",
+    "navigationBarTextStyle": "black",
+    "backgroundTextStyle": "dark",
+    "enablePullDownRefresh": false    
+  },  
+  "networkTimeout": {
+    "request": 10000,
+    "connectSocket": 10000,
+    "uploadFile": 10000,
+    "downloadFile": 10000
+  },
+  "debug": true
+}

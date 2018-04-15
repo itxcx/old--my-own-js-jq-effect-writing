@@ -1,0 +1,13 @@
+<view class='tit'>租金还款计算器</view>
+<view class='input flex'>
+  <text class='p'>租赁金额：</text>
+  <input placeholder='请输入租赁金额' type='digit' class='inp' placeholder-class='inputP' bindblur='money' value='{{money}}' bindfocus='clear'></input>
+  <text class='unit'>万元</text>
+</view>
+<view class='input flex bb0'>
+  <text>租赁期限：</text>  
+</view>
+<view class='terms flex'>
+  <view wx:for="{{itemsA}}" bindtap='chooseTerms' data-index='{{index}}' class="{{chooseItem==index?'cur':''}}">{{item}}</view>  
+</view>
+<button type='primary' class='calcuBtn' bindtap='calcu'>计算</button>

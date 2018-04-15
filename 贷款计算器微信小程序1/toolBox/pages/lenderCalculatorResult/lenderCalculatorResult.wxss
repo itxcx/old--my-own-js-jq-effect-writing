@@ -1,0 +1,16 @@
+.tit{height:120rpx;line-height:120rpx;background: #fff;font-size: 64rpx;color:#2b2b2b;padding: 0 50rpx;}
+.input{border-top:1px solid #e1e1e1;border-bottom:1px solid #e1e1e1;background: #fff;margin-top: 40rpx;padding: 0 50rpx;}
+.bb0{border-bottom: 0;}
+button.calcuBtn{width:580rpx;height:100rpx;line-height:100rpx;margin-top: 130rpx;border-radius:50rpx;background: #5cadf2;letter-spacing:10rpx;text-indent:6rpx;box-shadow:0 14rpx 24rpx #c9e6ff;}
+button.calcuBtn.re{margin: 40rpx auto 0;}
+.lists{height:140rpx;border-bottom:1px solid #e1e1e1;}
+.lists:last-child{height:140rpx;border-bottom:0;}
+.lists .left{}
+.lists .right{font-size: 32rpx;color:#cecece;line-height:124rpx;}
+.p{font-size: 32rpx;color:#666;}
+.d{font-size: 28rpx;color:#999;}
+.left text{width:100%;}
+.block{padding-bottom: 40rpx;}
+.total{height:108rpx;background:#fff;padding:0 50rpx;line-height:84rpx;}
+.total .n{font-size: 34rpx;color:#2b2b2b;}
+.total .p{font-size: 50rpx;color:#5cadf2;}
