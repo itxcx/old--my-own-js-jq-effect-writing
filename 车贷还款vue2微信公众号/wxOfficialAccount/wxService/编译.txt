@@ -1,0 +1,2 @@
+cnpm run build编译生产版本
+cnpm run dev运行开发版本

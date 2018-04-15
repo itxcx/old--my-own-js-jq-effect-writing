@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <!-- <meta name="viewport" content="width=device-width,initial-scale=1.0"> -->
+    <!-- 手机端自适应 -->
+    <script>!function(e){function t(a){if(i[a])return i[a].exports;var n=i[a]={exports:{},id:a,loaded:!1};return e[a].call(n.exports,n,n.exports,t),n.loaded=!0,n.exports}var i={};return t.m=e,t.c=i,t.p="",t(0)}([function(e,t){"use strict";Object.defineProperty(t,"__esModule",{value:!0});var i=window;t["default"]=i.flex=function(normal,e,t){var a=e||100,n=t||1,r=i.document,o=navigator.userAgent,d=o.match(/Android[\S\s]+AppleWebkit\/(\d{3})/i),l=o.match(/U3\/((\d+|\.){5,})/i),c=l&&parseInt(l[1].split(".").join(""),10)>=80,p=navigator.appVersion.match(/(iphone|ipad|ipod)/gi),s=i.devicePixelRatio||1;p||d&&d[1]>534||c||(s=1);var u=normal?1:1/s,m=r.querySelector('meta[name="viewport"]');m||(m=r.createElement("meta"),m.setAttribute("name","viewport"),r.head.appendChild(m)),m.setAttribute("content","width=device-width,user-scalable=no,initial-scale="+u+",maximum-scale="+u+",minimum-scale="+u),r.documentElement.style.fontSize=normal?"50px": a/2*s*n+"px"},e.exports=t["default"]}]);  flex(false,100, 1);
+	</script>
+    <title>苏汇金融</title>
+    <style type="text/css">
+    	.wrap{padding: .2rem;font-size: .3rem;}    	
+    </style>
+  </head>
+  <body>
+    <div class='wrap'>
+    	请点击右上角，选择在浏览器打开，完成支付...         
+  	</div>
+  	<script type="text/javascript">
+  		//获取url序列
+  		var urlParamsQuery = function(s){
+	    	let string = s.substring(s.indexOf('?')+1);
+	    	let paramsArray = string.split('&');
+	    	let paramsObject = {};
+	    	for(let i=0;i<paramsArray.length;i++){
+	    		let key = paramsArray[i].split('=')[0];
+	    		let value = paramsArray[i].split('=')[1];
+	    		paramsObject[key] = value;
+	    	};
+	    	return paramsObject;
+	    }
+	    //判断是否微信内置浏览器
+		var is_weixin = function(){
+	      var ua = navigator.userAgent.toLowerCase();
+	      if(ua.match(/MicroMessenger/i)=="micromessenger") {	      	
+	        return true;
+	      } else {
+	        return false;
+	      }
+	    }
+	    //通过网页调手机支付宝
+	    var alipay = (function (owner, doc) {
+	    	owner.getAllParams = function(url) {
+				var reg = /[(\?|\&)]([^=]+)\=([^&#]+)/g,
+					matches, output = {};
+				while(matches = reg.exec(url)) {
+					var key = decodeURIComponent(matches[1]),
+						value = decodeURIComponent(matches[2]);
+					output[key] = value;
+				}
+				return output;
+			};
+			owner.userAgent = function() {
+				var output = {};
+				if(navigator.userAgent.match(/(iPhone|iPod|iPad);?/i)) {
+					output['ios'] = true;
+				} else if(navigator.userAgent.match(/android/i)) {
+					output['android'] = true;
+				}
+				return output;
+			};
+			owner.ajax = function(method, uri, options, callback) {
+				var xmlhttp;
+				if(window.XMLHttpRequest) {
+					xmlhttp = new XMLHttpRequest();
+				} else {
+					xmlhttp = new ActiveXObject("Microsoft.XMLHTTP");
+				}
+				xmlhttp.onreadystatechange = function() {
+					if(xmlhttp.readyState == 4 && xmlhttp.status == 200) {
+						return callback(xmlhttp.responseText);
+					}
+				}
+				xmlhttp.open(method, uri, true);
+				xmlhttp.send(options);
+			};
+			owner.callAlipay = function(gourl) {
+				console.log(gourl);				
+				if(gourl) {
+					var urlscheme = 'alipays';
+					var ug = this.userAgent();
+					if(ug.ios) {
+						urlscheme = 'alipay';
+					}
+					var p = 'platformapi';
+					var sm = '11';
+					var s = '100000' + sm; 
+					var gopage = urlscheme + '://' + p + '/startApp?appId=' + s + '&url=' + encodeURIComponent(gourl);
+					console.log(gopage);		
+					window.location.href = gopage;
+					// window.location.href = 'http://fanyi.baidu.com/?aldtype=16047#auto/zh';
+				}
+			};
+	    }(window.callappjs = {}, document));
+  		let that = this;                 
+  		// let i = 0;
+	    let url = location.href.split('returnUrl=')[1];	
+	    // console.log(url);	    
+	    url = url.split('encryptnsukey=')[0];    
+	    // console.log(url);	    
+	    url = url.replace(/encrypt/g,'&');           
+	    //获取merchantOutOrderNo参数
+	    let merchantOutOrderNo = that.urlParamsQuery(url).merchantOutOrderNo;   	      
+	    // console.log(merchantOutOrderNo);  
+	    //微信浏览器 则轮询进行请求支付结果接口    
+	    if(is_weixin()){            	    	
+	      function recursion (){
+	        var inter = 0;       	        
+			let fetchUrl = 'http://192.168.0.100:81/api/Pay/EBJPayQuery';
+			let fetchInit = {
+				method: 'post',
+				//请求头
+				headers: {
+					'Authorization': `BasicAuth ${JSON.parse(localStorage.getItem('UserInfo')).openid}&${localStorage.getItem('token')}`,
+			    	'Content-Type': 'application/json; charset=utf-8'
+				},
+				//传后台的参数 obj转string
+				body: JSON.stringify({merchantOutOrderNo:merchantOutOrderNo,payType:localStorage.getItem('payType')}),
+				// body: JSON.stringify({merchantOutOrderNo:'18030614381191377',payType:localStorage.getItem('payType')})	
+			};			
+			fetch(fetchUrl,fetchInit)
+			//string转obj
+			.then(res=>res.json())
+			.then(res=>{
+				console.log(res);
+				if(res.code==0){
+					if(res.data.payResult=='True'){						
+						localStorage.setItem('merchantOutOrderNo',merchantOutOrderNo);
+	                	// localStorage.setItem('merchantOutOrderNo','18030614381191377');
+	                	clearInterval(inter);
+	                	window.location.href = window.location.origin + '/#/repaySuc';
+	                	// that.showTip('支付成功',function(){
+		                //   that.$router.push(`/repaySuc`);
+		                // },1000);
+					}
+					else{
+						//轮询 2s一次
+		                // that.showTip('正在查询支付结果,请稍等',Function);                                           		                  
+		                inter = setTimeout(function(){
+		                  // that.i++;
+		                  recursion ()
+		                },2000);
+					}
+				}
+				else{
+
+				}
+			},res=>{
+				console.log(res.desc);
+			})
+			.catch(err =>{
+				console.error(err);
+			});	        
+	      }      
+	      recursion ();
+	    }    
+	    //系统浏览器调用
+	    else{            
+	      callappjs.callAlipay(url);	      
+	    }
+  	</script>
+  </body>
+</html>
