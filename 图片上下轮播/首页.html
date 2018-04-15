@@ -1,0 +1,1343 @@
+<!doctype html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta http-equiv="Content-Language" content="zh-CN">
+<title>暂无标题</title>
+<meta name="keywords" content="">
+<meta name="description" content="">
+<meta name="copyright" content="" />
+<!--[if IE]>
+   <script src="js/html5.js"></script>
+<![endif]-->
+<script src="js/jquery-1.9.1.min.js"></script>
+<script src="js/common.js"></script>
+
+<link href="css/common.css" rel="stylesheet" type="text/css" />
+<link href="css/style.css" rel="stylesheet" type="text/css" />
+
+<script type="text/javascript">
+  $(document).ready(function(){
+    //首页顶部滚动
+    indexTopScroll(".indextop_ad .tempWrap",1000,2000);
+    //pcBannerCartoon(".bannerbox","a","#bannernum","span","numsel",500,5000,true,"#adlast","#adnext");
+    //下拉菜单
+    pcNavDown("#mainnav","li","sel","menu");
+    //首页右边框去除
+    removeRightBorder(".hot_recruitment .icon_cate ul li .words");
+    removeRightBorder(".index_footer .fl .a_com");
+  });
+</script>
+</head>
+
+<body class="grey">
+<!-- 头部广告开始 -->
+<div class="indextop_ad">
+   <menu>
+      <div id="slideBox" class="dtop_advert">
+        <div class="bd">
+          <div class="tempWrap">
+            <ul>
+              <li><a style="background-image:url(images/photos/pic01.jpg);" href="#"></a></li>
+               <li><a style="background-image:url(images/photos/pic01.jpg);" href="#"></a></li>
+                <li><a style="background-image:url(images/photos/pic01.jpg);" href="#"></a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <div class="clear"></div>
+    </menu>
+  <div class="main off"><p onclick="$('.indextop_ad').slideUp(500);">关闭</p></div>
+</div>
+<!-- 头部广告结束 -->
+
+<!-- 头部快捷导航开始 -->
+<div class="headquick">
+  <div class="main">
+    <!-- 左侧 -->
+    <p class="hqleft">      
+      帮助他人，成就自己
+    </p>
+
+    <!-- 右侧 -->
+    <div class="hqright">
+      <div class="hqgr">
+        <a  class="hq2a" href="" title="会员中心">会员中心</a>
+        <p class="hqgra">
+          <a href="" title="新手指南">新手指南</a>
+          <a href="" title="我的收藏">我的收藏</a>
+          <a href="" title="积分兑换">积分兑换</a>
+        </p>
+      </div>
+      <a class="hqa" href="" title="帮助中心">帮助中心</a>
+      <a class="hqa hqa_load" href="" title="手机贤士">手机贤士
+        <menu class="index_download">
+          <div class="index_ewm">
+            <ul>
+              <li><img src="images/photos/pic02.jpg" /><p class="p1">微信公众号</p></li>
+              <li><img src="images/photos/pic02.jpg" /><p class="p2">微信公众号</p></li>
+              <div class="clear"></div>
+            </ul>
+          </div>
+        </menu>
+      </a>      
+    </div>
+  </div>
+</div>
+<!-- 头部快捷导航结束 -->
+
+
+
+
+<header class="mainhead whitebg">
+  <div class="main">
+    <h1><a href="#"><img src="images/logo.png" width="185" alt="" /></a></h1>
+    <div class="btn">
+      <a href="#">登录</a>
+      <a href="#">注册</a>
+    </div>
+
+    <ul id="mainnav">
+      <li class="sel">
+        <a href="#" class="a1">首页</a>
+      </li>
+      <li>
+        <a href="#" class="a1 dd"><img src="images/icon/icon01.png">贤士家政 </a>
+      </li>
+                                
+      <li>
+        <a href="#" class="a1">找工作</a>
+      </li>
+      <li>
+        <a href="#" class="a1">寻人才</a>
+        <menu>
+          <a href="#">我是选项</a>
+          <a href="#">我是选项</a>
+          <a href="#">我是选项</a>
+        </menu>
+      </li>
+      <li>
+        <a href="#" class="a1">纸媒电子版</a>
+      </li>
+    </ul>
+    <div class="clear"></div>
+  </div>
+</header>
+
+<section class="bannerbox">
+  <menu>
+    <a style="background-image:url(images/photos/banner01.jpg);" href="#"></a>
+    <a style="background-image:url(images/photos/banner01.jpg);" href="#"></a>
+    <a style="background-image:url(images/photos/banner01.jpg);" href="#"></a>
+  </menu>
+  <div id="bannernum"></div>
+  <div class="main">
+    <div class="bannerfloat">
+      <i></i>
+      <div class="box">
+        <h5><img src="images/icon/icon04.png">贤士榜数字版</h5>
+        <div class="pic">
+          <img src="images/photos/pic16.jpg">
+        </div>
+        <p class="time">出版日期：<span>2016-12-28</span></p>
+      </div>
+    </div>
+  </div>
+</section><!--banner END-->
+<!-- 职位搜索开始 -->
+<section class="search_for_job">
+  <div class="main">
+    <div class="top">
+      <div class="fl">
+        <select>
+          <option style="font-size: 14px;color:#666;">搜职位</option>
+        </select>
+        <input type="text" placeholder="请输入您想要搜索的内容">
+        <input type="submit" value="搜索"/>
+      </div>
+      <a class="m">高级搜索</a>
+      <div class="nav">
+        <span>热门：</span>
+        <a href="">会计</a>
+        <a href="">行政专员</a>
+        <a href="">人力总监</a>
+        <a href="">网页设计</a>
+        <a href="">程序员</a>
+        <a href="">淘宝</a>
+      </div>
+    </div>
+    <div class="bottom oh">
+      <div class="fl1">
+        <dl>
+          <dt>
+            <a href="">
+              <img src="images/photos/pic03.jpg"/>
+            </a>
+          </dt>
+          <dd class="circle_pic">
+            <a href="">
+              <img src="images/photos/cw.png"/>
+            </a>
+          </dd>
+          <dd class="cate">
+            <a href="">业务员</a>
+            <a href="">仓库主管</a>
+            <a href="">驾驶员</a>
+          </dd>
+          <dd class="position">
+            <a href="" class="company">昆明鹏祺商贸有限公司</a>
+            <a href="" class="num">2 职位</a>
+          </dd>
+        </dl>
+        <dl>
+          <dt>
+            <a href="">
+              <img src="images/photos/pic03.jpg"/>
+            </a>
+          </dt>
+          <dd class="circle_pic">
+            <a href="">
+              <img src="images/photos/cw.png"/>
+            </a>
+          </dd>
+          <dd class="cate">
+            <a href="">业务员</a>
+            <a href="">仓库主管</a>
+            <a href="">驾驶员</a>
+          </dd>
+          <dd class="position">
+            <a href="" class="company">昆明鹏祺商贸有限公司</a>
+            <a href="" class="num">2 职位</a>
+          </dd>
+        </dl>
+        <dl>
+          <dt>
+            <a href="">
+              <img src="images/photos/pic03.jpg"/>
+            </a>
+          </dt>
+          <dd class="circle_pic">
+            <a href="">
+              <img src="images/photos/cw.png"/>
+            </a>
+          </dd>
+          <dd class="cate">
+            <a href="">业务员</a>
+            <a href="">仓库主管</a>
+            <a href="">驾驶员</a>
+          </dd>
+          <dd class="position">
+            <a href="" class="company">昆明鹏祺商贸有限公司</a>
+            <a href="" class="num">2 职位</a>
+          </dd>
+        </dl>
+        <dl>
+          <dt>
+            <a href="">
+              <img src="images/photos/pic03.jpg"/>
+            </a>
+          </dt>
+          <dd class="circle_pic">
+            <a href="">
+              <img src="images/photos/cw.png"/>
+            </a>
+          </dd>
+          <dd class="cate">
+            <a href="">业务员</a>
+            <a href="">仓库主管</a>
+            <a href="">驾驶员</a>
+          </dd>
+          <dd class="position">
+            <a href="" class="company">昆明鹏祺商贸有限公司</a>
+            <a href="" class="num">2 职位</a>
+          </dd>
+        </dl>
+        <dl>
+          <dt>
+            <a href="">
+              <img src="images/photos/pic03.jpg"/>
+            </a>
+          </dt>
+          <dd class="circle_pic">
+            <a href="">
+              <img src="images/photos/cw.png"/>
+            </a>
+          </dd>
+          <dd class="cate">
+            <a href="">业务员</a>
+            <a href="">仓库主管</a>
+            <a href="">驾驶员</a>
+          </dd>
+          <dd class="position">
+            <a href="" class="company">昆明鹏祺商贸有限公司</a>
+            <a href="" class="num">2 职位</a>
+          </dd>
+        </dl>
+        <dl>
+          <dt>
+            <a href="">
+              <img src="images/photos/pic03.jpg"/>
+            </a>
+          </dt>
+          <dd class="circle_pic">
+            <a href="">
+              <img src="images/photos/cw.png"/>
+            </a>
+          </dd>
+          <dd class="cate">
+            <a href="">业务员</a>
+            <a href="">仓库主管</a>
+            <a href="">驾驶员</a>
+          </dd>
+          <dd class="position">
+            <a href="" class="company">昆明鹏祺商贸有限公司</a>
+            <a href="" class="num">2 职位</a>
+          </dd>
+        </dl>
+        <div class="clear"></div>
+        <div class="btn">
+          <a href="javascript:void(0)"></a>
+          <a href="javascript:void(0)" class="on"></a>
+          <a href="javascript:void(0)"></a>
+        </div>
+      </div>
+      <div class="fr1">
+        <a href="">
+          <img src="images/photos/pic04.jpg"/>
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- 职位搜索结束 -->
+
+<!-- 热点招聘开始 -->
+<section class="hot_recruitment">
+  <div class="main">
+    <h3 class="oh tit">
+      <span class="icon"></span>
+      <span class="ch">热点招聘</span>
+      <span class="en">Hot recruitment</span>
+    </h3>
+    <div class="lists">
+      <dl>
+        <dt>
+          <a href="">
+            <img src="images/photos/pic05.jpg"/>
+          </a>
+        </dt>
+        <dd>
+          <div class="cate oh">
+            <a href="">驾驶员</a>
+            <a href="">仓库主管</a>
+            <a href="">业务员</a>
+          </div>
+          <div class="company">
+            <a href="">昆明鹏祺商贸有限公司</a>
+          </div>
+        </dd>
+      </dl>
+      <dl>
+        <dt>
+          <a href="">
+            <img src="images/photos/pic05.jpg"/>
+          </a>
+        </dt>
+        <dd>
+          <div class="cate oh">
+            <a href="">驾驶员</a>
+            <a href="">仓库主管</a>
+            <a href="">业务员</a>
+          </div>
+          <div class="company">
+            <a href="">昆明鹏祺商贸有限公司</a>
+          </div>
+        </dd>
+      </dl>
+      <dl>
+        <dt>
+          <a href="">
+            <img src="images/photos/pic05.jpg"/>
+          </a>
+        </dt>
+        <dd>
+          <div class="cate oh">
+            <a href="">驾驶员</a>
+            <a href="">仓库主管</a>
+            <a href="">业务员</a>
+          </div>
+          <div class="company">
+            <a href="">昆明鹏祺商贸有限公司</a>
+          </div>
+        </dd>
+      </dl>
+      <dl>
+        <dt>
+          <a href="">
+            <img src="images/photos/pic05.jpg"/>
+          </a>
+        </dt>
+        <dd>
+          <div class="cate oh">
+            <a href="">驾驶员</a>
+            <a href="">仓库主管</a>
+            <a href="">业务员</a>
+          </div>
+          <div class="company">
+            <a href="">昆明鹏祺商贸有限公司</a>
+          </div>
+        </dd>
+      </dl>
+      <dl>
+        <dt>
+          <a href="">
+            <img src="images/photos/pic05.jpg"/>
+          </a>
+        </dt>
+        <dd>
+          <div class="cate oh">
+            <a href="">驾驶员</a>
+            <a href="">仓库主管</a>
+            <a href="">业务员</a>
+          </div>
+          <div class="company">
+            <a href="">昆明鹏祺商贸有限公司</a>
+          </div>
+        </dd>
+      </dl>
+      <dl>
+        <dt>
+          <a href="">
+            <img src="images/photos/pic05.jpg"/>
+          </a>
+        </dt>
+        <dd>
+          <div class="cate oh">
+            <a href="">驾驶员</a>
+            <a href="">仓库主管</a>
+            <a href="">业务员</a>
+          </div>
+          <div class="company">
+            <a href="">昆明鹏祺商贸有限公司</a>
+          </div>
+        </dd>
+      </dl>
+      <dl>
+        <dt>
+          <a href="">
+            <img src="images/photos/pic05.jpg"/>
+          </a>
+        </dt>
+        <dd>
+          <div class="cate oh">
+            <a href="">驾驶员</a>
+            <a href="">仓库主管</a>
+            <a href="">业务员</a>
+          </div>
+          <div class="company">
+            <a href="">昆明鹏祺商贸有限公司</a>
+          </div>
+        </dd>
+      </dl>
+      <dl>
+        <dt>
+          <a href="">
+            <img src="images/photos/pic05.jpg"/>
+          </a>
+        </dt>
+        <dd>
+          <div class="cate oh">
+            <a href="">驾驶员</a>
+            <a href="">仓库主管</a>
+            <a href="">业务员</a>
+          </div>
+          <div class="company">
+            <a href="">昆明鹏祺商贸有限公司</a>
+          </div>
+        </dd>
+      </dl>
+      <dl>
+        <dt>
+          <a href="">
+            <img src="images/photos/pic05.jpg"/>
+          </a>
+        </dt>
+        <dd>
+          <div class="cate oh">
+            <a href="">驾驶员</a>
+            <a href="">仓库主管</a>
+            <a href="">业务员</a>
+          </div>
+          <div class="company">
+            <a href="">昆明鹏祺商贸有限公司</a>
+          </div>
+        </dd>
+      </dl>
+      <dl>
+        <dt>
+          <a href="">
+            <img src="images/photos/pic05.jpg"/>
+          </a>
+        </dt>
+        <dd>
+          <div class="cate oh">
+            <a href="">驾驶员</a>
+            <a href="">仓库主管</a>
+            <a href="">业务员</a>
+          </div>
+          <div class="company">
+            <a href="">昆明鹏祺商贸有限公司</a>
+          </div>
+        </dd>
+      </dl>
+      <dl>
+        <dt>
+          <a href="">
+            <img src="images/photos/pic05.jpg"/>
+          </a>
+        </dt>
+        <dd>
+          <div class="cate oh">
+            <a href="">驾驶员</a>
+            <a href="">仓库主管</a>
+            <a href="">业务员</a>
+          </div>
+          <div class="company">
+            <a href="">昆明鹏祺商贸有限公司</a>
+          </div>
+        </dd>
+      </dl>
+      <dl>
+        <dt>
+          <a href="">
+            <img src="images/photos/pic05.jpg"/>
+          </a>
+        </dt>
+        <dd>
+          <div class="cate oh">
+            <a href="">驾驶员</a>
+            <a href="">仓库主管</a>
+            <a href="">业务员</a>
+          </div>
+          <div class="company">
+            <a href="">昆明鹏祺商贸有限公司</a>
+          </div>
+        </dd>
+      </dl>
+      <dl>
+        <dt>
+          <a href="">
+            <img src="images/photos/pic05.jpg"/>
+          </a>
+        </dt>
+        <dd>
+          <div class="cate oh">
+            <a href="">驾驶员</a>
+            <a href="">仓库主管</a>
+            <a href="">业务员</a>
+          </div>
+          <div class="company">
+            <a href="">昆明鹏祺商贸有限公司</a>
+          </div>
+        </dd>
+      </dl>
+      <dl>
+        <dt>
+          <a href="">
+            <img src="images/photos/pic05.jpg"/>
+          </a>
+        </dt>
+        <dd>
+          <div class="cate oh">
+            <a href="">驾驶员</a>
+            <a href="">仓库主管</a>
+            <a href="">业务员</a>
+          </div>
+          <div class="company">
+            <a href="">昆明鹏祺商贸有限公司</a>
+          </div>
+        </dd>
+      </dl>
+      <dl>
+        <dt>
+          <a href="">
+            <img src="images/photos/pic05.jpg"/>
+          </a>
+        </dt>
+        <dd>
+          <div class="cate oh">
+            <a href="">驾驶员</a>
+            <a href="">仓库主管</a>
+            <a href="">业务员</a>
+          </div>
+          <div class="company">
+            <a href="">昆明鹏祺商贸有限公司</a>
+          </div>
+        </dd>
+      </dl>
+      <dl>
+        <dt>
+          <a href="">
+            <img src="images/photos/pic05.jpg"/>
+          </a>
+        </dt>
+        <dd>
+          <div class="cate oh">
+            <a href="">驾驶员</a>
+            <a href="">仓库主管</a>
+            <a href="">业务员</a>
+          </div>
+          <div class="company">
+            <a href="">昆明鹏祺商贸有限公司</a>
+          </div>
+        </dd>
+      </dl>
+    </div>
+    <div class="clear" style="height:8px"></div>
+    <div class="cate_lists">
+      <div class="latest_recruitment">
+        <aside style="background-image: url('images/photos/pic11.jpg')">
+          <h3>
+            <a href="">最新招聘</a>
+          </h3>
+          <div class="extension">
+            <a href="">互联网软件开发</a>
+            <a href="">网站运营/微信运营</a>
+            <a href="">网页设计/美工</a>
+            <a href="">网络工程师</a>
+          </div>
+        </aside>
+        <article>
+          <a href="" class="top" style="background-image: url('images/photos/pic07.jpg')"></a>
+          <div class="bottom_lists">
+            <ul>
+              <li>
+                <menu>
+                  <a href="">驾驶员</a>
+                  <a href="">仓库主管</a>
+                  <a href="">业务员</a>
+                </menu>
+                <a href="" class="company">昆明鹏祺商贸有限公司</a>
+              </li>
+              <li>
+                <menu>
+                  <a href="">驾驶员</a>
+                  <a href="">仓库主管</a>
+                  <a href="">业务员</a>
+                </menu>
+                <a href="" class="company">昆明鹏祺商贸有限公司</a>
+              </li>
+              <li>
+                <menu>
+                  <a href="">驾驶员</a>
+                  <a href="">仓库主管</a>
+                  <a href="">业务员</a>
+                </menu>
+                <a href="" class="company">昆明鹏祺商贸有限公司</a>
+              </li>
+              <li>
+                <menu>
+                  <a href="">驾驶员</a>
+                  <a href="">仓库主管</a>
+                  <a href="">业务员</a>
+                </menu>
+                <a href="" class="company">昆明鹏祺商贸有限公司</a>
+              </li>
+              <li>
+                <menu>
+                  <a href="">驾驶员</a>
+                  <a href="">仓库主管</a>
+                  <a href="">业务员</a>
+                </menu>
+                <a href="" class="company">昆明鹏祺商贸有限公司</a>
+              </li>
+              <li>
+                <menu>
+                  <a href="">驾驶员</a>
+                  <a href="">仓库主管</a>
+                  <a href="">业务员</a>
+                </menu>
+                <a href="" class="company">昆明鹏祺商贸有限公司</a>
+              </li>
+              <li>
+                <menu>
+                  <a href="">驾驶员</a>
+                  <a href="">仓库主管</a>
+                  <a href="">业务员</a>
+                </menu>
+                <a href="" class="company">昆明鹏祺商贸有限公司</a>
+              </li>
+              <li>
+                <menu>
+                  <a href="">驾驶员</a>
+                  <a href="">仓库主管</a>
+                  <a href="">业务员</a>
+                </menu>
+                <a href="" class="company">昆明鹏祺商贸有限公司</a>
+              </li>
+              <li>
+                <menu>
+                  <a href="">驾驶员</a>
+                  <a href="">仓库主管</a>
+                  <a href="">业务员</a>
+                </menu>
+                <a href="" class="company">昆明鹏祺商贸有限公司</a>
+              </li>
+              <li>
+                <menu>
+                  <a href="">驾驶员</a>
+                  <a href="">仓库主管</a>
+                  <a href="">业务员</a>
+                </menu>
+                <a href="" class="company">昆明鹏祺商贸有限公司</a>
+              </li>
+              <li>
+                <menu>
+                  <a href="">驾驶员</a>
+                  <a href="">仓库主管</a>
+                  <a href="">业务员</a>
+                </menu>
+                <a href="" class="company">昆明鹏祺商贸有限公司</a>
+              </li>
+              <li>
+                <menu>
+                  <a href="">驾驶员</a>
+                  <a href="">仓库主管</a>
+                  <a href="">业务员</a>
+                </menu>
+                <a href="" class="company">昆明鹏祺商贸有限公司</a>
+              </li>
+            </ul>
+          </div>
+        </article>
+      </div>
+      <div class="it">
+        <aside style="background-image: url('images/photos/pic12.jpg')">
+          <h3>
+            <a href="">IT</a>
+            <a href="">互联网通信</a>
+            <a href="">电子</a>
+          </h3>
+          <div class="extension">
+            <a href="">商务代表</a>
+            <a href="">商务经理</a>
+            <a href="">快递员</a>
+            <a href="">区域经理</a>
+            <a href="">采购</a>
+          </div>
+        </aside>
+        <article>
+          <div class="bottom_lists">
+            <ul>
+              <a href="" class="top" style="background-image: url('images/photos/pic08.jpg')"></a>
+              <li>
+                <menu>
+                  <a href="">驾驶员</a>
+                  <a href="">仓库主管</a>
+                  <a href="">业务员</a>
+                </menu>
+                <a href="" class="company">昆明鹏祺商贸有限公司</a>
+              </li>
+              <li>
+                <menu>
+                  <a href="">驾驶员</a>
+                  <a href="">仓库主管</a>
+                  <a href="">业务员</a>
+                </menu>
+                <a href="" class="company">昆明鹏祺商贸有限公司</a>
+              </li>
+              <li>
+                <menu>
+                  <a href="">驾驶员</a>
+                  <a href="">仓库主管</a>
+                  <a href="">业务员</a>
+                </menu>
+                <a href="" class="company">昆明鹏祺商贸有限公司</a>
+              </li>
+              <li>
+                <menu>
+                  <a href="">驾驶员</a>
+                  <a href="">仓库主管</a>
+                  <a href="">业务员</a>
+                </menu>
+                <a href="" class="company">昆明鹏祺商贸有限公司</a>
+              </li>
+              <li>
+                <menu>
+                  <a href="">驾驶员</a>
+                  <a href="">仓库主管</a>
+                  <a href="">业务员</a>
+                </menu>
+                <a href="" class="company">昆明鹏祺商贸有限公司</a>
+              </li>
+              <li>
+                <menu>
+                  <a href="">驾驶员</a>
+                  <a href="">仓库主管</a>
+                  <a href="">业务员</a>
+                </menu>
+                <a href="" class="company">昆明鹏祺商贸有限公司</a>
+              </li>
+              <li>
+                <menu>
+                  <a href="">驾驶员</a>
+                  <a href="">仓库主管</a>
+                  <a href="">业务员</a>
+                </menu>
+                <a href="" class="company">昆明鹏祺商贸有限公司</a>
+              </li>
+              <li>
+                <menu>
+                  <a href="">驾驶员</a>
+                  <a href="">仓库主管</a>
+                  <a href="">业务员</a>
+                </menu>
+                <a href="" class="company">昆明鹏祺商贸有限公司</a>
+              </li>
+              <li>
+                <menu>
+                  <a href="">驾驶员</a>
+                  <a href="">仓库主管</a>
+                  <a href="">业务员</a>
+                </menu>
+                <a href="" class="company">昆明鹏祺商贸有限公司</a>
+              </li>
+              <li>
+                <menu>
+                  <a href="">驾驶员</a>
+                  <a href="">仓库主管</a>
+                  <a href="">业务员</a>
+                </menu>
+                <a href="" class="company">昆明鹏祺商贸有限公司</a>
+              </li>
+              <li>
+                <menu>
+                  <a href="">驾驶员</a>
+                  <a href="">仓库主管</a>
+                  <a href="">业务员</a>
+                </menu>
+                <a href="" class="company">昆明鹏祺商贸有限公司</a>
+              </li>
+              <li>
+                <menu>
+                  <a href="">驾驶员</a>
+                  <a href="">仓库主管</a>
+                  <a href="">业务员</a>
+                </menu>
+                <a href="" class="company">昆明鹏祺商贸有限公司</a>
+              </li>
+            </ul>
+          </div>
+        </article>
+      </div>
+      <div class="latest_recruitment">
+        <aside style="background-image: url('images/photos/pic13.jpg')">
+          <h3>
+            <a href="">最新招聘</a>
+          </h3>
+          <div class="extension">
+            <a href="">互联网软件开发</a>
+            <a href="">网站运营/微信运营</a>
+            <a href="">网页设计/美工</a>
+            <a href="">网络工程师</a>
+          </div>
+        </aside>
+        <article>
+          <a href="" class="top" style="background-image: url('images/photos/pic09.jpg')"></a>
+          <div class="bottom_lists">
+            <ul>
+              <li>
+                <menu>
+                  <a href="">驾驶员</a>
+                  <a href="">仓库主管</a>
+                  <a href="">业务员</a>
+                </menu>
+                <a href="" class="company">昆明鹏祺商贸有限公司</a>
+              </li>
+              <li>
+                <menu>
+                  <a href="">驾驶员</a>
+                  <a href="">仓库主管</a>
+                  <a href="">业务员</a>
+                </menu>
+                <a href="" class="company">昆明鹏祺商贸有限公司</a>
+              </li>
+              <li>
+                <menu>
+                  <a href="">驾驶员</a>
+                  <a href="">仓库主管</a>
+                  <a href="">业务员</a>
+                </menu>
+                <a href="" class="company">昆明鹏祺商贸有限公司</a>
+              </li>
+              <li>
+                <menu>
+                  <a href="">驾驶员</a>
+                  <a href="">仓库主管</a>
+                  <a href="">业务员</a>
+                </menu>
+                <a href="" class="company">昆明鹏祺商贸有限公司</a>
+              </li>
+              <li>
+                <menu>
+                  <a href="">驾驶员</a>
+                  <a href="">仓库主管</a>
+                  <a href="">业务员</a>
+                </menu>
+                <a href="" class="company">昆明鹏祺商贸有限公司</a>
+              </li>
+              <li>
+                <menu>
+                  <a href="">驾驶员</a>
+                  <a href="">仓库主管</a>
+                  <a href="">业务员</a>
+                </menu>
+                <a href="" class="company">昆明鹏祺商贸有限公司</a>
+              </li>
+              <li>
+                <menu>
+                  <a href="">驾驶员</a>
+                  <a href="">仓库主管</a>
+                  <a href="">业务员</a>
+                </menu>
+                <a href="" class="company">昆明鹏祺商贸有限公司</a>
+              </li>
+              <li>
+                <menu>
+                  <a href="">驾驶员</a>
+                  <a href="">仓库主管</a>
+                  <a href="">业务员</a>
+                </menu>
+                <a href="" class="company">昆明鹏祺商贸有限公司</a>
+              </li>
+              <li>
+                <menu>
+                  <a href="">驾驶员</a>
+                  <a href="">仓库主管</a>
+                  <a href="">业务员</a>
+                </menu>
+                <a href="" class="company">昆明鹏祺商贸有限公司</a>
+              </li>
+              <li>
+                <menu>
+                  <a href="">驾驶员</a>
+                  <a href="">仓库主管</a>
+                  <a href="">业务员</a>
+                </menu>
+                <a href="" class="company">昆明鹏祺商贸有限公司</a>
+              </li>
+              <li>
+                <menu>
+                  <a href="">驾驶员</a>
+                  <a href="">仓库主管</a>
+                  <a href="">业务员</a>
+                </menu>
+                <a href="" class="company">昆明鹏祺商贸有限公司</a>
+              </li>
+              <li>
+                <menu>
+                  <a href="">驾驶员</a>
+                  <a href="">仓库主管</a>
+                  <a href="">业务员</a>
+                </menu>
+                <a href="" class="company">昆明鹏祺商贸有限公司</a>
+              </li>
+            </ul>
+          </div>
+        </article>
+      </div>
+      <div class="it">
+        <aside style="background-image: url('images/photos/pic14.jpg')">
+          <h3>
+            <a href="">IT</a>
+            <a href="">互联网通信</a>
+            <a href="">电子</a>
+          </h3>
+          <div class="extension">
+            <a href="">商务代表</a>
+            <a href="">商务经理</a>
+            <a href="">快递员</a>
+            <a href="">区域经理</a>
+            <a href="">采购</a>
+          </div>
+        </aside>
+        <article>
+          <div class="bottom_lists">
+            <ul>
+              <a href="" class="top" style="background-image: url('images/photos/pic10.jpg')"></a>
+              <li>
+                <menu>
+                  <a href="">驾驶员</a>
+                  <a href="">仓库主管</a>
+                  <a href="">业务员</a>
+                </menu>
+                <a href="" class="company">昆明鹏祺商贸有限公司</a>
+              </li>
+              <li>
+                <menu>
+                  <a href="">驾驶员</a>
+                  <a href="">仓库主管</a>
+                  <a href="">业务员</a>
+                </menu>
+                <a href="" class="company">昆明鹏祺商贸有限公司</a>
+              </li>
+              <li>
+                <menu>
+                  <a href="">驾驶员</a>
+                  <a href="">仓库主管</a>
+                  <a href="">业务员</a>
+                </menu>
+                <a href="" class="company">昆明鹏祺商贸有限公司</a>
+              </li>
+              <li>
+                <menu>
+                  <a href="">驾驶员</a>
+                  <a href="">仓库主管</a>
+                  <a href="">业务员</a>
+                </menu>
+                <a href="" class="company">昆明鹏祺商贸有限公司</a>
+              </li>
+              <li>
+                <menu>
+                  <a href="">驾驶员</a>
+                  <a href="">仓库主管</a>
+                  <a href="">业务员</a>
+                </menu>
+                <a href="" class="company">昆明鹏祺商贸有限公司</a>
+              </li>
+              <li>
+                <menu>
+                  <a href="">驾驶员</a>
+                  <a href="">仓库主管</a>
+                  <a href="">业务员</a>
+                </menu>
+                <a href="" class="company">昆明鹏祺商贸有限公司</a>
+              </li>
+              <li>
+                <menu>
+                  <a href="">驾驶员</a>
+                  <a href="">仓库主管</a>
+                  <a href="">业务员</a>
+                </menu>
+                <a href="" class="company">昆明鹏祺商贸有限公司</a>
+              </li>
+              <li>
+                <menu>
+                  <a href="">驾驶员</a>
+                  <a href="">仓库主管</a>
+                  <a href="">业务员</a>
+                </menu>
+                <a href="" class="company">昆明鹏祺商贸有限公司</a>
+              </li>
+              <li>
+                <menu>
+                  <a href="">驾驶员</a>
+                  <a href="">仓库主管</a>
+                  <a href="">业务员</a>
+                </menu>
+                <a href="" class="company">昆明鹏祺商贸有限公司</a>
+              </li>
+              <li>
+                <menu>
+                  <a href="">驾驶员</a>
+                  <a href="">仓库主管</a>
+                  <a href="">业务员</a>
+                </menu>
+                <a href="" class="company">昆明鹏祺商贸有限公司</a>
+              </li>
+              <li>
+                <menu>
+                  <a href="">驾驶员</a>
+                  <a href="">仓库主管</a>
+                  <a href="">业务员</a>
+                </menu>
+                <a href="" class="company">昆明鹏祺商贸有限公司</a>
+              </li>
+              <li>
+                <menu>
+                  <a href="">驾驶员</a>
+                  <a href="">仓库主管</a>
+                  <a href="">业务员</a>
+                </menu>
+                <a href="" class="company">昆明鹏祺商贸有限公司</a>
+              </li>
+            </ul>
+          </div>
+        </article>
+      </div>
+    </div>
+    <div class="icon_cate oh">
+      <ul>
+        <li>
+          <a class="icon" style="background-image: url('images/icon/menu01.png');"></a>
+          <div class="words">
+            <a href="">广告</a>
+            <a href="">传媒</a>
+            <a href="">印刷</a>
+          </div>
+        </li>
+        <li>
+          <a class="icon" style="background-image: url('images/icon/menu02.png');"></a>
+          <div class="words">
+            <a href="">金融</a>
+            <a href="">银行</a>
+            <a href="">保险</a>
+          </div>
+        </li>
+        <li>
+          <a class="icon" style="background-image: url('images/icon/menu03.png');"></a>
+          <div class="words">
+            <a href="">酒店</a>
+            <a href="">旅游</a>
+          </div>
+        </li>
+        <li>
+          <a class="icon" style="background-image: url('images/icon/menu04.png');"></a>
+          <div class="words">
+            <a href="">管理</a>
+            <a href="">教育</a>
+            <a href="">中介</a>
+          </div>
+        </li>
+        <li>
+          <a class="icon" style="background-image: url('images/icon/menu05.png');"></a>
+          <div class="words">
+            <a href="">医药生物</a>
+            <a href="">医疗保健</a>
+          </div>
+        </li>
+        <li>
+          <a class="icon" style="background-image: url('images/icon/menu06.png');"></a>
+          <div class="words">
+            <a href="">加工制造</a>
+            <a href="">仪表设备</a>
+          </div>
+        </li>
+        <li>
+          <a class="icon" style="background-image: url('images/icon/menu07.png');"></a>
+          <div class="words">
+            <a href="">更多</a>
+          </div>
+        </li>
+      </ul>
+    </div>
+    <a href="" class="tencent_games" style="background: url('images/photos/pic15.jpg')"></a>
+  </div>
+</section>
+<!-- 热点招聘结束 -->
+<!-- 兼职招聘，最新简历，最新加入企业开始 -->
+<section class="part_latest_comp">
+  <div class="main">
+    <div class="part">
+      <h3 class="oh tit">
+        <span class="icon"></span>
+        <span class="ch">兼职招聘</span>
+        <span class="en">A part-time job</span>
+      </h3>
+      <div class="bottom">
+        <a href="">·  昆明肯德基有限公司</a>
+        <a href="">·  昆明肯德基有限公司</a>
+        <a href="">·  昆明肯德基有限公司</a>
+        <a href="">·  昆明肯德基有限公司</a>
+        <a href="">·  昆明肯德基有限公司</a>
+        <a href="">·  昆明肯德基有限公司</a>
+        <a href="">·  昆明肯德基有限公司</a>
+      </div>
+    </div>
+    <div class="latest">
+      <h3 class="oh tit">
+        <span class="icon"></span>
+        <span class="ch">最新简历</span>
+        <span class="en">Latest resumes</span>
+      </h3>
+      <div class="bottom">
+        <ul>
+          <li class="title">
+            <span class="span01">姓名</span>
+            <span class="span02">性别</span>
+            <span class="span03">学历</span>
+            <span class="span04">求职意向</span>
+            <span class="span05">更新日期</span>
+          </li>
+          <li>
+            <a href="">
+              <span class="span01">王建聪</span>
+              <span class="span02">男</span>
+              <span class="span03">本科</span>
+              <span class="span04">交通运输</span>
+              <span class="span05">2017-01-01</span>
+            </a>
+          </li>
+          <li>
+            <a href="">
+              <span class="span01">王建聪</span>
+              <span class="span02">男</span>
+              <span class="span03">本科</span>
+              <span class="span04">交通运输</span>
+              <span class="span05">2017-01-01</span>
+            </a>
+          </li>
+          <li>
+            <a href="">
+              <span class="span01">王建聪</span>
+              <span class="span02">男</span>
+              <span class="span03">本科</span>
+              <span class="span04">交通运输</span>
+              <span class="span05">2017-01-01</span>
+            </a>
+          </li>
+          <li>
+            <a href="">
+              <span class="span01">王建聪</span>
+              <span class="span02">男</span>
+              <span class="span03">本科</span>
+              <span class="span04">交通运输</span>
+              <span class="span05">2017-01-01</span>
+            </a>
+          </li>
+          <li>
+            <a href="">
+              <span class="span01">王建聪</span>
+              <span class="span02">男</span>
+              <span class="span03">本科</span>
+              <span class="span04">交通运输</span>
+              <span class="span05">2017-01-01</span>
+            </a>
+          </li>
+          <li>
+            <a href="">
+              <span class="span01">王建聪</span>
+              <span class="span02">男</span>
+              <span class="span03">本科</span>
+              <span class="span04">交通运输</span>
+              <span class="span05">2017-01-01</span>
+            </a>
+          </li>
+        </ul>
+      </div>
+    </div>
+    <div class="part">
+      <h3 class="oh tit">
+        <span class="icon"></span>
+        <span class="ch">最新加入企业</span>
+        <span class="en">company</span>
+      </h3>
+      <div class="bottom">
+        <a href="">云南宇邦保安服务有限公司昆明分...</a>
+        <a href="">云南宇邦保安服务有限公司昆明分...</a>
+        <a href="">云南宇邦保安服务有限公司昆明分...</a>
+        <a href="">云南宇邦保安服务有限公司昆明分...</a>
+        <a href="">云南宇邦保安服务有限公司昆明分...</a>
+        <a href="">云南宇邦保安服务有限公司昆明分...</a>
+        <a href="">云南宇邦保安服务有限公司昆明分...</a>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- 兼职招聘，最新简历，最新加入企业结束 -->
+<!-- 友情链接开始 -->
+<section class="friendship_link">
+  <div class="main">
+    <h3 class="oh tit">
+      <div class="fl">
+        <span class="icon"></span>
+        <span class="ch">友情链接</span>
+        <span class="en">link</span>
+      </div>
+      <div class="fr">
+        <a href="">申请友情链接</a>
+      </div>
+    </h3>
+    <div class="bottom">
+      <a href="">云企招聘网</a><a href="">云企招聘网</a><a href="">云企招聘网</a><a href="">云企招聘网</a><a href="">云企招聘网</a><a href="">云企招聘网</a><a href="">云企招聘网</a><a href="">云企招聘网</a><a href="">云企招聘网</a><a href="">云企招聘网</a><a href="">云企招聘网</a><a href="">云企招聘网</a><a href="">云企招聘网</a><a href="">云企招聘网</a><a href="">云企招聘网</a><a href="">云企招聘网</a><a href="">云企招聘网</a><a href="">云企招聘网</a><a href="">云企招聘网</a><a href="">云企招聘网</a><a href="">云企招聘网</a><a href="">云企招聘网</a><a href="">云企招聘网</a><a href="">云企招聘网</a><a href="">云企招聘网</a><a href="">云企招聘网</a><a href="">云企招聘网</a><a href="">云企招聘网</a><a href="">云企招聘网</a><a href="">云企招聘网</a><a href="">云企招聘网</a><a href="">云企招聘网</a><a href="">云企招聘网</a><a href="">云企招聘网</a><a href="">云企招聘网</a><a href="">云企招聘网</a><a href="">云企招聘网</a><a href="">云企招聘网</a><a href="">云企招聘网</a><a href="">云企招聘网</a><a href="">云企招聘网</a><a href="">云企招聘网</a><a href="">云企招聘网</a><a href="">云企招聘网</a><a href="">云企招聘网</a><a href="">云企招聘网</a><a href="">云企招聘网</a><a href="">云企招聘网</a><a href="">云企招聘网</a><a href="">云企招聘网</a><a href="">云企招聘网</a><a href="">云企招聘网</a><a href="">云企招聘网</a><a href="">云企招聘网</a>
+    </div>
+  </div>
+</section>
+<!-- 友情链接结束 -->
+<div class="doubleline"></div>
+<!-- footer开始 -->
+<footer class="index_footer">
+  <div class="main">
+    <div class="l fl">
+      <div class="a_com oh">
+        <a href="">冒用声明</a>
+        <a href="">冒用声明</a>
+        <a href="">冒用声明</a>
+        <a href="">冒用声明</a>
+        <a href="">冒用声明</a>
+        <a href="">冒用声明</a>
+        <a href="">冒用声明</a>
+        <a href="">冒用声明</a>
+      </div>
+      <p class="xsb">本网站之所有招聘信息及作品归贤士榜所有，未经贤士榜同意，不得转载</p>
+      <p class="tdwl">
+        <span>云南净化科技系统工程有限公司 版权所有</span>
+        <span>滇ICP备16009599号</span>
+        <span><a href="http://www.ynyes.com" title="云南网站建设" target="_blank">网站建设</a>支持：<a href="http://www.ynyes.com" title="昆明天度网络公司" target="_blank">天度网络</a></span>
+      </p>
+    </div>
+    <div class="r fr">
+      <div class="qrcode fr">
+        <div class="qr01 fr">
+          <img src="images/qrcode.png"/>
+          <span>贤士榜APP</span>
+        </div>
+        <i></i>
+        <div class="qr02 fr">
+          <img src="images/qrcode.png"/>
+          <span>贤士榜APP</span>
+        </div>
+        <i></i>
+      </div>
+      <div class="phone fr">
+        <p class="words">贤士榜客服联系电话：</p>
+        <p class="num">0871-63648012</p>
+      </div>
+    </div>
+  </div>
+</footer>
+<!-- footer结束 -->
+<!--底部悬浮层开始-->
+<aside class="bottom_sus">
+  <div class="main">
+    <div class="l fl">
+      <img src="images/icon/icon10.png"/>
+    </div>
+    <div class="m fl">
+      <div class="fl">
+        <img src="images/qrcode.png"/>
+        <span>贤士榜APP</span>
+      </div>
+      <div class="fl">
+        <img src="images/qrcode.png"/>
+        <span>贤士榜公众号</span>
+      </div>
+    </div>
+    <div class="r fl">
+      <a href="" class="sign">登录</a>
+      <a href="" class="register">注册</a>
+    </div>
+    <a href="" class="quit"></a>
+  </div>
+</aside>
+<!--底部悬浮层结束-->
+<!--右侧悬浮层开始-->
+<aside class="right_sus">
+  <div class="qrcode01">
+    <img src="images/qrcode.png"/>
+    <span>微信公众号</span>
+  </div>
+  <div class="qrcode02">
+    <img src="images/qrcode.png"/>
+    <span>下载APP</span>
+  </div>
+  <a class="online_ser"></a>
+  <a class="top"></a>
+  <a href="javascript:void(0)" class="adv_quit">关闭</a>
+  <a class="adv"></a>
+</aside>
+<!--右侧悬浮层结束-->
+</body>
+</html>
+
+

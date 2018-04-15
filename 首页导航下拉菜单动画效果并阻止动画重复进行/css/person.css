@@ -1,0 +1,964 @@
+/*14.个人中心*/
+.per_header{
+	width: 100%;
+	height: 80px;
+	background: #f79100;
+}
+.per_header section{
+	width: 1000px;
+	height: 80px;
+	margin: auto;
+	overflow: hidden;
+}
+.per_header img{
+	float: left;
+	margin-top: 11px;
+}
+.per_header h3{
+	font-size: 18px;
+	color: white;
+	line-height: 80px;
+	float: left;
+	margin-left: 70px;
+}
+.per_header form{
+	width: 232px;
+    overflow: hidden;
+    float: right;
+    margin-top: 22px;
+    margin-right: 30px;
+    border-radius:6px;
+}
+.per_header form .text{
+	height: 34px;
+    line-height: 34px;
+    width: 150px;
+    padding-left: 20px;
+    border: #DDDDDD 1px solid;
+    border-right: none;
+    outline: none;
+    font-size:14px;
+    color: #999999;
+    float: left;
+}
+.per_header form .btn{
+	width: 60px;
+    height: 36px;
+    color: white;
+    border: none;
+    float: left;
+    outline: none;
+    background:#f26600 url(../images/per_search.png) no-repeat center;
+}
+.per_header a{
+	float: right;
+	width: 110px;
+    height: 34px;
+    line-height: 34px;
+    color: white;
+    border: white 1px solid;
+    border-radius: 4px;
+    font-size: 14px;
+    outline: none;
+    margin-top: 22px;
+    text-align: center;
+}
+.person{
+	width: 1000px;
+	margin: auto;
+	overflow: hidden;
+	margin-top: 30px;
+}
+.person_left{
+	float: left;
+	width: 180px;
+	text-align: center;
+	background: #f9f9f9;
+	overflow: hidden;	
+}
+.person_left dt{
+	width: 100%;
+}
+.person_left dt h3{
+	width: 80%;
+	line-height: 70px;
+	margin: 0 10%;
+	border-bottom: #DDDDDD 1px solid;
+	font-size: 20px;
+	color: #333333;
+}
+.person_left dd{
+	width: 80%;
+	padding: 0 10%;
+}
+.person_left dd a{
+	display: block;
+	line-height: 40px;
+	width: 100%;
+	font-size: 16px;
+}
+.person_left dt p{
+	line-height: 40px;
+	width: 100%;
+	font-size: 16px;
+	position: relative;
+}
+.person_left dt p img{
+	position: absolute;
+	right: 40px;
+	top: 17px;
+}
+.person_left dt label{
+	line-height: 40px;
+	width: 100%;
+	font-size: 14px;
+}
+.person_left dt a{
+	display: block;
+	line-height: 40px;
+	width: 100%;
+}
+#account_information{
+	height: 40px;
+}
+#ai_up{
+	display: none;
+}
+.person_right{
+	width: 780px;
+	float: right;
+}
+.person_title{
+	width: 100%;
+	overflow: hidden;
+}
+.person_title dt{
+	float: left;
+	width: 80px;
+	height: 80px;
+}
+.person_title dt img{
+	width: 100%;
+	height: 100%;
+}
+.person_title dd{
+	float: left;
+	height: 40px;
+	width: 650px;
+	margin-left: 30px;
+	line-height: 40px;
+}
+.person_title dd h3{
+	float: left;
+	font-size: 16px;
+	color: #333333;
+}
+.person_title dd a{
+	float: left;
+	margin-left: 24px;
+}
+.person_title dd a font{
+	color: #f79100;
+}
+.person_title dd label{
+	float: left;
+	width: 60px;
+	height: 20px;
+	line-height: 20px;
+	text-align: center;
+	margin-left: 10px;
+	color: white;
+}
+.person_title dd .l1{
+	background: #f6c37b;
+}
+.person_title dd .l2{
+	background: #dddddd;
+}
+.hgroup{
+	width: 100%;
+	line-height: 60px;
+	height: 62px;
+	border-bottom:#DDDDDD 2px solid ;
+	position: relative;
+}
+.hgroup div{
+	position: absolute;
+	left: 0px;
+	top: 2px;
+	z-index: 999;
+}
+.hgroup a{
+	float: left;
+	padding: 0 20px;
+	font-size: 14px;
+	font-weight: 600;
+	color: #333333;
+}
+.hgroup a.sty{
+	border-bottom:#f79100 2px solid ;
+	color: #f79100;
+}
+.per_box{
+	width: 100%;
+	display: none;
+	min-height: 502px;
+}
+.per_dt_box01{
+	width: 100%;
+	overflow: hidden;
+}
+.per_dt_box01 label{
+	float: left;
+	line-height: 50px;
+	border-bottom: #DDDDDD 1px solid;
+	color: #999999;
+}
+.per_dt_box01 .l1{
+	width: 40%;
+}
+.per_dt_box01 .l2{
+	width: 20%;
+}
+.per_dt_box01 .l4{
+	width: 20%;
+}
+.per_dd_box01{
+	width: 100%;
+	overflow: hidden;
+}
+.per_dd_box01 div{
+	float: left;
+	line-height: 40px;
+	border-bottom: #DDDDDD 1px solid;
+}
+.per_dd_box01 .div01{
+	width: 40%;
+}
+.per_dd_box01 .div02{
+	width: 20%;
+}
+.per_dd_box01 .div04{
+	width: 20%;
+}
+.per_dd_box01 .div04 a{
+	float: left;
+	width: 33.3%;
+	line-height: 40px;
+}
+/*page*/
+.page01{
+	width: 780px;
+	float: left;
+}
+.page01 ul{
+	float: right;
+	overflow: hidden;
+	margin-top: 30px;
+}
+.page01 ul li{
+	float: left;
+}
+.page01 ul .page_up{
+	width: 80px;
+	line-height: 28px;
+	border: #DDDDDD 1px solid;
+	text-align: center;	
+	background: url(../images/page_left.png) no-repeat 6px;
+}
+.page01 ul .page_down{
+	width: 80px;
+	line-height: 28px;
+	border: #DDDDDD 1px solid;
+	text-align: center;
+	margin-left: 4px;
+	background: url(../images/page_right.png) no-repeat 64px;	
+}
+.page01 ul .page_key{
+	width: 28px;
+	line-height: 28px;
+	border: #DDDDDD 1px solid;
+	text-align: center;	
+	margin-left: 4px;
+}
+.page01 a{
+	display: block;
+	color: #0b73bb;
+}
+.page01 a.page_get{
+	background: #f79100;
+	color: white;
+}
+/*15.个人中心-我的订阅02.html*/
+.person_right .right_title{
+	width: 100%;
+	line-height:30px;
+	font-size: 16px;
+	color: #f79100;
+}
+.hgroup01{
+	width: 100%;
+	line-height: 30px;
+	height: 32px;
+	border-bottom:#DDDDDD 2px solid ;
+	position: relative;
+	margin-top: 10px;
+}
+.hgroup01 div{
+	position: absolute;
+	left: 10px;
+	top: 2px;
+	z-index: 999;
+}
+.hgroup01 span{
+	display: block;
+	width: 94px;
+	height: 26px;
+	line-height: 26px;
+	text-align: center;
+	border: #DDDDDD 1px dashed;
+	float: right;
+	color: #f79100;
+}
+.hgroup01 a{
+	float: left;
+	padding: 0 20px;
+	font-size: 14px;
+	font-weight: 600;
+	color: #333333;
+	background: white;
+}
+.hgroup01 a.sty{
+	border-top:#f79100 2px solid;
+	border-left:#dddddd 1px solid;
+	border-right:#DDDDDD 1px solid;
+	color: #f79100;
+}
+.per_box{
+	width: 100%;
+	display: none;
+	min-height: 502px;
+}
+.per_dt_box02{
+	width: 100%;
+	overflow: hidden;
+}
+.per_dt_box02 label{
+	float: left;
+	line-height: 50px;
+	border-bottom: #DDDDDD 1px solid;
+	color: #999999;
+}
+.per_dt_box02 .l1{
+	width: 40%;
+}
+.per_dt_box02 .l2{
+	width: 18%;
+}
+.per_dt_box02 .l3{
+	width: 6%;
+}
+.per_dd_box02{
+	width: 100%;
+	overflow: hidden;
+}
+.per_dd_box02 div{
+	float: left;
+	line-height: 40px;
+	border-bottom: #DDDDDD 1px solid;
+}
+.per_dd_box02 .div01 input{
+	float: left;
+	width: 14px;
+	height: 14px;
+	margin-top:13px;
+	margin-right: 6px;
+}
+.per_dd_box01 .div01 input{
+	float: left;
+	width: 14px;
+	height: 14px;
+	margin-top:13px;
+	margin-right: 6px;
+}
+.per_dd_box02 .div01{
+	width: 40%;
+}
+.per_dd_box02 .div02{
+	width: 18%;
+}
+.per_dd_box02 .div03{
+	width: 6%;
+}
+.per_dd_box02 .div04 a{
+	float: left;
+	width: 33.3%;
+	line-height: 40px;
+}
+.win_out{
+	position:fixed;
+	overflow: hidden;
+	left: 0px;
+	top: 0px;
+	width: 100%;
+	height: 100%;
+	z-index: 999999999999999999;
+	background: url(../images/win_outbd.png);
+}
+.win_out dl{
+	background: white;
+	margin: auto;
+	width: 400px;
+	height: 452px;
+	border-radius: 10px;
+	margin-top: 260px;
+}
+.win_out dt{
+	float: left;
+	width: 100%;
+}
+.win_out dt span{
+	float: left;
+	width: 100%;
+	line-height: 50px;
+	text-align: center;
+	font-size: 20px;
+	color: #333333;
+}
+.win_out dd{
+	float: left;
+	width: 90%;
+	padding:0 5%;
+}
+.win_out dd input{
+	width: 94%;
+	padding-left: 6%;
+	height: 40px;
+	border: #DDDDDD 1px solid;
+	color: #999999;
+	font-size: 16px;
+	margin-top: 16px;
+	float: left;
+}
+.win_out dd label{
+	display: block;
+	float: left;
+	width: 96%;
+	padding-left: 4%;
+	color: #ef0000;
+	background: url(../images/win_out_waring.png) no-repeat left;
+}
+.win_out dd textarea{
+	width: 94%;
+	padding: 3%;
+	height:100px;
+	margin-top: 6px;
+	font-size: 14px;
+	color: #999999;
+}
+.win_out dd .btn{
+	width: 100%;
+	background: #f79100;
+	color: white;
+	font-size: 20px;
+	border-bottom: none;
+	outline: none;
+	height: 40px;
+	margin-top: 90px;
+	padding: 0;
+}
+.win_out dd a{
+	width: 100%;
+	border: #DDDDDD 1px dashed;
+	color: #999999;
+	font-size: 30px;
+	display: block;
+	text-align: center;
+	height: 40px;
+	line-height: 40px;
+	float: left;
+	margin-top: 10px;
+	margin-top: 30px;
+}
+.win_out dd span{
+	width: 100%;
+    background: #f79100;
+    color: white;
+    font-size: 18px;
+    display: block;
+    text-align: center;
+    height: 40px;
+    line-height: 40px;
+    float: left;
+    margin-top: 10px;
+}
+.page01 div{
+	overflow: hidden;
+	width: 200px;
+	float: left;
+	height: 40px;
+	line-height: 40px;
+	margin-top: 26px;
+}
+.page01 div *{
+	float: left;
+}
+.page01 div input{
+	width: 16px;
+	height: 16px;
+	margin-top: 12px;
+}
+.page01 div label{
+	margin-left: 20px;
+}
+.page01 div span{
+	margin-left: 20px;
+    width: 54px;
+	height: 20px;
+	line-height: 20px;
+	text-align: center;
+	background: #cccccc;
+	margin-top: 10px;
+	color: white;
+}
+/*20*/
+.hgroup02{
+	width: 100%;
+	height: 40px;
+	line-height: 40px;
+	overflow: hidden;
+	background: #f9f9f9;
+}
+.hgroup02 select{
+	width: 60px;
+	height: 24px;
+	margin-top: 8px;
+	border: #DDDDDD 1px solid;
+	float: left;
+	margin-left: 30px;
+}
+.hgroup02 div{
+	float: left;
+	margin-left: 10px;
+}
+.hgroup02 div label{
+	color: #f79100;
+}
+.per_dd_box01 .div05 .yes{
+	display: none;
+}
+.per_dd_box01 .div05 label{
+	float: left;
+	margin: 0 14px;
+	margin-top: 2px;
+}
+.per_dd_box01 .div05{
+	width: 20%;
+}
+.per_dt_box01 .l5{
+	width: 20%;
+}
+.per_mes{
+	display: block;
+}
+.per_dd_box01 .div05 input{
+	float: left;
+	width: 14px;
+	height: 14px;
+	margin-top:13px;
+	margin-right: 6px;
+}
+.per_dd_box01 .div06{
+	width: 40%;
+}
+.per_dt_box01 .l6{
+	width: 40%;
+}
+/*21*/
+.person_data{
+	width: 100%;
+}
+.data_box01{
+	width: 778px;
+	border: #DDDDDD 1px solid;
+	margin-top: 30px;
+}
+.data_box01 dt{
+	width: 100%;
+	height: 100px;
+	border-bottom: #DDDDDD 1px solid;
+}
+.data_box01 img{
+	float: left;
+	margin-top: 32px;
+	margin-left: 26px;
+}
+.data_box01 div{
+	float: left;
+	overflow: hidden;
+	width: 200px;
+	margin-left: 30px;
+	margin-top: 26px;
+}
+.data_box01 div label{
+	float: left;
+	width: 200px;
+	line-height: 24px;
+}
+.data_box01 span{
+	float: right;
+    width: 86px;
+    height: 34px;
+    line-height: 34px;
+    color: white;
+    background: #f79100;
+    border-radius: 4px;
+    font-size: 14px;
+    outline: none;
+    margin-top: 33px;
+    text-align: center;
+    margin-right: 30px;
+}
+.data_box01 dd{
+	text-align: center;
+	overflow: hidden;
+	height: 0px;
+}
+.data_box01 dd h3{
+	font-size: 16px;
+	line-height: 24px;
+	margin-top: 30px;
+}
+.data_box01 dd a{
+	line-height: 24px;
+	color: #999999;
+}
+.data_box01 dd form{
+	width: 240px;
+	height: 40px;
+	margin: auto;
+	overflow: hidden;
+	border: #DDDDDD 1px solid;
+	line-height: 40px;
+	margin-top: 20px;
+	
+}
+.data_box01 dd form .text{
+	float: left;
+	width:150px;
+	padding-left: 10px;
+	height: 40px;
+	color: #999999;
+	border: none;
+	outline: none;
+}
+.data_box01 dd form .sub{
+	float: left;
+    width: 76px;
+    height: 34px;
+    line-height: 34px;
+    color: white;
+    background: #f79100;
+    border-radius: 4px;
+    font-size: 14px;
+    outline: none;
+    text-align: center;
+    border: none;
+    outline: none;
+    margin-top: 3px;
+}
+.data_box02{
+	width: 778px;
+	border: #DDDDDD 1px solid;
+	margin-top: 30px;
+}
+.data_box02 dt{
+	width: 100%;
+	height: 100px;
+	border-bottom: #DDDDDD 1px solid;
+}
+.data_box02 img{
+	float: left;
+	margin-top: 22px;
+	margin-left: 26px;
+}
+.data_box02 div{
+	float: left;
+	overflow: hidden;
+	width: 200px;
+	margin-left: 30px;
+	margin-top: 26px;
+}
+.data_box02 div label{
+	float: left;
+	width: 200px;
+	line-height: 24px;
+}
+.data_box02 span{
+	float: right;
+    width: 86px;
+    height: 34px;
+    line-height: 34px;
+    color: white;
+    background: #f79100;
+    border-radius: 4px;
+    font-size: 14px;
+    outline: none;
+    margin-top: 33px;
+    text-align: center;
+    margin-right: 30px;
+}
+.data_box02 dd{
+	text-align: center;
+	overflow: hidden;
+	height: 0px;
+}
+.data_box02 dd h3{
+	font-size: 16px;
+	line-height: 24px;
+	margin-top: 30px;
+}
+.data_box02 dd a{
+	line-height: 24px;
+	color: #999999;
+}
+.data_box02 dd form{
+	width:316px ;
+	margin: auto;
+	
+}
+.data_box02 dd form label{
+	float: right;
+	line-height: 40px;
+}
+.data_box02 dd form div{
+	float: right;
+	width: 240px;
+	height: 40px;
+	margin: auto;
+	overflow: hidden;
+	border: #DDDDDD 1px solid;
+	line-height: 40px;
+	
+}
+.data_box02 dd form section{
+	width: 100%;
+	float: left;
+	margin-top: 20px;
+}
+.data_box02 dd form div .text{
+	float: left;
+	width:150px;
+	padding-left: 10px;
+	height: 40px;
+	color: #999999;
+	border: none;
+	outline: none;
+}
+.data_box02 dd form div .text02{
+	float: left;
+	width:110px;
+	padding-left: 10px;
+	height: 40px;
+	color: #999999;
+	border: none;
+	outline: none;
+}
+.data_box02 dd form .btn{
+	float: left;
+    width: 110px;
+    height: 34px;
+    line-height: 34px;
+    color: white;
+    background: #f79100;
+    border-radius: 4px;
+    font-size: 14px;
+    outline: none;
+    text-align: center;
+    border: none;
+    outline: none;
+    margin-top: 3px;
+}
+.data_box02 dd form .sub{
+    width: 76px;
+    height: 34px;
+    line-height: 34px;
+    color: white;
+    background: #f79100;
+    border-radius: 4px;
+    font-size: 14px;
+    outline: none;
+    text-align: center;
+    border: none;
+    outline: none;
+    margin: auto;
+    margin-top: 20px;
+    
+}
+/*21*/
+.my_inform{
+	width:100%;
+	margin-bottom: 60px;
+}
+.my_inform li{
+	width: 100%;
+	overflow: hidden;
+	line-height: 40px;
+	font-size: 14px;
+	margin-top: 10px;
+}
+.my_inform li font{
+	float: left;
+	width: 20px;
+	height: 40px;
+	color: #ef0000;
+}
+.my_inform li label{
+	width: 70px;
+	height: 40px;
+	float: left;
+	text-align: right;
+}
+.my_inform .li02 .color{
+	color: #999999;
+}
+.my_inform .li02 input{
+	height: 30px;
+	margin-top: 5px;
+	width: 160px;
+	padding-left: 10px;
+	float: left;
+	line-height: 30px;
+}
+.my_inform .li03 input{
+	float: left;
+	width: 14px;
+	height: 14px;
+	margin: 0 10px;
+	margin-top: 13px;
+}
+.my_inform .li03 span{
+	float: left;
+}
+.my_inform .li05 div{
+	float: left;
+	width: 100px;
+	height: 100px;
+	overflow: hidden;
+}
+.my_inform .li05 input{
+	float: left;
+	margin-top: 57px;
+	margin-left: 30px;
+}
+.my_inform .li06{
+	margin-top: 48px;
+}
+.my_inform .li06 div{
+	float: left;
+	margin-left:48px;
+}
+.my_inform .li06 .div01 img{
+	width: 324px;
+	height: 324px;
+}
+.my_inform .li06 .div02 img{
+	width: 180px;
+	height: 180px;
+}
+.my_inform .li06 .div03 img{
+	width: 100px;
+	height: 100px;
+}
+.my_inform .li06 .div01{
+	width: 324px;
+	height: 344px;	
+}
+.my_inform .li06 .div02{
+	width: 180px;
+	height: 200px;
+	margin-top: 144px;
+}
+.my_inform .li06 .div03{
+	width: 100px;
+	height: 120px;
+	margin-top: 224px;
+}
+.my_inform .li06 div a{
+	position: absolute;
+	z-index: 999;
+	left: 0px;
+	bottom: 0px;
+	text-align: center;
+	width: 100%;
+	display: block;
+	height: 30px;
+	line-height: 48px;
+	
+}
+.my_inform .li06 .div01 a{
+	color: #109bfc;
+}
+/*advice*/
+.your_advice{
+	background: #c3c3c3;
+	position: fixed;
+	right: 50px;
+	top: 360px;	
+	height: 76px;
+	width:76px;
+	text-align: center;
+	display: block;
+}
+.your_advice img{
+	margin-top:12px;
+}
+.your_advice p{
+	font-size: 14px;
+	color: white;
+	line-height: 30px;
+}
+
+/*22change_secret*/
+.change_secret{
+	width:100%;
+	margin-bottom: 60px;
+}
+.change_secret div{
+	width: 100%;
+	overflow: hidden;
+	line-height: 40px;
+	font-size: 14px;
+	margin-top: 10px;
+}
+.change_secret div label{
+	width: 70px;
+	height: 40px;
+	float: left;
+	text-align: right;
+}
+.change_secret div input{
+	height: 30px;
+	margin-top: 5px;
+	width: 160px;
+	padding-left: 10px;
+	float: left;
+	line-height: 30px;
+}
+.change_secret .sub{
+	width: 88px;
+    height: 30px;
+    color: white;
+    border: none;
+    outline: none;
+    background: #f26600;
+    border-radius: 4px;
+    margin-top: 20px;
+    margin-left: 70px;
+    font-size: 14px;
+}
+
+
+
+
+
