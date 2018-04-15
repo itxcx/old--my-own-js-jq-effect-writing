@@ -1,0 +1,1594 @@
+<!doctype html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta http-equiv="Content-Language" content="zh-CN">
+<title>暂无标题</title>
+<meta name="keywords" content="">
+<meta name="description" content="">
+<meta name="copyright" content="" />
+<!--[if IE]>
+   <script src="js/html5.js"></script>
+<![endif]-->
+<script src="js/jquery-1.9.1.min.js"></script>
+<script src="js/common.js"></script>
+<script src="js/jquery.jcarousellite.min.js"></script>
+
+<link href="css/common.css" rel="stylesheet" type="text/css" />
+<link href="css/style.css" rel="stylesheet" type="text/css" />
+
+<script type="text/javascript">
+  $(document).ready(function(){
+	  pcNavDown("#mainnav","li","sel","menu");
+	  pcBannerCartoon(".bannerbox","a","#bannernum","span","numsel",500,5000,true,"#adlast","#adnext");
+    //首页banner 动画
+    //ba();
+    //首页bannner按钮宽度
+    bannerBtn();
+    //首页infos层 tab切换
+    infosTab();
+    //首页class_guid层 tab切换
+    class_guid();
+    //首页 teacher传送带
+    $(".teacher_style .ts_banner").jCarouselLite({
+      btnNext: ".teacher_style .ts_banner .tea_btn .tea_next",
+      btnPrev: ".teacher_style .ts_banner .tea_btn .tea_prev",
+      speed: 800
+    });
+    //首页video tab切换
+    videoTab();
+    //首页 books传送带
+    $(".books .books_banner_wrap .books_banner").jCarouselLite({
+      btnNext: ".books .books_banner_wrap .tea_btn a.tea_next",
+      btnPrev: ".books .books_banner_wrap .tea_btn a.tea_prev",
+      speed: 800,
+      visible:4
+    });
+    //首页 books传送带 宽度调整 li宽高调节 ul宽度
+    ajust();
+    //首页 coop传送带
+   $(".cooperat .main .coop_banner").jCarouselLite({
+      btnNext: ".cooperat .main .coop_btn a.coop_rbtn",
+      btnPrev: ".cooperat .main .coop_btn a.coop_lbtn",
+      speed: 800,
+      visible:8
+    });
+    //首页 弹窗动画
+    hoverQQ();
+    //首页置顶事件
+    stick();
+    //首页 banner插件调整
+    allWidth();
+  });
+</script>
+</head>
+
+<body>
+<header class="indexhead">
+  <div class="main">
+    <div class="top">
+      <div class="top_l">
+        <h1><a href=""><img src="images/logo.png"/></a></h1>
+        <div class="branch">
+          <img src="images/bran.png"/>
+        </div>
+      </div>
+      <div class="top_r">
+        <div class="search">
+          <input type="text" placeholder="请输入搜索内容" class="se"/>
+          <input type="submit" class="su" value=""/>
+        </div>
+        <div class="switch">
+          <ul>
+            <li><a href="">关于我们</a></li>
+            <li><a href="" class="on">首页</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <div class="nav">
+      <ul>
+        <li style="margin-left: 43px;" class="li1"><a href="">遴选选调</a></li>
+        <li class="li1"><a href="">公务员考试</a></li>
+        <li class="li1"><a href="">事业单位</a></li>
+        <li class="li1"><a href="">银行</a></li>
+        <li class="li1"><a href="">农信社</a></li>
+        <li class="li1"><a href="">政法干净</a></li>
+        <li class="li1"><a href="">公安文职  /  大学生村官  /  社区工作者</a></li>
+        <li class="li1"><a href="">教师</a></li>
+        <li class="li1"><a href="">成人教育</a></li>
+      </ul>
+      <div class="cate">
+        <ul>
+          <li class="fir">
+            <h3>招考资讯</h3>
+            <ul>
+              <li class="sec">
+                <a href="">招考公告</a>
+              </li>
+              <li class="sec">
+                <a href="">招考公告</a>
+              </li>
+              <li class="sec">
+                <a href="">招考公告</a>
+              </li>
+              <li class="sec">
+                <a href="">招考公告</a>
+              </li>
+              <li class="sec">
+                <a href="">招考公告</a>
+              </li>
+
+            </ul>
+          </li>
+          <li class="fir">
+            <h3>招考资讯</h3>
+            <ul>
+              <li class="sec">
+                <a href="">招考公告</a>
+              </li>
+              <li class="sec">
+                <a href="">招考公告</a>
+              </li>
+              <li class="sec">
+                <a href="">招考公告</a>
+              </li>
+            </ul>
+          </li>
+          <li class="fir">
+            <h3>招考资讯</h3>
+            <ul>
+              <li class="sec">
+                <a href="">招考公告</a>
+              </li>
+              <li class="sec">
+                <a href="">招考公告</a>
+              </li>
+              <li class="sec">
+                <a href="">招考公告</a>
+              </li>
+            </ul>
+          </li>
+          <li class="fir">
+            <h3>招考资讯</h3>
+            <ul>
+              <li class="sec">
+                <a href="">招考公告</a>
+              </li>
+              <li class="sec">
+                <a href="">招考公告</a>
+              </li>
+              <li class="sec">
+                <a href="">招考公告</a>
+              </li>
+            </ul>
+          </li>
+          <li class="fir">
+            <h3>招考资讯</h3>
+            <ul>
+              <li class="sec">
+                <a href="">招考公告</a>
+              </li>
+              <li class="sec">
+                <a href="">招考公告</a>
+              </li>
+              <li class="sec">
+                <a href="">招考公告</a>
+              </li>
+            </ul>
+          </li>
+          <li class="fir">
+            <h3>招考资讯</h3>
+            <ul>
+              <li class="sec">
+                <a href="">招考公告</a>
+              </li>
+              <li class="sec">
+                <a href="">招考公告</a>
+              </li>
+              <li class="sec">
+                <a href="">招考公告</a>
+              </li>
+            </ul>
+          </li>
+          <li class="fir" style="border:0;">
+            <h3>招考资讯</h3>
+            <ul>
+              <li class="sec">
+                <a href="">招考公告</a>
+              </li>
+              <li class="sec">
+                <a href="">招考公告</a>
+              </li>
+              <li class="sec">
+                <a href="">招考公告</a>
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </div>
+    </div>
+
+  </div>
+</header>
+
+<section class="bannerbox">
+  <menu>
+    <a style="background-image:url(images/photos/index_banner0.jpg);" href="#"></a>
+    <a style="background-image:url(images/photos/index_banner1.jpg);" href="#"></a>
+    <a style="background-image:url(images/photos/index_banner0.jpg);" href="#"></a>
+    <a style="background-image:url(images/photos/index_banner1.jpg);" href="#"></a>
+
+  </menu>
+  <p class="index_banner_main">
+    <b id="adlast"></b>
+    <b id="adnext"></b>
+  </p>
+</section><!--banner END-->
+
+<section class="public_notice">
+  <div class="notice_top">
+    <h3>招考公告</h3>
+    <span></span>
+  </div>
+  <div class="main">
+    <div class="tit">Latest  announcement</div>
+    <div class="con">
+      <div class="detail">
+        <aside>
+          <a href=""><img src="images/notice_online.jpg"/></a>
+        </aside>
+        <article>
+          <div class="time">
+            <span class="one">11-20</span>
+            <span class="two"></span>
+            <span class="thr">2016</span>
+          </div>
+          <h4><a href="">2017国考行测全真模拟预测试卷上线啦!</a></h4>
+          <p>自从《公考时政热点解析》2014版、2015版出版以来，广大考生读者对该书给予了很高的评价，市场反响也超出了我们的预料。这使我们欣喜激动的同时，也让我们“压力山大”。如何让这本书为考生读者提供更多、更有用时政信息，一直是编者心头的关切。</p>
+        </article>
+      </div>
+      <div class="list">
+        <ul>
+          <li>
+            <a href="">2016云南玉溪新平县第一中学提前招聘18名教 ...</a>
+          </li>
+          <li>
+            <a href="">2016云南玉溪新平县第一中学提前招聘18名教 ...</a>
+          </li>
+          <li>
+            <a href="">2016云南玉溪新平县第一中学提前招聘18名教 ...</a>
+          </li>
+          <li>
+            <a href="">2016云南玉溪新平县第一中学提前招聘18名教 ...</a>
+          </li>
+          <li>
+            <a href="">2016云南玉溪新平县第一中学提前招聘18名教 ...</a>
+          </li>
+          <li>
+            <a href="">2016云南玉溪新平县第一中学提前招聘18名教 ...</a>
+          </li>
+          <li>
+            <a href="">2016云南玉溪新平县第一中学提前招聘18名教 ...</a>
+          </li>
+          <li>
+            <a href="">2016云南玉溪新平县第一中学提前招聘18名教 ...</a>
+          </li>
+        </ul>
+      </div>
+      <div class="clear"></div>
+    </div>
+  </div>
+</section>
+
+<section class="infos">
+  <div class="main">
+    <article>
+      <div class="infos_btn">
+        <a href="javascript:void(0)" class="on">招考政策</a>
+        <a href="javascript:void(0)">考试快讯</a>
+      </div>
+      <div class="info_con on">
+        <ul>
+          <li>
+            <a href="">2.7万!"国考"计划招录人数创新高 聚焦三大变化</a>
+            <span> \ 2016-11-20</span>
+          </li>
+          <li>
+            <a href="">2.7万!"国考"计划招录人数创新高 聚焦三大变化</a>
+            <span> \ 2016-11-20</span>
+          </li>
+          <li>
+            <a href="">2.7万!"国考"计划招录人数创新高 聚焦三大变化</a>
+            <span> \ 2016-11-20</span>
+          </li>
+          <li>
+            <a href="">2.7万!"国考"计划招录人数创新高 聚焦三大变化</a>
+            <span> \ 2016-11-20</span>
+          </li>
+          <li>
+            <a href="">2.7万!"国考"计划招录人数创新高 聚焦三大变化</a>
+            <span> \ 2016-11-20</span>
+          </li>
+          <li>
+            <a href="">2.7万!"国考"计划招录人数创新高 聚焦三大变化</a>
+            <span> \ 2016-11-20</span>
+          </li>
+          <li>
+            <a href="">2.7万!"国考"计划招录人数创新高 聚焦三大变化</a>
+            <span> \ 2016-11-20</span>
+          </li>
+          <li>
+            <a href="">2.7万!"国考"计划招录人数创新高 聚焦三大变化</a>
+            <span> \ 2016-11-20</span>
+          </li>
+        </ul>
+      </div>
+      <div class="info_con">
+        <ul>
+          <li>
+            <a href="">2.7万!"国考"计划招录人数创新高 聚焦三大变化</a>
+            <span> \ 2016-11-20</span>
+          </li>
+          <li>
+            <a href="">2.7万!"国考"计划招录人数创新高 聚焦三大变化</a>
+            <span> \ 2016-11-20</span>
+          </li>
+          <li>
+            <a href="">2.7万!"国考"计划招录人数创新高 聚焦三大变化</a>
+            <span> \ 2016-11-20</span>
+          </li>
+          <li>
+            <a href="">2.7万!"国考"计划招录人数创新高 聚焦三大变化</a>
+            <span> \ 2016-11-20</span>
+          </li>
+          <li>
+            <a href="">2.7万!"国考"计划招录人数创新高 聚焦三大变化</a>
+            <span> \ 2016-11-20</span>
+          </li>
+          <li>
+            <a href="">2.7万!"国考"计划招录人数创新高 聚焦三大变化</a>
+            <span> \ 2016-11-20</span>
+          </li>
+          <li>
+            <a href="">2.7万!"国考"计划招录人数创新高 聚焦三大变化</a>
+            <span> \ 2016-11-20</span>
+          </li>
+          <li>
+            <a href="">2.7万!"国考"计划招录人数创新高 聚焦三大变化</a>
+            <span> \ 2016-11-20</span>
+          </li>
+        </ul>
+      </div>
+    </article>
+    <aside>
+      <a href="">查看更多</a>
+    </aside>
+  </div>
+</section>
+<section class="class_guid">
+  <div class="notice_top">
+    <h3>分类辅导</h3>
+    <span></span>
+  </div>
+  <div class="main">
+    <div class="tit">Latest  announcement</div>
+    <div class="guid_btn">
+      <ul>
+        <li style="margin-left: 0;">
+          <a href="javascript:void(0)">行测辅导</a>
+        </li>
+        <li>
+          <a href="javascript:void(0)" class="on">行测辅导</a>
+        </li>
+        <li>
+          <a href="javascript:void(0)">行测辅导</a>
+        </li>
+        <li>
+          <a href="javascript:void(0)">行测辅导</a>
+        </li>
+        <li>
+          <a href="javascript:void(0)">行测辅导</a>
+        </li>
+      </ul>
+    </div>
+    <!--<ul>-->
+    <!--<li>-->
+    <!--<div class="guid_con_top">-->
+    <!--<span class="guid_con_top_date">2016-11-25</span>-->
+    <!--<span class="guid_con_top_icon"></span>-->
+    <!--<a href="" class="guid_con_top_tit">2017国考申论：秸秆“不烧咋整”还要问多久</a>-->
+    <!--</div>-->
+    <!--<p class="guid_con_p">老问题，老不改，不是没思路，就是没决心。与其大费周章地对农民烧秸秆围追堵截，不如多在提高秸秆利用率上想 ...</p>-->
+    <!--<a href="" class="guid_con_more"></a>-->
+    <!--</li>-->
+    <!--<li>-->
+    <!--<div class="guid_con_top">-->
+    <!--<span class="guid_con_top_date">2016-11-25</span>-->
+    <!--<span class="guid_con_top_icon"></span>-->
+    <!--<a href="" class="guid_con_top_tit">2017国考申论：秸秆“不烧咋整”还要问多久</a>-->
+    <!--</div>-->
+    <!--<p class="guid_con_p">老问题，老不改，不是没思路，就是没决心。与其大费周章地对农民烧秸秆围追堵截，不如多在提高秸秆利用率上想 ...</p>-->
+    <!--<a href="" class="guid_con_more"></a>-->
+    <!--</li>-->
+    <!--<li>-->
+    <!--<div class="guid_con_top">-->
+    <!--<span class="guid_con_top_date">2016-11-25</span>-->
+    <!--<span class="guid_con_top_icon"></span>-->
+    <!--<a href="" class="guid_con_top_tit">2017国考申论：秸秆“不烧咋整”还要问多久</a>-->
+    <!--</div>-->
+    <!--<p class="guid_con_p">老问题，老不改，不是没思路，就是没决心。与其大费周章地对农民烧秸秆围追堵截，不如多在提高秸秆利用率上想 ...</p>-->
+    <!--<a href="" class="guid_con_more"></a>-->
+    <!--</li>-->
+    <!--<li>-->
+    <!--<div class="guid_con_top">-->
+    <!--<span class="guid_con_top_date">2016-11-25</span>-->
+    <!--<span class="guid_con_top_icon"></span>-->
+    <!--<a href="" class="guid_con_top_tit">2017国考申论：秸秆“不烧咋整”还要问多久</a>-->
+    <!--</div>-->
+    <!--<p class="guid_con_p">老问题，老不改，不是没思路，就是没决心。与其大费周章地对农民烧秸秆围追堵截，不如多在提高秸秆利用率上想 ...</p>-->
+    <!--<a href="" class="guid_con_more"></a>-->
+    <!--</li>-->
+    <!--<div class="clear"></div>-->
+    <!--</ul>-->
+    <div class="guid_con">
+      <ul>
+        <li>
+          <div class="video_pic">
+            <a href=""><img src="images/video.jpg"/></a>
+            <div class="video_layer">
+              <a href=""></a>
+            </div>
+          </div>
+          <div class="video_tit">
+            <h4><a href="">半月谈1210时事热点特色课程</a></h4>
+            <div class="video_tit_bottom">
+              <span class="video_tit_icon"></span>
+              <span class="video_tit_times">4万</span>
+            </div>
+          </div>
+        </li>
+        <li>
+          <div class="video_pic">
+            <a href=""><img src="images/video.jpg"/></a>
+            <div class="video_layer">
+              <a href=""></a>
+            </div>
+          </div>
+          <div class="video_tit">
+            <h4><a href="">半月谈1210时事热点特色课程</a></h4>
+            <div class="video_tit_bottom">
+              <span class="video_tit_icon"></span>
+              <span class="video_tit_times">4万</span>
+            </div>
+          </div>
+        </li>
+        <li>
+          <div class="video_pic">
+            <a href=""><img src="images/video.jpg"/></a>
+            <div class="video_layer">
+              <a href=""></a>
+            </div>
+          </div>
+          <div class="video_tit">
+            <h4><a href="">半月谈1210时事热点特色课程</a></h4>
+            <div class="video_tit_bottom">
+              <span class="video_tit_icon"></span>
+              <span class="video_tit_times">4万</span>
+            </div>
+          </div>
+        </li>
+        <li>
+          <div class="video_pic">
+            <a href=""><img src="images/video.jpg"/></a>
+            <div class="video_layer">
+              <a href=""></a>
+            </div>
+          </div>
+          <div class="video_tit">
+            <h4><a href="">半月谈1210时事热点特色课程</a></h4>
+            <div class="video_tit_bottom">
+              <span class="video_tit_icon"></span>
+              <span class="video_tit_times">4万</span>
+            </div>
+          </div>
+        </li>
+        <li>
+          <div class="video_pic">
+            <a href=""><img src="images/video.jpg"/></a>
+            <div class="video_layer">
+              <a href=""></a>
+            </div>
+          </div>
+          <div class="video_tit">
+            <h4><a href="">半月谈1210时事热点特色课程</a></h4>
+            <div class="video_tit_bottom">
+              <span class="video_tit_icon"></span>
+              <span class="video_tit_times">4万</span>
+            </div>
+          </div>
+        </li>
+        <li>
+          <div class="video_pic">
+            <a href=""><img src="images/video.jpg"/></a>
+            <div class="video_layer">
+              <a href=""></a>
+            </div>
+          </div>
+          <div class="video_tit">
+            <h4><a href="">半月谈1210时事热点特色课程</a></h4>
+            <div class="video_tit_bottom">
+              <span class="video_tit_icon"></span>
+              <span class="video_tit_times">4万</span>
+            </div>
+          </div>
+        </li>
+        <li>
+          <div class="video_pic">
+            <a href=""><img src="images/video.jpg"/></a>
+            <div class="video_layer">
+              <a href=""></a>
+            </div>
+          </div>
+          <div class="video_tit">
+            <h4><a href="">半月谈1210时事热点特色课程</a></h4>
+            <div class="video_tit_bottom">
+              <span class="video_tit_icon"></span>
+              <span class="video_tit_times">4万</span>
+            </div>
+          </div>
+        </li>
+        <li>
+          <div class="video_pic">
+            <a href=""><img src="images/video.jpg"/></a>
+            <div class="video_layer">
+              <a href=""></a>
+            </div>
+          </div>
+          <div class="video_tit">
+            <h4><a href="">半月谈1210时事热点特色课程</a></h4>
+            <div class="video_tit_bottom">
+              <span class="video_tit_icon"></span>
+              <span class="video_tit_times">4万</span>
+            </div>
+          </div>
+        </li>
+      </ul>
+
+    </div>
+    <div class="guid_con on">
+      <ul>
+        <li>
+          <div class="video_pic">
+            <a href=""><img src="images/video.jpg"/></a>
+            <div class="video_layer">
+              <a href=""></a>
+            </div>
+          </div>
+          <div class="video_tit">
+            <h4><a href="">半月谈1210时事热点特色课程</a></h4>
+            <div class="video_tit_bottom">
+              <span class="video_tit_icon"></span>
+              <span class="video_tit_times">4万</span>
+            </div>
+          </div>
+        </li>
+        <li>
+          <div class="video_pic">
+            <a href=""><img src="images/video.jpg"/></a>
+            <div class="video_layer">
+              <a href=""></a>
+            </div>
+          </div>
+          <div class="video_tit">
+            <h4><a href="">半月谈1210时事热点特色课程</a></h4>
+            <div class="video_tit_bottom">
+              <span class="video_tit_icon"></span>
+              <span class="video_tit_times">4万</span>
+            </div>
+          </div>
+        </li>
+        <li>
+          <div class="video_pic">
+            <a href=""><img src="images/video.jpg"/></a>
+            <div class="video_layer">
+              <a href=""></a>
+            </div>
+          </div>
+          <div class="video_tit">
+            <h4><a href="">半月谈1210时事热点特色课程</a></h4>
+            <div class="video_tit_bottom">
+              <span class="video_tit_icon"></span>
+              <span class="video_tit_times">4万</span>
+            </div>
+          </div>
+        </li>
+        <li>
+          <div class="video_pic">
+            <a href=""><img src="images/video.jpg"/></a>
+            <div class="video_layer">
+              <a href=""></a>
+            </div>
+          </div>
+          <div class="video_tit">
+            <h4><a href="">半月谈1210时事热点特色课程</a></h4>
+            <div class="video_tit_bottom">
+              <span class="video_tit_icon"></span>
+              <span class="video_tit_times">4万</span>
+            </div>
+          </div>
+        </li>
+        <li>
+          <div class="video_pic">
+            <a href=""><img src="images/video.jpg"/></a>
+            <div class="video_layer">
+              <a href=""></a>
+            </div>
+          </div>
+          <div class="video_tit">
+            <h4><a href="">半月谈1210时事热点特色课程</a></h4>
+            <div class="video_tit_bottom">
+              <span class="video_tit_icon"></span>
+              <span class="video_tit_times">4万</span>
+            </div>
+          </div>
+        </li>
+        <li>
+          <div class="video_pic">
+            <a href=""><img src="images/video.jpg"/></a>
+            <div class="video_layer">
+              <a href=""></a>
+            </div>
+          </div>
+          <div class="video_tit">
+            <h4><a href="">半月谈1210时事热点特色课程</a></h4>
+            <div class="video_tit_bottom">
+              <span class="video_tit_icon"></span>
+              <span class="video_tit_times">4万</span>
+            </div>
+          </div>
+        </li>
+        <li>
+          <div class="video_pic">
+            <a href=""><img src="images/video.jpg"/></a>
+            <div class="video_layer">
+              <a href=""></a>
+            </div>
+          </div>
+          <div class="video_tit">
+            <h4><a href="">半月谈1210时事热点特色课程</a></h4>
+            <div class="video_tit_bottom">
+              <span class="video_tit_icon"></span>
+              <span class="video_tit_times">4万</span>
+            </div>
+          </div>
+        </li>
+        <li>
+          <div class="video_pic">
+            <a href=""><img src="images/video.jpg"/></a>
+            <div class="video_layer">
+              <a href=""></a>
+            </div>
+          </div>
+          <div class="video_tit">
+            <h4><a href="">半月谈1210时事热点特色课程</a></h4>
+            <div class="video_tit_bottom">
+              <span class="video_tit_icon"></span>
+              <span class="video_tit_times">4万</span>
+            </div>
+          </div>
+        </li>
+      </ul>
+
+    </div>
+    <div class="guid_con">
+      <ul>
+        <li>
+          <div class="video_pic">
+            <a href=""><img src="images/video.jpg"/></a>
+            <div class="video_layer">
+              <a href=""></a>
+            </div>
+          </div>
+          <div class="video_tit">
+            <h4><a href="">半月谈1210时事热点特色课程</a></h4>
+            <div class="video_tit_bottom">
+              <span class="video_tit_icon"></span>
+              <span class="video_tit_times">4万</span>
+            </div>
+          </div>
+        </li>
+        <li>
+          <div class="video_pic">
+            <a href=""><img src="images/video.jpg"/></a>
+            <div class="video_layer">
+              <a href=""></a>
+            </div>
+          </div>
+          <div class="video_tit">
+            <h4><a href="">半月谈1210时事热点特色课程</a></h4>
+            <div class="video_tit_bottom">
+              <span class="video_tit_icon"></span>
+              <span class="video_tit_times">4万</span>
+            </div>
+          </div>
+        </li>
+        <li>
+          <div class="video_pic">
+            <a href=""><img src="images/video.jpg"/></a>
+            <div class="video_layer">
+              <a href=""></a>
+            </div>
+          </div>
+          <div class="video_tit">
+            <h4><a href="">半月谈1210时事热点特色课程</a></h4>
+            <div class="video_tit_bottom">
+              <span class="video_tit_icon"></span>
+              <span class="video_tit_times">4万</span>
+            </div>
+          </div>
+        </li>
+        <li>
+          <div class="video_pic">
+            <a href=""><img src="images/video.jpg"/></a>
+            <div class="video_layer">
+              <a href=""></a>
+            </div>
+          </div>
+          <div class="video_tit">
+            <h4><a href="">半月谈1210时事热点特色课程</a></h4>
+            <div class="video_tit_bottom">
+              <span class="video_tit_icon"></span>
+              <span class="video_tit_times">4万</span>
+            </div>
+          </div>
+        </li>
+        <li>
+          <div class="video_pic">
+            <a href=""><img src="images/video.jpg"/></a>
+            <div class="video_layer">
+              <a href=""></a>
+            </div>
+          </div>
+          <div class="video_tit">
+            <h4><a href="">半月谈1210时事热点特色课程</a></h4>
+            <div class="video_tit_bottom">
+              <span class="video_tit_icon"></span>
+              <span class="video_tit_times">4万</span>
+            </div>
+          </div>
+        </li>
+        <li>
+          <div class="video_pic">
+            <a href=""><img src="images/video.jpg"/></a>
+            <div class="video_layer">
+              <a href=""></a>
+            </div>
+          </div>
+          <div class="video_tit">
+            <h4><a href="">半月谈1210时事热点特色课程</a></h4>
+            <div class="video_tit_bottom">
+              <span class="video_tit_icon"></span>
+              <span class="video_tit_times">4万</span>
+            </div>
+          </div>
+        </li>
+        <li>
+          <div class="video_pic">
+            <a href=""><img src="images/video.jpg"/></a>
+            <div class="video_layer">
+              <a href=""></a>
+            </div>
+          </div>
+          <div class="video_tit">
+            <h4><a href="">半月谈1210时事热点特色课程</a></h4>
+            <div class="video_tit_bottom">
+              <span class="video_tit_icon"></span>
+              <span class="video_tit_times">4万</span>
+            </div>
+          </div>
+        </li>
+        <li>
+          <div class="video_pic">
+            <a href=""><img src="images/video.jpg"/></a>
+            <div class="video_layer">
+              <a href=""></a>
+            </div>
+          </div>
+          <div class="video_tit">
+            <h4><a href="">半月谈1210时事热点特色课程</a></h4>
+            <div class="video_tit_bottom">
+              <span class="video_tit_icon"></span>
+              <span class="video_tit_times">4万</span>
+            </div>
+          </div>
+        </li>
+      </ul>
+
+    </div>
+    <div class="guid_con">
+      <ul>
+        <li>
+          <div class="video_pic">
+            <a href=""><img src="images/video.jpg"/></a>
+            <div class="video_layer">
+              <a href=""></a>
+            </div>
+          </div>
+          <div class="video_tit">
+            <h4><a href="">半月谈1210时事热点特色课程</a></h4>
+            <div class="video_tit_bottom">
+              <span class="video_tit_icon"></span>
+              <span class="video_tit_times">4万</span>
+            </div>
+          </div>
+        </li>
+        <li>
+          <div class="video_pic">
+            <a href=""><img src="images/video.jpg"/></a>
+            <div class="video_layer">
+              <a href=""></a>
+            </div>
+          </div>
+          <div class="video_tit">
+            <h4><a href="">半月谈1210时事热点特色课程</a></h4>
+            <div class="video_tit_bottom">
+              <span class="video_tit_icon"></span>
+              <span class="video_tit_times">4万</span>
+            </div>
+          </div>
+        </li>
+        <li>
+          <div class="video_pic">
+            <a href=""><img src="images/video.jpg"/></a>
+            <div class="video_layer">
+              <a href=""></a>
+            </div>
+          </div>
+          <div class="video_tit">
+            <h4><a href="">半月谈1210时事热点特色课程</a></h4>
+            <div class="video_tit_bottom">
+              <span class="video_tit_icon"></span>
+              <span class="video_tit_times">4万</span>
+            </div>
+          </div>
+        </li>
+        <li>
+          <div class="video_pic">
+            <a href=""><img src="images/video.jpg"/></a>
+            <div class="video_layer">
+              <a href=""></a>
+            </div>
+          </div>
+          <div class="video_tit">
+            <h4><a href="">半月谈1210时事热点特色课程</a></h4>
+            <div class="video_tit_bottom">
+              <span class="video_tit_icon"></span>
+              <span class="video_tit_times">4万</span>
+            </div>
+          </div>
+        </li>
+        <li>
+          <div class="video_pic">
+            <a href=""><img src="images/video.jpg"/></a>
+            <div class="video_layer">
+              <a href=""></a>
+            </div>
+          </div>
+          <div class="video_tit">
+            <h4><a href="">半月谈1210时事热点特色课程</a></h4>
+            <div class="video_tit_bottom">
+              <span class="video_tit_icon"></span>
+              <span class="video_tit_times">4万</span>
+            </div>
+          </div>
+        </li>
+        <li>
+          <div class="video_pic">
+            <a href=""><img src="images/video.jpg"/></a>
+            <div class="video_layer">
+              <a href=""></a>
+            </div>
+          </div>
+          <div class="video_tit">
+            <h4><a href="">半月谈1210时事热点特色课程</a></h4>
+            <div class="video_tit_bottom">
+              <span class="video_tit_icon"></span>
+              <span class="video_tit_times">4万</span>
+            </div>
+          </div>
+        </li>
+        <li>
+          <div class="video_pic">
+            <a href=""><img src="images/video.jpg"/></a>
+            <div class="video_layer">
+              <a href=""></a>
+            </div>
+          </div>
+          <div class="video_tit">
+            <h4><a href="">半月谈1210时事热点特色课程</a></h4>
+            <div class="video_tit_bottom">
+              <span class="video_tit_icon"></span>
+              <span class="video_tit_times">4万</span>
+            </div>
+          </div>
+        </li>
+        <li>
+          <div class="video_pic">
+            <a href=""><img src="images/video.jpg"/></a>
+            <div class="video_layer">
+              <a href=""></a>
+            </div>
+          </div>
+          <div class="video_tit">
+            <h4><a href="">半月谈1210时事热点特色课程</a></h4>
+            <div class="video_tit_bottom">
+              <span class="video_tit_icon"></span>
+              <span class="video_tit_times">4万</span>
+            </div>
+          </div>
+        </li>
+      </ul>
+
+    </div>
+    <div class="guid_con">
+      <ul>
+        <li>
+          <div class="video_pic">
+            <a href=""><img src="images/video.jpg"/></a>
+            <div class="video_layer">
+              <a href=""></a>
+            </div>
+          </div>
+          <div class="video_tit">
+            <h4><a href="">半月谈1210时事热点特色课程</a></h4>
+            <div class="video_tit_bottom">
+              <span class="video_tit_icon"></span>
+              <span class="video_tit_times">4万</span>
+            </div>
+          </div>
+        </li>
+        <li>
+          <div class="video_pic">
+            <a href=""><img src="images/video.jpg"/></a>
+            <div class="video_layer">
+              <a href=""></a>
+            </div>
+          </div>
+          <div class="video_tit">
+            <h4><a href="">半月谈1210时事热点特色课程</a></h4>
+            <div class="video_tit_bottom">
+              <span class="video_tit_icon"></span>
+              <span class="video_tit_times">4万</span>
+            </div>
+          </div>
+        </li>
+        <li>
+          <div class="video_pic">
+            <a href=""><img src="images/video.jpg"/></a>
+            <div class="video_layer">
+              <a href=""></a>
+            </div>
+          </div>
+          <div class="video_tit">
+            <h4><a href="">半月谈1210时事热点特色课程</a></h4>
+            <div class="video_tit_bottom">
+              <span class="video_tit_icon"></span>
+              <span class="video_tit_times">4万</span>
+            </div>
+          </div>
+        </li>
+        <li>
+          <div class="video_pic">
+            <a href=""><img src="images/video.jpg"/></a>
+            <div class="video_layer">
+              <a href=""></a>
+            </div>
+          </div>
+          <div class="video_tit">
+            <h4><a href="">半月谈1210时事热点特色课程</a></h4>
+            <div class="video_tit_bottom">
+              <span class="video_tit_icon"></span>
+              <span class="video_tit_times">4万</span>
+            </div>
+          </div>
+        </li>
+        <li>
+          <div class="video_pic">
+            <a href=""><img src="images/video.jpg"/></a>
+            <div class="video_layer">
+              <a href=""></a>
+            </div>
+          </div>
+          <div class="video_tit">
+            <h4><a href="">半月谈1210时事热点特色课程</a></h4>
+            <div class="video_tit_bottom">
+              <span class="video_tit_icon"></span>
+              <span class="video_tit_times">4万</span>
+            </div>
+          </div>
+        </li>
+        <li>
+          <div class="video_pic">
+            <a href=""><img src="images/video.jpg"/></a>
+            <div class="video_layer">
+              <a href=""></a>
+            </div>
+          </div>
+          <div class="video_tit">
+            <h4><a href="">半月谈1210时事热点特色课程</a></h4>
+            <div class="video_tit_bottom">
+              <span class="video_tit_icon"></span>
+              <span class="video_tit_times">4万</span>
+            </div>
+          </div>
+        </li>
+        <li>
+          <div class="video_pic">
+            <a href=""><img src="images/video.jpg"/></a>
+            <div class="video_layer">
+              <a href=""></a>
+            </div>
+          </div>
+          <div class="video_tit">
+            <h4><a href="">半月谈1210时事热点特色课程</a></h4>
+            <div class="video_tit_bottom">
+              <span class="video_tit_icon"></span>
+              <span class="video_tit_times">4万</span>
+            </div>
+          </div>
+        </li>
+        <li>
+          <div class="video_pic">
+            <a href=""><img src="images/video.jpg"/></a>
+            <div class="video_layer">
+              <a href=""></a>
+            </div>
+          </div>
+          <div class="video_tit">
+            <h4><a href="">半月谈1210时事热点特色课程</a></h4>
+            <div class="video_tit_bottom">
+              <span class="video_tit_icon"></span>
+              <span class="video_tit_times">4万</span>
+            </div>
+          </div>
+        </li>
+      </ul>
+
+    </div>
+
+    <a href="" class="guid_more">查看更多</a>
+  </div>
+</section>
+<section class="teacher_style">
+  <div class="ts_tit">
+    <h3>名师风采</h3>
+    <p>我们拥有雄厚的师资力量</p>
+  </div>
+  <div class="ts_banner">
+    <ul>
+      <li>
+        <aside>
+          <a href="">
+            <img src="images/teacher.jpg"/>
+          </a>
+        </aside>
+        <article>
+          <h4>
+            <a href="">李梦圆</a>
+          </h4>
+          <p>李梦圆，清华大学哲学硕士，半月谈专栏作家，主讲申论和面试。曾担任北京市多家部队高端定制班的特约名师，授课思路清晰严谨，教学经验丰富，理论功底扎实，学识渊博，深入浅出，擅长以轻松幽默、通俗易懂的方式帮助学员快速掌握答题方法和技巧，深受广大军转干部的好评。</p>
+        </article>
+      </li>
+      <li>
+        <aside>
+          <a href="">
+            <img src="images/teacher.jpg"/>
+          </a>
+        </aside>
+        <article>
+          <h4>
+            <a href="">李梦圆</a>
+          </h4>
+          <p>李梦圆，清华大学哲学硕士，半月谈专栏作家，主讲申论和面试。曾担任北京市多家部队高端定制班的特约名师，授课思路清晰严谨，教学经验丰富，理论功底扎实，学识渊博，深入浅出，擅长以轻松幽默、通俗易懂的方式帮助学员快速掌握答题方法和技巧，深受广大军转干部的好评。</p>
+        </article>
+      </li>
+      <li>
+        <aside>
+          <a href="">
+            <img src="images/teacher.jpg"/>
+          </a>
+        </aside>
+        <article>
+          <h4>
+            <a href="">李梦圆</a>
+          </h4>
+          <p>李梦圆，清华大学哲学硕士，半月谈专栏作家，主讲申论和面试。曾担任北京市多家部队高端定制班的特约名师，授课思路清晰严谨，教学经验丰富，理论功底扎实，学识渊博，深入浅出，擅长以轻松幽默、通俗易懂的方式帮助学员快速掌握答题方法和技巧，深受广大军转干部的好评。</p>
+        </article>
+      </li>
+
+    </ul>
+    <div class="tea_btn">
+      <a href="javascript:void(0)" class="tea_prev"></a>
+      <a href="javascript:void(0)" class="tea_next"></a>
+    </div>
+  </div>
+</section>
+<section class="video">
+  <div class="notice_top">
+    <h3>视频</h3>
+    <span></span>
+  </div>
+  <div class="main">
+    <div class="tit">Classification guidance</div>
+    <div class="guid_btn">
+      <ul>
+        <li style="margin-left: 0;">
+          <a href="javascript:void(0)" class="on">免费视频</a>
+        </li>
+        <li>
+          <a href="javascript:void(0)">免费试听</a>
+        </li>
+      </ul>
+    </div>
+    <div class="clear"></div>
+    <div class="video_cate on">
+      <ul>
+        <li>
+          <div class="video_pic">
+            <img src="images/video.jpg"/>
+            <div class="video_layer">
+              <a href=""></a>
+            </div>
+          </div>
+          <div class="video_tit">
+            <h4><a href="">半月谈1210时事热点特色课程</a></h4>
+            <div class="video_tit_bottom">
+              <span class="video_tit_icon"></span>
+              <span class="video_tit_times">4万</span>
+            </div>
+          </div>
+        </li>
+        <li>
+          <div class="video_pic">
+            <img src="images/video.jpg"/>
+            <div class="video_layer">
+              <a href=""></a>
+            </div>
+          </div>
+          <div class="video_tit">
+            <h4><a href="">半月谈1210时事热点特色课程</a></h4>
+            <div class="video_tit_bottom">
+              <span class="video_tit_icon"></span>
+              <span class="video_tit_times">4万</span>
+            </div>
+          </div>
+        </li>
+        <li>
+          <div class="video_pic">
+            <img src="images/video.jpg"/>
+            <div class="video_layer">
+              <a href=""></a>
+            </div>
+          </div>
+          <div class="video_tit">
+            <h4><a href="">半月谈1210时事热点特色课程</a></h4>
+            <div class="video_tit_bottom">
+              <span class="video_tit_icon"></span>
+              <span class="video_tit_times">4万</span>
+            </div>
+          </div>
+        </li>
+        <li>
+          <div class="video_pic">
+            <img src="images/video.jpg"/>
+            <div class="video_layer">
+              <a href=""></a>
+            </div>
+          </div>
+          <div class="video_tit">
+            <h4><a href="">半月谈1210时事热点特色课程</a></h4>
+            <div class="video_tit_bottom">
+              <span class="video_tit_icon"></span>
+              <span class="video_tit_times">4万</span>
+            </div>
+          </div>
+        </li>
+        <li>
+          <div class="video_pic">
+            <img src="images/video.jpg"/>
+            <div class="video_layer">
+              <a href=""></a>
+            </div>
+          </div>
+          <div class="video_tit">
+            <h4><a href="">半月谈1210时事热点特色课程</a></h4>
+            <div class="video_tit_bottom">
+              <span class="video_tit_icon"></span>
+              <span class="video_tit_times">4万</span>
+            </div>
+          </div>
+        </li>
+        <li>
+          <div class="video_pic">
+            <img src="images/video.jpg"/>
+            <div class="video_layer">
+              <a href=""></a>
+            </div>
+          </div>
+          <div class="video_tit">
+            <h4><a href="">半月谈1210时事热点特色课程</a></h4>
+            <div class="video_tit_bottom">
+              <span class="video_tit_icon"></span>
+              <span class="video_tit_times">4万</span>
+            </div>
+          </div>
+        </li>
+        <li>
+          <div class="video_pic">
+            <img src="images/video.jpg"/>
+            <div class="video_layer">
+              <a href=""></a>
+            </div>
+          </div>
+          <div class="video_tit">
+            <h4><a href="">半月谈1210时事热点特色课程</a></h4>
+            <div class="video_tit_bottom">
+              <span class="video_tit_icon"></span>
+              <span class="video_tit_times">4万</span>
+            </div>
+          </div>
+        </li>
+        <li>
+          <div class="video_pic">
+            <img src="images/video.jpg"/>
+            <div class="video_layer">
+              <a href=""></a>
+            </div>
+          </div>
+          <div class="video_tit">
+            <h4><a href="">半月谈1210时事热点特色课程</a></h4>
+            <div class="video_tit_bottom">
+              <span class="video_tit_icon"></span>
+              <span class="video_tit_times">4万</span>
+            </div>
+          </div>
+        </li>
+      </ul>
+    </div>
+    <div class="video_cate">
+      <ul>
+        <li>
+          <div class="video_pic">
+            <img src="images/video.jpg"/>
+            <div class="video_layer">
+              <a href=""></a>
+            </div>
+          </div>
+          <div class="video_tit">
+            <h4><a href="">半月谈1210时事热点特色课程</a></h4>
+            <div class="video_tit_bottom">
+              <span class="video_tit_icon"></span>
+              <span class="video_tit_times">4万</span>
+            </div>
+          </div>
+        </li>
+        <li>
+          <div class="video_pic">
+            <img src="images/video.jpg"/>
+            <div class="video_layer">
+              <a href=""></a>
+            </div>
+          </div>
+          <div class="video_tit">
+            <h4><a href="">半月谈1210时事热点特色课程</a></h4>
+            <div class="video_tit_bottom">
+              <span class="video_tit_icon"></span>
+              <span class="video_tit_times">4万</span>
+            </div>
+          </div>
+        </li>
+        <li>
+          <div class="video_pic">
+            <img src="images/video.jpg"/>
+            <div class="video_layer">
+              <a href=""></a>
+            </div>
+          </div>
+          <div class="video_tit">
+            <h4><a href="">半月谈1210时事热点特色课程</a></h4>
+            <div class="video_tit_bottom">
+              <span class="video_tit_icon"></span>
+              <span class="video_tit_times">4万</span>
+            </div>
+          </div>
+        </li>
+        <li>
+          <div class="video_pic">
+            <img src="images/video.jpg"/>
+            <div class="video_layer">
+              <a href=""></a>
+            </div>
+          </div>
+          <div class="video_tit">
+            <h4><a href="">半月谈1210时事热点特色课程</a></h4>
+            <div class="video_tit_bottom">
+              <span class="video_tit_icon"></span>
+              <span class="video_tit_times">4万</span>
+            </div>
+          </div>
+        </li>
+        <li>
+          <div class="video_pic">
+            <img src="images/video.jpg"/>
+            <div class="video_layer">
+              <a href=""></a>
+            </div>
+          </div>
+          <div class="video_tit">
+            <h4><a href="">半月谈1210时事热点特色课程</a></h4>
+            <div class="video_tit_bottom">
+              <span class="video_tit_icon"></span>
+              <span class="video_tit_times">4万</span>
+            </div>
+          </div>
+        </li>
+        <li>
+          <div class="video_pic">
+            <img src="images/video.jpg"/>
+            <div class="video_layer">
+              <a href=""></a>
+            </div>
+          </div>
+          <div class="video_tit">
+            <h4><a href="">半月谈1210时事热点特色课程</a></h4>
+            <div class="video_tit_bottom">
+              <span class="video_tit_icon"></span>
+              <span class="video_tit_times">4万</span>
+            </div>
+          </div>
+        </li>
+        <li>
+          <div class="video_pic">
+            <img src="images/video.jpg"/>
+            <div class="video_layer">
+              <a href=""></a>
+            </div>
+          </div>
+          <div class="video_tit">
+            <h4><a href="">半月谈1210时事热点特色课程</a></h4>
+            <div class="video_tit_bottom">
+              <span class="video_tit_icon"></span>
+              <span class="video_tit_times">4万</span>
+            </div>
+          </div>
+        </li>
+        <li>
+          <div class="video_pic">
+            <img src="images/video.jpg"/>
+            <div class="video_layer">
+              <a href=""></a>
+            </div>
+          </div>
+          <div class="video_tit">
+            <h4><a href="">半月谈1210时事热点特色课程</a></h4>
+            <div class="video_tit_bottom">
+              <span class="video_tit_icon"></span>
+              <span class="video_tit_times">4万</span>
+            </div>
+          </div>
+        </li>
+      </ul>
+    </div>
+    <a href="" class="guid_more">查看更多</a>
+  </div>
+</section>
+<section class="books">
+  <div class="ts_tit">
+    <h3>精品图书</h3>
+    <p>半月谈杂志社出品</p>
+  </div>
+  <div class="books_banner_wrap">
+    <div class="books_banner">
+      <ul>
+        <li>
+          <div class="books_pic">
+            <a href=""><img src="images/books_pic.jpg"/></a>
+          </div>
+          <div class="books_tit"><a href="">半月谈2017年品读</a></div>
+        </li>
+        <li>
+          <div class="books_pic">
+            <a href=""><img src="images/books_pic.jpg"/></a>
+          </div>
+          <div class="books_tit"><a href="">半月谈2017年品读</a></div>
+        </li>
+        <li>
+          <div class="books_pic">
+            <a href=""><img src="images/books_pic.jpg"/></a>
+          </div>
+          <div class="books_tit"><a href="">半月谈2017年品读</a></div>
+        </li>
+        <li>
+          <div class="books_pic">
+            <a href=""><img src="images/books_pic.jpg"/></a>
+          </div>
+          <div class="books_tit"><a href="">半月谈2017年品读</a></div>
+        </li>
+      </ul>
+    </div>
+    <div class="tea_btn">
+      <a href="javascript:void(0)" class="tea_prev"></a>
+      <a href="javascript:void(0)" class="tea_next"></a>
+    </div>
+  </div>
+</section>
+<section class="cooperat">
+  <div class="main">
+    <div class="coop_banner">
+      <ul>
+        <li>
+          <a href="javascript:void(0)">
+            <img src="images/co0.png"/>
+          </a>
+        </li>
+        <li>
+          <a href="javascript:void(0)">
+            <img src="images/co1.png"/>
+          </a>
+        </li>
+        <li>
+          <a href="javascript:void(0)">
+            <img src="images/co2.png"/>
+          </a>
+        </li>
+        <li>
+          <a href="javascript:void(0)">
+            <img src="images/co3.png"/>
+          </a>
+        </li>
+        <li>
+          <a href="javascript:void(0)">
+            <img src="images/co4.png"/>
+          </a>
+        </li>
+        <li>
+          <a href="javascript:void(0)">
+            <img src="images/co5.png"/>
+          </a>
+        </li>
+        <li>
+          <a href="javascript:void(0)">
+            <img src="images/co6.png"/>
+          </a>
+        </li>
+        <li>
+          <a href="javascript:void(0)">
+            <img src="images/co7.png"/>
+          </a>
+        </li>
+      </ul>
+    </div>
+    <div class="coop_btn">
+      <a href="javascript:void(0)" class="coop_lbtn"></a>
+      <a href="javascript:void(0)" class="coop_rbtn"></a>
+    </div>
+  </div>
+</section>
+<footer class="index_footer">
+    <div class="contact">
+      <div class="main">
+        <div class="contact_icon">
+          <h3 class="ch">联系</h3>
+          <h3 class="en">CONTACT</h3>
+          <div class="contact_icon_list">
+            <ul>
+              <li>
+                <a href="" class="wx">
+                  <div class="qrcode2">
+                    <img src="images/qrcode.png"/>
+                  </div>
+                </a>
+              </li>
+              <li>
+                <a href="" class="qq"></a>
+              </li>
+              <li>
+                <a href="" class="wb"></a>
+              </li>
+              <div class="clear"></div>
+            </ul>
+          </div>
+          <div class="contact_list">
+            <ul>
+              <li>
+                <a href="">网站首页</a>
+              </li>
+              <li>
+                <a href="">网站首页</a>
+              </li>
+              <li>
+                <a href="">网站首页</a>
+              </li>
+              <li>
+                <a href="">网站首页</a>
+              </li>
+              <li>
+                <a href="">网站首页</a>
+              </li>
+              <li>
+                <a href="">网站首页</a>
+              </li>
+              <li>
+                <a href="">网站首页</a>
+              </li>
+              <li>
+                <a href="">网站首页</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <div class="contact_way">
+          <div class="ways">
+            <h3>联系方式</h3>
+            <p>联系电话：0871-65123456</p>
+            <p>联系人：杨磊</p>
+            <p>传真：0871-65123456</p>
+            <p>邮箱：12345678@qq.com</p>
+            <p>地址：云南昆明五华区昌源中路与昆瑞路交叉口</p>
+            <p>邮编：650000</p>
+          </div>
+          <div class="qrcode">
+            <div class="cate">
+              <img src="images/qrcode.png"/>
+              <span>半月谈，孔老师</span>
+            </div>
+            <div class="cate">
+              <img src="images/qrcode.png"/>
+              <span>扫一扫，关注我们</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="copyright">
+      <div class="main">
+        <div class="copy_l">
+          <p>Copyright (C) 云南问政教育信息咨询有限公司 &nbsp;&nbsp;&nbsp;&nbsp;版权所有 &nbsp;&nbsp;&nbsp;&nbsp;滇ICP备12345678号</p>
+        </div>
+        <div class="copy_r">
+          <a href="" class="sitemap">网站地图</a>
+          <span> &nbsp;&nbsp;&nbsp;&nbsp;<a href="">网站建设</a>支持：<a href="">天度网络</a></span>
+        </div>
+      </div>
+    </div>
+</footer>
+<aside class="hover">
+  <div class="hover_btn">
+    <ul>
+      <li class="hover_btn_qq">
+        <a href="javascript:void(0)" class="a"></a>
+        <div class="hover_btn_qq_con">
+          <div class="top">
+            <span class="fir">在线咨询</span>
+            <span class="sec"></span>
+          </div>
+          <div class="bottom">
+            <ul>
+              <li><a href="" class="qq_num">212345678</a></li>
+              <li class="phone_num">
+                <div class="top_inner">咨询热线</div>
+                <div class="bottom">0871-65123456</div>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </li>
+      <li class="hover_btn_top">
+        <a href="javascript:void(0);"></a>
+      </li>
+    </ul>
+  </div>
+</aside>
+</body>
+</html>
