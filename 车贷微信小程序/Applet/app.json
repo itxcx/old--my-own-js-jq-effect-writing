@@ -1,0 +1,108 @@
+{
+  "pages": [        
+   
+    "pages/welcome/welcome",
+    "pages/index/index",
+    "pages/logs/logs",
+    "pages/login/login",
+    "pages/beforeLoan/carBodyPic/carBodyPic",
+    "pages/beforeLoan/carBodyPicV/carBodyPicV",
+    "pages/beforeLoan/addInfo/addInfo",
+    "pages/beforeLoan/addInfoV/addInfoV",
+    "pages/beforeLoan/isAgreeMoney/isAgreeMoney",
+    "pages/beforeLoan/basicInfo/basicInfo",
+    "pages/beforeLoan/basicInfoV/basicInfoV",
+    "pages/beforeLoan/certificate/certificate",
+    "pages/beforeLoan/perfectData/index",  
+    "pages/beforeLoan/guarantorInfo/guarantor",
+    "pages/beforeLoan/idAuthen/idAuthen",
+    "pages/beforeLoan/idCardMess/idCardMess",
+    "pages/beforeLoan/marriageInfo/marriageInfo",
+    "pages/beforeLoan/resAddress/resAddress",
+    "pages/beforeLoan/workUnit/workUnit",
+    "pages/beforeLoan/marriageInfoV/marriageInfoV",
+    "pages/beforeLoan/Guarantee/Guarantee",
+    "pages/beforeLoan/GuaranteeV/GuaranteeV",
+    "pages/beforeLoan/operator/operator",
+    "pages/beforeLoan/perfectCarMess/perfectCar",
+    "pages/beforeLoan/perfectCarMessV/perfectCarV",
+    "pages/beforeLoan/perfectCarMess/insurance/insurance",
+    "pages/beforeLoan/perfectCarMess/illegalMsg/illegalMsg",
+    "pages/beforeLoan/perfectCarMessV/illegalMsgV/illegalMsgV",
+    "pages/beforeLoan/vehicleEvaluation/index/index",
+    "pages/beforeLoan/vehicleEvaluation/evaluation/evaluation",
+    "pages/beforeLoan/vehicleEvaluation/evaluationMess/evaluationMess",
+    "pages/beforeLoan/vehicleEvaluation/fillInloan/fillInloan",
+    "pages/beforeLoan/vehicleEvaluation/loan/loan",
+    "pages/orderM/orderCenter/orderCenter",
+    "pages/orderM/orderDetails/orderDetails",
+    "pages/orderM/confirmquota/confirmquota",    
+    "pages/orderM/quotanoaccept/quotanoaccept",
+    "pages/orderM/allorders/allorders",
+    "pages/orderM/intencustom/intencustom",
+    "pages/orderM/infoList/infoList",  
+    "pages/orderM/mortgagePic/index",
+    "pages/beforeLoan/mortgage/mortgage",
+   "pages/Gps/Gpslist/Gpslist",
+   "pages/Gps/dydjPicUpload/dydjPicUpload",
+    "pages/Gps/Gpsmap/Gpsmap",
+   "pages/Gps/Gpsbind/Gpsbind",
+   "pages/Gps/verticalAbPic/verticalAbPic",
+   "pages/Gps/isAbnormal/isAbnormal",
+   "pages/Gps/abPicUpload/abPicUpload",
+    "pages/personalCenter/personalCenter",
+    "pages/personalCenter/personalPassword",
+    
+    "pages/newsCenter/index",
+    "pages/newsCenter/details/index",
+
+    "pages/dataCenter/index",
+
+    "pages/template/preview/preview",
+    "pages/template/areaList/index",
+
+    "pages/lenderCalculator/lenderCalculator"    
+  ],
+  "window": {
+    "backgroundColor": "#666666",
+    "navigationBarBackgroundColor": "#fff",
+    "navigationBarTitleText": "汽车融资租赁 ",
+    "navigationBarTextStyle": "black",
+    "backgroundTextStyle": "dark",
+    "enablePullDownRefresh": false    
+  },
+  "tabBar": {
+    "color": "#666",
+    "selectedColor": "#4e8cee",
+    "backgroundColor": "#fff",
+    "borderStyle": "black",
+    "list": [
+      {
+        "pagePath": "pages/index/index",
+        "text": "首页",
+        "iconPath": "images/nav/tab-home-n.png",
+        "selectedIconPath": "images/nav/tab-home-h.png"
+      },
+      {
+        "pagePath": "pages/newsCenter/index",
+        "text": "消息",
+        "iconPath": "images/nav/tab-mes-n.png",
+        "selectedIconPath": "images/nav/tab-mes-h.png"
+      },
+      {
+        "pagePath": "pages/personalCenter/personalCenter",
+        "text": "个人中心",
+        "iconPath": "images/nav/tab-my-n.png",
+        "selectedIconPath": "images/nav/tab-my-h.png"
+      }
+    ],
+    "position": "bottom"
+  },
+  "networkTimeout": {
+    "request": 10000,
+    "connectSocket": 10000,
+    "uploadFile": 10000,
+    "downloadFile": 10000
+  },
+  "debug": true
+}
