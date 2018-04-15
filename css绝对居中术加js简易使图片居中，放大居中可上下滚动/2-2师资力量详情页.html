@@ -1,0 +1,580 @@
+<!doctype html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta http-equiv="Content-Language" content="zh-CN">
+<title>暂无标题</title>
+<meta name="keywords" content="">
+<meta name="description" content="">
+<meta name="copyright" content="" />
+<!--[if IE]>
+   <script src="js/html5.js"></script>
+<![endif]-->
+<script src="js/jquery-1.9.1.min.js"></script>
+<script src="js/common.js"></script>
+<script src="plusing/jquery.easing.min.js"></script>
+<link href="css/common.css" rel="stylesheet" type="text/css" />
+<link href="css/style.css" rel="stylesheet" type="text/css" />
+<script type="text/javascript">
+  $(function(){
+    navFn("nav_1","nav_2","h_nav_bg");
+    //相关作品图片弹出层
+    relatedPicPop();    
+    //导师风采效果
+    tutor_style();    
+  });
+</script>
+</head>
+<body>
+<header>
+  <div class="main">
+    <!-- 头部 -->
+    <a href="" title="" rel="nofollow" class="h_logo trans"><img src="images/photo/logo.png"></a>
+    <p class="h_lang">
+      <a href="" title="" class="noborder"><span class="trans">EN<br>英文</span></a>
+      <a href="" title="" class="sel"><span class="trans">CN<br>中文</span></a>
+    </p>
+
+    <!-- 搜索 -->
+    <div class="h_search">
+      <input class="h_sch_text trans" type="text" placeholder="请输入关键词">
+      <a class="h_sch_but trans" href="javascript:void(0)" title="" rel="nofollow"></a>
+    </div>
+
+    <div class="h85"></div>
+
+    <!-- 导航 -->  
+    <nav>
+      <ul class="navwrap">
+        <li class="sel">
+          <a href="" title="" class="nav_1 sel">首页</a>
+          <i class="nav_line trans"></i>
+        </li>
+
+        <li>
+          <a href="" title="" class="nav_1 sel">学院概况</a>
+          <i class="nav_line trans"></i>
+          <div class="nav_2">
+            <a class="trans" href="" title=""><span><img src="images/photo/icon_nav2_1.png"></span>学院简介</a>
+            <a class="trans" href="" title=""><span><img src="images/photo/icon_nav2_2.png"></span>课程专业</a>
+          </div>
+        </li>
+
+        <li>
+          <a href="" title="" class="nav_1 sel">师资力量</a>
+          <i class="nav_line trans"></i>
+        </li>
+
+        <li>
+          <a href="" title="" class="nav_1 sel">新闻资讯</a>
+          <i class="nav_line trans"></i>
+          <div class="nav_2">
+            <a class="trans" href="" title=""><span><img src="images/photo/icon_nav2_1.png"></span>院校资讯</a>
+            <a class="trans" href="" title=""><span><img src="images/photo/icon_nav2_1.png"></span>视频资讯</a>
+            <a class="trans" href="" title=""><span><img src="images/photo/icon_nav2_1.png"></span>留学资讯</a>
+            <a class="trans" href="" title=""><span><img src="images/photo/icon_nav2_1.png"></span>绘画资讯</a>
+            <a class="trans" href="" title=""><span><img src="images/photo/icon_nav2_1.png"></span>音乐资讯</a>
+            <a class="trans" href="" title=""><span><img src="images/photo/icon_nav2_1.png"></span>舞蹈资讯</a>
+          </div>
+        </li>
+
+        <li>
+          <a href="" title="" class="nav_1 sel">教学科研</a>
+          <i class="nav_line trans"></i>
+        </li>
+
+        <li>
+          <a href="" title="" class="nav_1 sel">招生就业</a>
+          <i class="nav_line trans"></i>
+        </li>
+
+        <li>
+          <a href="" title="" class="nav_1 sel">合作交流</a>
+          <i class="nav_line trans"></i>
+        </li>
+
+        <li>
+          <a href="" title="" class="nav_1 sel">校园文化</a>
+          <i class="nav_line trans"></i>
+        </li>
+
+        <li>
+          <a href="" title="" class="nav_1 sel">艺术基金</a>
+          <i class="nav_line trans"></i>
+        </li>
+
+        <li>
+          <a href="" title="" class="nav_1 sel">昌新教育</a>
+          <i class="nav_line trans"></i>
+        </li>
+
+        <li>
+          <a href="" title="" class="nav_1 sel">联系我们</a>
+          <i class="nav_line trans"></i>
+        </li>
+      </ul>
+    </nav>
+  </div>
+  <div class="h_nav_bg" id="h_nav_bg"></div>
+</header>
+<div class="h130"></div>
+
+<!-- banner -->
+<section class="inner">
+  <menu>      
+    <a style="background-image:url(images/dd_pics/pic08.jpg);" href="#"></a>
+  </menu>
+</section>
+<!--banner END--> 
+
+<!-- 导师简介 -->
+<div class="inner_teacher">
+  <div class="main">
+    <!-- 头像 -->
+    <div class="innertch_head">
+      <p class="innertch_headimg"><img src="images/photo/tch_1.jpg"></p>
+      <span class="innertch_name">周昌新</span>
+      <span class="innertch_info">重彩油画</span>
+    </div>
+    
+    <div class="heavy_tit">
+      <p><b>导师简介</b><span>introduction</span></p>
+      <i></i> 
+    </div>
+    <div class="innertch_desc">
+      <p>周昌新，中国当代著名画家；中国重彩油画奠基人；中国厚彩瓷创始人；线彩主义绘画之父；真象艺术开创者；中西艺术融合焦点与标志性人物；中国对外文化交流使者。
+      </p><p>1973年生于中国广东湛江，1993年毕业于湛江艺校美术专业，1994年师从中央工艺美院（现清华美院）杜大恺教授学习现代重彩，2000年考入中央美院壁画系硕士研究生班专修壁画艺术。现为周昌新艺术基金名誉理事长，《重彩油画》杂志主编，中国重彩油画国际研究院院长，中华文化促进会理事，世界艺术家协会理事等职务。其代表作有《中华魂》、《净》、《命运》、《花魂》、《心灵家园》、《秋高颂》、《美丽的过程》、《源》、《长生天》等。周昌新现已成为中国民族艺术对外交流的文化使者。
+      </p><p>周昌新论文有：《周昌新艺术论》、《从重彩到重彩油画》、《论重彩油画的中国风》、《艺术家的风格论》、《论线彩主义绘画》、《论真象艺术》、《从重彩油画到厚彩瓷》等。
+      </p><p>周昌新的艺术成就在中央电视台、新华社、人民日报、人民画报、中央人民广播电台、新华网、中国网、新浪网、搜狐网、凤凰卫视、亚洲卫视、台湾《独家报道》、香港《领袖人物》、《亚洲周刊》、TVBS、《领导者》杂志、中国新闻社、北京卫视、《北京时报》、《北京晚报》、《经济日报》、《光明日报》、《瞭望》周刊、《环球》杂志、香港《星岛日报》、《美术》杂志、中国文化报等媒体专题报道。
+      </p><p>周昌新作品广受世界各国人民喜爱与好评，部分作品被中国及世界各国政府、各大著名博物馆、著名收藏家收藏。</p>
+    </div>
+  </div>
+</div>
+
+<div class="inner_teacher bgblack20">
+  <div class="main">
+   
+    <div class="heavy_tit">
+      <p><b>相关作品</b><span>artworks</span></p>
+      <i></i>
+      <div class="con_morewrap trans">
+        <a class="trans" href="" title="查看更多" target="_blank">查看更多<i class="trans"></i></a>
+      </div>
+    </div>
+    <!-- 相关作品 -->
+    <div class="innertchlistwrap">
+      <div class="innertchlistbox">
+        <ul class="innertchlist">
+          <li>
+            <a href="javascript:void(0)" title="">
+              <div class="innertchlistimgwrap">
+                <p class="innertchlst_img">
+                  <img class="midimg" src="images/photo/pic_01.jpg">
+                </p>
+                <p class="innertchlst_info trans"><span>日出东方</span>2012年作</p>
+              </div>
+              <p class="innertchlisttitle">
+                <b>阿昌姑娘</b>
+                2012年作<br>
+                80cm*120cm
+              </p>
+            </a>
+          </li>
+
+          <li>
+            <a href="javascript:void(0)" title="">
+              <div class="innertchlistimgwrap">
+                <p class="innertchlst_img">
+                  <img class="midimg" src="images/photo/pic_02.jpg">
+                </p>
+                <p class="innertchlst_info trans"><span>日出东方</span>2012年作</p>
+              </div>
+              <p class="innertchlisttitle">
+                <b>阿昌姑娘</b>
+                2012年作<br>
+                80cm*120cm
+              </p>
+            </a>
+          </li>
+
+          <li>
+            <a href="javascript:void(0)" title="">
+              <div class="innertchlistimgwrap">
+                <p class="innertchlst_img">
+                  <img class="midimg" src="images/photo/pic_01.jpg">
+                </p>
+                <p class="innertchlst_info trans"><span>日出东方</span>2012年作</p>
+              </div>
+              <p class="innertchlisttitle">
+                <b>阿昌姑娘</b>
+                2012年作<br>
+                80cm*120cm
+              </p>
+            </a>
+          </li>
+
+          <li>
+            <a href="javascript:void(0)" title="">
+              <div class="innertchlistimgwrap">
+                <p class="innertchlst_img">
+                  <img class="midimg" src="images/photo/pic_02.jpg">
+                </p>
+                <p class="innertchlst_info trans"><span>日出东方</span>2012年作</p>
+              </div>
+              <p class="innertchlisttitle">
+                <b>阿昌姑娘</b>
+                2012年作<br>
+                80cm*120cm
+              </p>
+            </a>
+          </li>
+
+          <li>
+            <a href="javascript:void(0)" title="">
+              <div class="innertchlistimgwrap">
+                <p class="innertchlst_img">
+                  <img class="midimg" src="images/photo/pic_01.jpg">
+                </p>
+                <p class="innertchlst_info trans"><span>日出东方</span>2012年作</p>
+              </div>
+              <p class="innertchlisttitle">
+                <b>阿昌姑娘</b>
+                2012年作<br>
+                80cm*120cm
+              </p>
+            </a>
+          </li>
+
+          <li>
+            <a href="javascript:void(0)" title="">
+              <div class="innertchlistimgwrap">
+                <p class="innertchlst_img">
+                  <img class="midimg" src="images/photo/pic_02.jpg">
+                </p>
+                <p class="innertchlst_info trans"><span>日出东方</span>2012年作</p>
+              </div>
+              <p class="innertchlisttitle">
+                <b>阿昌姑娘</b>
+                2012年作<br>
+                80cm*120cm
+              </p>
+            </a>
+          </li>
+
+          <li>
+            <a href="javascript:void(0)" title="">
+              <div class="innertchlistimgwrap">
+                <p class="innertchlst_img">
+                  <img class="midimg" src="images/photo/pic_01.jpg">
+                </p>
+                <p class="innertchlst_info trans"><span>日出东方</span>2012年作</p>
+              </div>
+              <p class="innertchlisttitle">
+                <b>阿昌姑娘</b>
+                2012年作<br>
+                80cm*120cm
+              </p>
+            </a>
+          </li>
+
+          <li>
+            <a href="javascript:void(0)" title="">
+              <div class="innertchlistimgwrap">
+                <p class="innertchlst_img">
+                  <img class="midimg" src="images/photo/pic_02.jpg">
+                </p>
+                <p class="innertchlst_info trans"><span>日出东方</span>2012年作</p>
+              </div>
+              <p class="innertchlisttitle">
+                <b>阿昌姑娘</b>
+                2012年作<br>
+                80cm*120cm
+              </p>
+            </a>
+          </li>
+
+          <li>
+            <a href="javascript:void(0)" title="">
+              <div class="innertchlistimgwrap">
+                <p class="innertchlst_img">
+                  <img class="midimg" src="images/photo/pic_01.jpg">
+                </p>
+                <p class="innertchlst_info trans"><span>日出东方</span>2012年作</p>
+              </div>
+              <p class="innertchlisttitle">
+                <b>阿昌姑娘</b>
+                2012年作<br>
+                80cm*120cm
+              </p>
+            </a>
+          </li>
+
+          <li>
+            <a href="javascript:void(0)" title="">
+              <div class="innertchlistimgwrap">
+                <p class="innertchlst_img">
+                  <img class="midimg" src="images/photo/pic_02.jpg">
+                </p>
+                <p class="innertchlst_info trans"><span>日出东方</span>2012年作</p>
+              </div>
+              <p class="innertchlisttitle">
+                <b>阿昌姑娘</b>
+                2012年作<br>
+                80cm*120cm
+              </p>
+            </a>
+          </li>
+
+                   
+        </ul>
+      </div>
+    </div>
+    <div class="clear"></div>
+  </div>
+</div>
+
+
+<!-- 导师风采 -->
+<div class="inner_teacher innertch_fcwrap">
+  <div class="main">
+    <div class="heavy_tit">
+      <p><b>导师风采</b><span>Tutor style</span></p>
+      <i></i> 
+    </div>
+
+    <div class="innertchshowwrap">
+      <span class="innertchshowprev" id="innertchshowprev"></span>
+      <span class="innertchshownext" id="innertchshownext"></span>
+      <div class="innertchshowbox">
+        <ul class="innertchshowlist" id="innertchshowlist">
+          <li>
+            <a href="javascript:void(0)" title="">
+              <p class="innertchshowimg"><img src="images/photo/s1.jpg"></p>
+              <p class="innertchshowtitle">七彩云南·国际美术创作基地111</p>
+            </a>
+          </li>
+
+          <li>
+            <a href="javascript:void(0)" title="">
+              <p class="innertchshowimg"><img src="images/photo/s1.jpg"></p>
+              <p class="innertchshowtitle">七彩云南·国际美术创作基地222</p>
+            </a>
+          </li>
+          <li>
+            <a href="javascript:void(0)" title="">
+              <p class="innertchshowimg"><img src="images/photo/s1.jpg"></p>
+              <p class="innertchshowtitle">七彩云南·国际美术创作基地333</p>
+            </a>
+          </li>
+          <li>
+            <a href="javascript:void(0)" title="">
+              <p class="innertchshowimg"><img src="images/photo/s1.jpg"></p>
+              <p class="innertchshowtitle">七彩云南·国际美术创作基地444</p>
+            </a>
+          </li>
+          <li>
+            <a href="javascript:void(0)" title="">
+              <p class="innertchshowimg"><img src="images/photo/s1.jpg"></p>
+              <p class="innertchshowtitle">七彩云南·国际美术创作基地555</p>
+            </a>
+          </li>
+          <li>
+            <a href="javascript:void(0)" title="">
+              <p class="innertchshowimg"><img src="images/photo/s1.jpg"></p>
+              <p class="innertchshowtitle">七彩云南·国际美术创作基地666</p>
+            </a>
+          </li>
+          <li>
+            <a href="javascript:void(0)" title="">
+              <p class="innertchshowimg"><img src="images/photo/s1.jpg"></p>
+              <p class="innertchshowtitle">七彩云南·国际美术创作基地777</p>
+            </a>
+          </li>
+          <li>
+            <a href="javascript:void(0)" title="">
+              <p class="innertchshowimg"><img src="images/photo/s1.jpg"></p>
+              <p class="innertchshowtitle">七彩云南·国际美术创作基地888</p>
+            </a>
+          </li>
+          <li>
+            <a href="javascript:void(0)" title="">
+              <p class="innertchshowimg"><img src="images/photo/s1.jpg"></p>
+              <p class="innertchshowtitle">七彩云南·国际美术创作基地999</p>
+            </a>
+          </li>
+
+        </ul>
+      </div>
+      <div class="innertchmenus"></div>
+    </div>
+      
+    </div>
+  </div>
+</div>
+
+<!-- 相关链接 -->
+<div class="inner_teacher bgblack20">
+  <div class="main">
+    <div class="heavy_tit">
+      <p><b>相关链接</b><span>artworks</span></p>
+      <i></i> 
+    </div>
+    <div class="innertch_links black">
+      <a href="" title="" target="_blank">个人网站</a>
+    </div>
+  </div>
+</div>
+
+<!-- 底部 -->
+<footer>
+  <div class="main footerinfomation">
+    <div class="f_info">
+      <a class="flogo" href="" title="" rel="nofollow"><img src="images/photo/footer_logo.png"></a>
+      <p class="f_desc">
+        <i></i>
+        <b>在这里，你可以真正的成为艺术家</b><br><span>Here, you can really become an artist</span>
+      </p>
+    </div>
+    <div class="f_ewm">
+      <p class="fewmitem">
+        <img src="images/photo/ewm.jpg" alt="" width="115" height="115">学院微信公众号
+      </p>
+      <p class="fewmitem">
+        <img src="images/photo/ewm.jpg" alt="" width="115" height="115">扫描访问触屏版
+      </p>
+    </div>
+    <div class="f_contact">
+      <p class="fconitem fadd">
+        地址 / address<br>中国云南省昆明市五华区翠湖北路云南大学昌新国际艺术学院
+      </p>
+      <p class="fconitem ftel">
+        热线 / tel<br><b>0871-88888888</b>
+      </p>
+      <p class="fconitem feml">
+        邮箱 / EML<br>changxiniac@163.com
+      </p>
+    </div>
+    <div class="clear"></div>
+  </div>
+  <div class="copy">
+    <div class="main">
+      版权所有©2015&nbsp;&nbsp;&nbsp;&nbsp;昌新国际艺术学院&nbsp;&nbsp;&nbsp;&nbsp;滇ICP备11005594号-1
+      <p class="fnav">        
+        <a class="trans" href="" title="" rel="nofollow">首页</a>|  
+        <a class="trans" href="" title="" rel="nofollow">学院概况</a>|  
+        <a class="trans" href="" title="" rel="nofollow">相关资讯</a>|  
+        <a class="trans" href="" title="" rel="nofollow">教育教学</a>|  
+        <a class="trans" href="" title="" rel="nofollow">科学研究</a>|  
+        <a class="trans" href="" title="" rel="nofollow">招生就业</a>|  
+        <a class="trans" href="" title="" rel="nofollow">合作交流</a>|  
+        <a class="trans" href="" title="" rel="nofollow">校园文化</a>|  
+        <a class="trans" href="" title="" rel="nofollow">联系我们</a>
+      </p>
+    </div>
+  </div>
+  
+</footer>
+
+<script type="text/javascript">
+    //imgLoads("midimg");
+</script>
+
+<!--相关作品弹出层-->
+<div class="floatShowImagesWrap">
+  
+</div>
+<!--背景层-->
+<div class="floatImagesBg" id="floatImagesBg"></div>
+<!--导师风采弹出层-->
+<div class="tutor_style">
+  <!-- 关闭按钮-->
+  <a href="javascript:void(0)" class="tutor_style_close"></a>
+  <!--图片列表展示效果-->
+  <a id="imglast" class="imglast" href="javascript:void(0);"></a>
+  <a id="imgnext" class="imgnext" href="javascript:void(0);"></a>
+  <div class="imgpartbox" id="imgpartbox">
+    <ul id="imgpartsum" class="imgpartsum">
+      <li>
+        <img class="img" src="images/photo/pic_03.jpg" />
+      </li>
+      <li>
+        <img class="img" src="images/photo/pic_03.jpg" />
+      </li>
+      <li>
+        <img class="img" src="images/photo/pic_03.jpg" />
+      </li>
+      <li>
+        <img class="img" src="images/photo/pic_03.jpg" />
+      </li>
+      <li>
+        <img class="img" src="images/photo/pic_03.jpg" />
+      </li>
+      <li>
+        <img class="img" src="images/photo/pic_03.jpg" />
+      </li>
+      <li>
+        <img class="img" src="images/photo/pic_03.jpg" />
+      </li>
+      <li>
+        <img class="img" src="images/photo/pic_03.jpg" />
+      </li>
+      <li>
+        <img class="img" src="images/photo/pic_03.jpg" />
+      </li>
+    </ul>
+  </div>
+  <div class="clear"></div>
+  <div id="imgpartmenu" class="footer imgpartmenu"></div>
+  <div class="clear"></div>
+  <a id="menunext" class="menunext" href="javascript:void(0);">&nbsp;</a>
+  <a id="menulast" class="menulast" href="javascript:void(0);">&nbsp;</a>
+  <!--图片列表展示效果-->
+  <div class="clear"></div>
+  <div class="comments">
+    <ul>
+      <li>
+        <p>照片标题：七彩云南·国际美术创作基地启动仪式111</p>
+        <p>相关人物：周昌新</p>
+      </li>
+      <li>
+        <p>照片标题：七彩云南·国际美术创作基地启动仪式222</p>
+        <p>相关人物：周昌新</p>
+      </li>
+      <li>
+        <p>照片标题：七彩云南·国际美术创作基地启动仪式333</p>
+        <p>相关人物：周昌新</p>
+      </li>
+      <li>
+        <p>照片标题：七彩云南·国际美术创作基地启动仪式444</p>
+        <p>相关人物：周昌新</p>
+      </li>
+      <li>
+        <p>照片标题：七彩云南·国际美术创作基地启动仪式555</p>
+        <p>相关人物：周昌新</p>
+      </li>
+      <li>
+        <p>照片标题：七彩云南·国际美术创作基地启动仪式666</p>
+        <p>相关人物：周昌新</p>
+      </li>
+      <li>
+        <p>照片标题：七彩云南·国际美术创作基地启动仪式777</p>
+        <p>相关人物：周昌新</p>
+      </li>
+      <li>
+        <p>照片标题：七彩云南·国际美术创作基地启动仪式888</p>
+        <p>相关人物：周昌新</p>
+      </li>
+      <li>
+        <p>照片标题：七彩云南·国际美术创作基地启动仪式999</p>
+        <p>相关人物：周昌新</p>
+      </li>
+    </ul>
+  </div>
+</div>
+<script type="text/javascript">
+//  floatShowImage($(window),$(document),"floatShowImagesWrap","floatShowImagebox","floatShowImage",124)
+//  creatScrollBar($("#floatShowImage"),$("#floatShowImagespic"));
+</script>
+
+</body>
+</html>

@@ -1,0 +1,902 @@
+<!doctype html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta http-equiv="Content-Language" content="zh-CN">
+<title>首页</title>
+<meta name="keywords" content="">
+<meta name="description" content="">
+<meta name="copyright" content="" />
+<!--[if IE]>
+   <script src="js/html5.js"></script>
+<![endif]-->
+<script src="js/jquery-1.9.1.min.js"></script>
+<script src="js/common.js"></script>
+<script src="plusing/jquery.easing.min.js"></script>
+<link href="css/common.css" rel="stylesheet" type="text/css" />
+<link href="css/style.css" rel="stylesheet" type="text/css" />
+<script type="text/javascript">
+  $(function(){
+    //导航
+    navFn("nav_1","nav_2","h_nav_bg");
+    //con_lev1Top
+    con_lev1Top();
+  });
+</script>
+</head>
+<body>
+<header class="trans">
+  <div class="main">
+    <!-- 头部 -->
+    <a href="" title="" rel="nofollow" class="h_logo trans"><img src="images/photo/logo.png"></a>
+    <p class="h_lang">
+      <a href="" title="" class="noborder"><span class="trans">EN<br>英文</span></a>
+      <a href="" title="" class="sel"><span class="trans">CN<br>中文</span></a>
+    </p>
+
+    <!-- 搜索 -->
+    <div class="h_search">
+      <input class="h_sch_text trans" type="text" placeholder="请输入关键词">
+      <a class="h_sch_but trans" href="javascript:void(0)" title="" rel="nofollow"></a>
+    </div>
+
+    <div class="h85"></div>
+
+    <!-- 导航 -->  
+    <nav>
+      <ul class="navwrap">
+        <li class="sel">
+          <a href="" title="" class="nav_1 sel">首页</a>
+          <i class="nav_line trans"></i>
+        </li>
+
+        <li>
+          <a href="" title="" class="nav_1 sel">学院概况</a>
+          <i class="nav_line trans"></i>
+          <div class="nav_2">
+            <a class="trans" href="" title=""><span><img src="images/photo/icon_nav2_1.png"></span>学院简介</a>
+            <a class="trans" href="" title=""><span><img src="images/photo/icon_nav2_2.png"></span>课程专业</a>
+          </div>
+        </li>
+
+        <li>
+          <a href="" title="" class="nav_1 sel">师资力量</a>
+          <i class="nav_line trans"></i>
+        </li>
+
+        <li>
+          <a href="" title="" class="nav_1 sel">新闻资讯</a>
+          <i class="nav_line trans"></i>
+          <div class="nav_2">
+            <a class="trans" href="" title=""><span><img src="images/photo/icon_nav2_1.png"></span>院校资讯</a>
+            <a class="trans" href="" title=""><span><img src="images/photo/icon_nav2_1.png"></span>视频资讯</a>
+            <a class="trans" href="" title=""><span><img src="images/photo/icon_nav2_1.png"></span>留学资讯</a>
+            <a class="trans" href="" title=""><span><img src="images/photo/icon_nav2_1.png"></span>绘画资讯</a>
+            <a class="trans" href="" title=""><span><img src="images/photo/icon_nav2_1.png"></span>音乐资讯</a>
+            <a class="trans" href="" title=""><span><img src="images/photo/icon_nav2_1.png"></span>舞蹈资讯</a>
+          </div>
+        </li>
+
+        <li>
+          <a href="" title="" class="nav_1 sel">教学科研</a>
+          <i class="nav_line trans"></i>
+        </li>
+
+        <li>
+          <a href="" title="" class="nav_1 sel">招生就业</a>
+          <i class="nav_line trans"></i>
+        </li>
+
+        <li>
+          <a href="" title="" class="nav_1 sel">合作交流</a>
+          <i class="nav_line trans"></i>
+        </li>
+
+        <li>
+          <a href="" title="" class="nav_1 sel">校园文化</a>
+          <i class="nav_line trans"></i>
+        </li>
+
+        <li>
+          <a href="" title="" class="nav_1 sel">艺术基金</a>
+          <i class="nav_line trans"></i>
+        </li>
+
+        <li>
+          <a href="" title="" class="nav_1 sel">昌新教育</a>
+          <i class="nav_line trans"></i>
+        </li>
+
+        <li>
+          <a href="" title="" class="nav_1 sel">联系我们</a>
+          <div class="nav_2">
+            <a class="trans" href="" title=""><span><img src="images/photo/icon_nav2_1.png"></span>联系我们</a>
+            <a class="trans" href="" title=""><span><img src="images/photo/icon_nav2_1.png"></span>预约报名</a>
+
+          </div>
+          <i class="nav_line trans"></i>
+        </li>
+      </ul>
+    </nav>
+  </div>
+  <div class="h_nav_bg" id="h_nav_bg"></div>
+</header>
+<div class="h130"></div>
+<!-- banner -->
+<div id="slider" class="slider">
+  <a class="pic" href="" style="background-image:url('images/photo/banner1.png')"></a>
+  <a class="pic" href="" style="background-image:url('images/photo/banner2.png')"></a>
+  <a class="pic" href="" style="background-image:url('images/photo/banner3.png')"></a>
+  <a class="pic" href="" style="background-image:url('images/photo/banner1.png')"></a>
+  <a class="pic" href="" style="background-image:url('images/photo/banner2.png')"></a>
+  <a class="pic" href="" style="background-image:url('images/photo/banner3.png')"></a>
+  <span class="next_page" id="next_page" onclick="toIndex($(window).height())"></span>
+</div>
+<script type="text/javascript" src="plusing/jquery.mousewheel.min.js"></script>
+<script>
+  isImgLoad1(function(){
+    $( '#slider' ).lateralSlider( {
+      captionPadding: '0',
+      captionHeight: 45,
+      hidePrevAndNextArrows:true
+    } );
+  });
+</script>
+<!-- 云南大学 -->
+<div class="con_lev1" >
+  <div class="main">
+    <div class="con_title">
+      <p class="con_t1">
+        云南大学<span>昌新国际艺术学院</span>
+      </p>
+      <p class="con_tdesc">
+        2016年，云南大学与“北京文化发展基金会周昌新艺术基金”共同创建“云南大学昌新国际艺术学院”。学<br>
+        院设置<span class="reds">13个专业系</span>，现有教职工120人，<span class="reds">教学科研仪器设备总值1200万元</span>，校外<br>
+        实习、实训基地16个...  <a href="" title="详细">【详细】</a>
+      </p>
+    </div>
+
+    <div class="con_lev1_container">
+      <div class="con_lev1_info">
+        <img class="trans" width="141" src="images/icon_dx1.png" alt="">
+        <span>全世界顶尖艺术导师</span>
+        昌新国际艺术学院导师均来自全世界最顶尖的艺术学院优秀导师，这里是艺术家的摇篮地...
+      </div>
+
+      <div class="con_lev1_info">
+        <img class="trans" width="141" src="images/icon_dx2.png" alt="">
+        <span>顶级导师亲临指导</span>
+        云南大学昌新国际艺术学院将打造成国际一流的艺术院校，每个导师均只带1至2个学生,真正实现教学服务一对一！
+      </div>
+
+      <div class="con_lev1_info">
+        <img class="trans" width="141" src="images/icon_dx3.png" alt="">
+        <span>2+1+1和3+1培养模式</span>
+        互动的教育模式，前2年（或前3年）学习后，可以选择到国外合作大学进行1年学习，然后再回到本校学业完成学业！
+      </div>
+
+      <div class="con_lev1_info">
+        <img class="trans" width="141" src="images/icon_dx4.png" alt="">
+        <span>相互合作世界顶尖院校</span>
+        昌新国际艺术学院与国内外顶级艺术设计院校，艺术机构，政府文化创意产业保持良好的交流合作！
+      </div>
+      <div class="clear"></div>
+    </div>
+  </div>
+</div>
+
+<!-- 专业课程 -->
+<div class="con_lev2">
+  <div class="main">
+    <div class="con_title">
+      <p class="con_t1">
+        课程专业<span>course</span>
+      </p>
+      <p class="con_tdesc">
+        致力于打造世界一流顶级的艺术院校
+      </p>
+      <i class="con_line"></i>
+      <div class="con_morewrap trans">
+        <a class="trans" href="" title="查看更多" target="_blank">查看更多<i class="trans"></i></a>
+      </div>
+    </div>
+    <!-- 课程列表 -->
+    <div class="con_lessonwrap">
+      <ul class="con_lessonlist">
+        <li>
+          <a href="" title="">
+            <div class="con_lessimgwrap">
+              <p class="con_lessimg">
+                <img class="midimg" src="images/photo/kc_1.jpg">
+              </p>
+              <p class="con_lesshover trans">
+                <b>美术学</b>
+                meishuxue
+              </p>
+            </div>
+            <p class="con_lesstitle">美术学</p>
+          </a>
+        </li>
+
+        <li>
+          <a href="" title="">
+            <div class="con_lessimgwrap">
+              <p class="con_lessimg">
+                <img class="midimg" src="images/photo/kc_2.jpg">
+              </p>
+              <p class="con_lesshover trans">
+                <b>美术学</b>
+                meishuxue
+              </p>
+            </div>
+            <p class="con_lesstitle">美术学</p>
+          </a>
+        </li>
+
+        <li>
+          <a href="" title="">
+            <div class="con_lessimgwrap">
+              <p class="con_lessimg">
+                <img class="midimg" src="images/photo/kc_3.jpg">
+              </p>
+              <p class="con_lesshover trans">
+                <b>美术学</b>
+                meishuxue
+              </p>
+            </div>
+            <p class="con_lesstitle">美术学</p>
+          </a>
+        </li>
+
+        <li>
+          <a href="" title="">
+            <div class="con_lessimgwrap">
+              <p class="con_lessimg">
+                <img class="midimg" src="images/photo/kc_4.jpg">
+              </p>
+              <p class="con_lesshover trans">
+                <b>美术学</b>
+                meishuxue
+              </p>
+            </div>
+            <p class="con_lesstitle">美术学</p>
+          </a>
+        </li>
+
+        <li>
+          <a href="" title="">
+            <div class="con_lessimgwrap">
+              <p class="con_lessimg">
+                <img class="midimg" src="images/photo/kc_5.jpg">
+              </p>
+              <p class="con_lesshover trans">
+                <b>美术学</b>
+                meishuxue
+              </p>
+            </div>
+            <p class="con_lesstitle">美术学</p>
+          </a>
+        </li>
+
+        <li>
+          <a href="" title="">
+            <div class="con_lessimgwrap">
+              <p class="con_lessimg">
+                <img class="midimg" src="images/photo/kc_6.jpg">
+              </p>
+              <p class="con_lesshover trans">
+                <b>美术学</b>
+                meishuxue
+              </p>
+            </div>
+            <p class="con_lesstitle">美术学</p>
+          </a>
+        </li>
+
+        <li>
+          <a href="" title="">
+            <div class="con_lessimgwrap">
+              <p class="con_lessimg">
+                <img class="midimg" src="images/photo/kc_7.jpg">
+              </p>
+              <p class="con_lesshover trans">
+                <b>美术学</b>
+                meishuxue
+              </p>
+            </div>
+            <p class="con_lesstitle">美术学</p>
+          </a>
+        </li>
+
+        <li>
+          <a href="" title="">
+            <div class="con_lessimgwrap">
+              <p class="con_lessimg">
+                <img class="midimg" src="images/photo/kc_8.jpg">
+              </p>
+              <p class="con_lesshover trans">
+                <b>美术学</b>
+                meishuxue
+              </p>
+            </div>
+            <p class="con_lesstitle">美术学</p>
+          </a>
+        </li>
+
+        
+      <div class="clear"></div>
+      </ul>
+    </div>
+  </div>
+</div>
+
+
+<!-- 您的导师 -->
+<div class="con_lev3">
+  <div class="main">
+    <div class="con_title">
+      <p class="con_t1">
+        您的导师<span>mentor</span>
+      </p>
+      <p class="con_tdesc">
+        全世界最顶级艺术院校导师
+      </p>
+      <i class="con_line"></i>
+      <div class="con_morewrap trans">
+        <a class="trans" href="" title="查看更多" target="_blank">查看更多<i class="trans"></i></a>
+      </div>
+    </div>
+    <!-- 导师列表 -->
+    <div class="con_teachwrap">
+      <div class="con_teachbox">
+        <ul class="con_teachlist" id="con_teachlist">
+          <li>
+            <a href="" title="">
+              <div class="con_tchimgwrap">
+                <p class="con_tchimg">
+                  <img class="midimg" src="images/photo/tch_1.jpg" alt="">
+                </p>
+                <p class="con_tchhover trans">
+                  <b>杜大恺</b>
+                </p>
+              </div>
+              <p class="con_tchdesc"><span>杜大恺</span><br>清华大学美术学院教授</p>
+            </a>
+          </li>
+
+          <li>
+            <a href="" title="">
+              <div class="con_tchimgwrap">
+                <p class="con_tchimg">
+                  <img class="midimg" src="images/photo/tch_2.jpg" alt="">
+                </p>
+                <p class="con_tchhover trans">
+                  <b>杜大恺</b>
+                </p>
+              </div>
+              <p class="con_tchdesc"><span>杜大恺</span><br>清华大学美术学院教授</p>
+            </a>
+          </li>
+
+          <li>
+            <a href="" title="">
+              <div class="con_tchimgwrap">
+                <p class="con_tchimg">
+                  <img class="midimg" src="images/photo/tch_3.jpg" alt="">
+                </p>
+                <p class="con_tchhover trans">
+                  <b>杜大恺</b>
+                </p>
+              </div>
+              <p class="con_tchdesc"><span>杜大恺</span><br>清华大学美术学院教授</p>
+            </a>
+          </li>
+
+          <li>
+            <a href="" title="">
+              <div class="con_tchimgwrap">
+                <p class="con_tchimg">
+                  <img class="midimg" src="images/photo/tch_4.jpg" alt="">
+                </p>
+                <p class="con_tchhover trans">
+                  <b>杜大恺</b>
+                </p>
+              </div>
+              <p class="con_tchdesc"><span>杜大恺</span><br>清华大学美术学院教授</p>
+            </a>
+          </li>
+
+          <li>
+            <a href="" title="">
+              <div class="con_tchimgwrap">
+                <p class="con_tchimg">
+                  <img class="midimg" src="images/photo/tch_1.jpg" alt="">
+                </p>
+                <p class="con_tchhover trans">
+                  <b>杜大恺</b>
+                </p>
+              </div>
+              <p class="con_tchdesc"><span>杜大恺</span><br>清华大学美术学院教授</p>
+            </a>
+          </li>
+
+          <li>
+            <a href="" title="">
+              <div class="con_tchimgwrap">
+                <p class="con_tchimg">
+                  <img class="midimg" src="images/photo/tch_2.jpg" alt="">
+                </p>
+                <p class="con_tchhover trans">
+                  <b>杜大恺</b>
+                </p>
+              </div>
+              <p class="con_tchdesc"><span>杜大恺</span><br>清华大学美术学院教授</p>
+            </a>
+          </li>
+
+          <li>
+            <a href="" title="">
+              <div class="con_tchimgwrap">
+                <p class="con_tchimg">
+                  <img class="midimg" src="images/photo/tch_3.jpg" alt="">
+                </p>
+                <p class="con_tchhover trans">
+                  <b>杜大恺</b>
+                </p>
+              </div>
+              <p class="con_tchdesc"><span>杜大恺</span><br>清华大学美术学院教授</p>
+            </a>
+          </li>
+
+          <li>
+            <a href="" title="">
+              <div class="con_tchimgwrap">
+                <p class="con_tchimg">
+                  <img class="midimg" src="images/photo/tch_4.jpg" alt="">
+                </p>
+                <p class="con_tchhover trans">
+                  <b>杜大恺</b>
+                </p>
+              </div>
+              <p class="con_tchdesc"><span>杜大恺</span><br>清华大学美术学院教授</p>
+            </a>
+          </li>
+
+          <li>
+            <a href="" title="">
+              <div class="con_tchimgwrap">
+                <p class="con_tchimg">
+                  <img class="midimg" src="images/photo/tch_1.jpg" alt="">
+                </p>
+                <p class="con_tchhover trans">
+                  <b>杜大恺</b>
+                </p>
+              </div>
+              <p class="con_tchdesc"><span>杜大恺</span><br>清华大学美术学院教授</p>
+            </a>
+          </li>
+
+          <li>
+            <a href="" title="">
+              <div class="con_tchimgwrap">
+                <p class="con_tchimg">
+                  <img class="midimg" src="images/photo/tch_2.jpg" alt="">
+                </p>
+                <p class="con_tchhover trans">
+                  <b>杜大恺</b>
+                </p>
+              </div>
+              <p class="con_tchdesc"><span>杜大恺</span><br>清华大学美术学院教授</p>
+            </a>
+          </li>
+
+          <li>
+            <a href="" title="">
+              <div class="con_tchimgwrap">
+                <p class="con_tchimg">
+                  <img class="midimg" src="images/photo/tch_3.jpg" alt="">
+                </p>
+                <p class="con_tchhover trans">
+                  <b>杜大恺</b>
+                </p>
+              </div>
+              <p class="con_tchdesc"><span>杜大恺</span><br>清华大学美术学院教授</p>
+            </a>
+          </li>
+
+          <li>
+            <a href="" title="">
+              <div class="con_tchimgwrap">
+                <p class="con_tchimg">
+                  <img class="midimg" src="images/photo/tch_4.jpg" alt="">
+                </p>
+                <p class="con_tchhover trans">
+                  <b>杜大恺</b>
+                </p>
+              </div>
+              <p class="con_tchdesc"><span>杜大恺</span><br>清华大学美术学院教授</p>
+            </a>
+          </li>
+        </ul>
+        <div class="clear"></div>
+      </div>
+      <div class="con_tchmenu" id="con_tchmenu"></div>
+    </div>
+    <!-- 导师列表滚动 -->
+    <script type="text/javascript">slideItem("con_teachlist","li","con_tchmenu")</script>
+  </div>
+</div>
+
+
+<!-- 艺术咨询 -->
+<div class="con_lev4">
+  <div class="main">
+    <div class="con_title">
+      <p class="con_t1">
+        艺术资讯<span>information</span>
+      </p>
+      <p class="con_tdesc">
+        最新鲜的当代艺术干货资讯
+      </p>
+      <i class="con_line"></i>
+      <div class="con_morewrap trans">
+        <a class="trans" href="" title="查看更多" target="_blank">查看更多<i class="trans"></i></a>
+      </div>
+    </div>
+
+    <!-- 资讯列表 -->
+    <div class="con_newslist">
+      <div class="con_newsitem">
+        <div class="cont_newsimgwrap">
+          <a href="" title="">
+            <p class="con_newsimg"><img src="images/photo/new_1.jpg"></p>
+            <p class="con_newstitle trans">绘画</p>
+          </a>
+        </div>
+        <div class="con_news">
+          <p><a href="" title="">笔墨·求索,潘公凯个展揭幕：中国画现笔墨·求索,潘公凯个展揭幕：中国画现</a><span>2017-01-03</span></p>
+          <p><a href="" title="">2016中国美协实验艺委会年会在天津</a><span>2017-01-03</span></p>
+          <p><a href="" title="">图案人生——中国现代设计教育奠基</a><span>2017-01-03</span></p>
+        </div>
+      </div>
+
+      <div class="con_newsitem">
+        <div class="cont_newsimgwrap">
+          <a href="" title="">
+            <p class="con_newsimg"><img src="images/photo/new_2.jpg"></p>
+            <p class="con_newstitle trans">音乐</p>
+          </a>
+        </div>
+        <div class="con_news">
+          <p><a href="" title="">笔墨·求索,潘公凯个展揭幕：中国画现</a><span>2017-01-03</span></p>
+          <p><a href="" title="">2016中国美协实验艺委会年会在天津</a><span>2017-01-03</span></p>
+          <p><a href="" title="">图案人生——中国现代设计教育奠基</a><span>2017-01-03</span></p>
+        </div>
+      </div>
+
+      <div class="con_newsitem">
+        <div class="cont_newsimgwrap">
+            <a href="" title="">
+              <p class="con_newsimg"><img src="images/photo/new_3.jpg"></p>
+              <p class="con_newstitle trans">舞蹈</p>
+          </a>
+        </div>
+        <div class="con_news">
+          <p><a href="" title="">笔墨·求索,潘公凯个展揭幕：中国画现</a><span>2017-01-03</span></p>
+          <p><a href="" title="">2016中国美协实验艺委会年会在天津</a><span>2017-01-03</span></p>
+          <p><a href="" title="">图案人生——中国现代设计教育奠基</a><span>2017-01-03</span></p>
+        </div>
+      </div>
+      <div class="clear"></div>
+    </div>
+  </div>
+</div>
+
+
+<!-- 合作学院 -->
+<div class="con_lev5">
+  <div class="main">
+    <div class="con_title">
+      <p class="con_t1">
+        合作学院<span>cooperation</span>
+      </p>
+      <p class="con_tdesc">
+        同全球最顶尖的艺术院校教育合作
+      </p>
+      <i class="con_line"></i>
+      <div class="con_morewrap trans">
+        <a class="trans" href="" title="查看更多" target="_blank">查看更多<i class="trans"></i></a>
+      </div>
+    </div>
+    <!-- 合作学院  -->
+      <ul class="ff_cooperate">
+        <li>
+          <a href="javascript:void(0)" title="">
+            <div class="cooperate_imgwrap">
+              <p class="cooperate_img"><img src="images/ff/hzpic.jpg" alt=""></p>
+              <p class="cooperate_hover trans"><span>巴黎国立高等美术学院<i class="coop_line trans"></i></span></p>
+            </div>
+            <p class="cooper_title">伦敦大学</p>        
+          </a>
+        </li>
+        
+        <li>
+          <a href="javascript:void(0)" title="">
+            <div class="cooperate_imgwrap">
+              <p class="cooperate_img"><img src="images/ff/hzpic.jpg" alt=""></p>
+              <p class="cooperate_hover trans"><span>巴黎国<i class="coop_line trans"></i></span></p>
+            </div>
+            <p class="cooper_title">伦敦大学</p>        
+          </a>
+        </li>
+        
+        <li>
+          <a href="javascript:void(0)" title="">
+            <div class="cooperate_imgwrap">
+              <p class="cooperate_img"><img src="images/ff/hzpic.jpg" alt=""></p>
+              <p class="cooperate_hover trans"><span>巴黎国<i class="coop_line trans"></i></span></p>
+            </div>
+            <p class="cooper_title">伦敦大学</p>        
+          </a>
+        </li>
+        
+        <li>
+          <a href="javascript:void(0)" title="">
+            <div class="cooperate_imgwrap">
+              <p class="cooperate_img"><img src="images/ff/hzpic.jpg" alt=""></p>
+              <p class="cooperate_hover trans"><span>巴黎国<i class="coop_line trans"></i></span></p>
+            </div>
+            <p class="cooper_title">伦敦大学</p>        
+          </a>
+        </li>
+        
+        <li>
+          <a href="javascript:void(0)" title="">
+            <div class="cooperate_imgwrap">
+              <p class="cooperate_img"><img src="images/ff/hzpic.jpg" alt=""></p>
+              <p class="cooperate_hover trans"><span>巴黎国<i class="coop_line trans"></i></span></p>
+            </div>
+            <p class="cooper_title">伦敦大学</p>        
+          </a>
+        </li>
+        
+        <li>
+          <a href="javascript:void(0)" title="">
+            <div class="cooperate_imgwrap">
+              <p class="cooperate_img"><img src="images/ff/hzpic.jpg" alt=""></p>
+              <p class="cooperate_hover trans"><span>巴黎国<i class="coop_line trans"></i></span></p>
+            </div>
+            <p class="cooper_title">伦敦大学</p>        
+          </a>
+        </li>
+        
+        <li>
+          <a href="javascript:void(0)" title="">
+            <div class="cooperate_imgwrap">
+              <p class="cooperate_img"><img src="images/ff/hzpic.jpg" alt=""></p>
+              <p class="cooperate_hover trans"><span>伦敦大学学院 <i class="coop_line trans"></i></span></p>
+            </div>
+            <p class="cooper_title">伦敦大学</p>        
+          </a>
+        </li>
+        
+        <li>
+          <a href="javascript:void(0)" title="">
+            <div class="cooperate_imgwrap">
+              <p class="cooperate_img"><img src="images/ff/hzpic.jpg" alt=""></p>
+              <p class="cooperate_hover trans"><span>巴黎国<i class="coop_line trans"></i></span></p>
+            </div>
+            <p class="cooper_title">伦敦大学</p>        
+          </a>
+        </li>
+      </ul>
+  </div>
+</div>
+
+<!-- 互动报名 -->
+<div class="con_lev6">
+  <div class="main">
+    <div class="con_title">
+      <p class="con_t1">
+        互动报名<span>dynamic</span>
+      </p>
+      <p class="con_tdesc">
+        
+      </p>
+      <i class="con_line"></i>
+    </div>
+    <!-- 互动专区 -->
+    <div class="con_hdwrap">
+      <div class="con_hdtitle">
+        互动专区<span>Interactive</span>
+        <div class="con_morewrap trans">
+          <a class="trans" href="" title="查看更多" target="_blank">查看更多<i class="trans"></i></a>
+        </div>
+      </div>
+      <!-- 滚动内容 -->
+      <div class="con_hdscrollwrap">
+        <div class="con_hdscrollbox">
+          <ul class="con_hdscrollList" id="scrollList">
+            <li>
+              <span>1、做一个视觉平面类作品集申请伦艺需要具备哪些能力？</span>
+              <p>答：创作平面设计作品集，很多同学们担心自己不会素描、速写、色彩，没有美术功底，申请不到好的国外院校。但其实国外院校作品集的考评标准与国内美术高考完全是两回事，国外更希望看到的是同学们独特的设计理念、鲜明的创作风格、多样的审视角度，以及个人创造潜力。而同学们展现这些个人能力的方式，并不局限于传统老三样，同学们可以尝试使用装置、拼贴等方式体现自己过人的创造性。</p>        
+            </li>
+            
+            <li>
+              <span>1、做一个视觉平面类作品集申请伦艺需要具备哪些能力？</span>
+              <p>答：创作平面设计作品集，很多同学们担心自己不会素描、速写、色彩，没有美术功底，申请不到好的国外院校。但其实国外院校作品集的考评标准与国内美术高考完全是两回事，国外更希望看到的是同学们独特的设计理念、鲜明的创作风格、多样的审视角度，以及个人创造潜力。而同学们展现这些个人能力的方式，并不局限于传统老三样，同学们可以尝试使用装置、拼贴等方式体现自己过人的创造性。</p>        
+            </li>
+            
+            <li>
+              <span>1、做一个视觉平面类作品集申请伦艺需要具备哪些能力？</span>
+              <p>答：创作平面设计作品集，很多同学们担心自己不会素描、速写、色彩，没有美术功底，申请不到好的国外院校。但其实国外院校作品集的考评标准与国内美术高考完全是两回事，国外更希望看到的是同学们独特的设计理念、鲜明的创作风格、多样的审视角度，以及个人创造潜力。而同学们展现这些个人能力的方式，并不局限于传统老三样，同学们可以尝试使用装置、拼贴等方式体现自己过人的创造性。</p>        
+            </li>
+            
+            <li>
+              <span>1、做一个视觉平面类作品集申请伦艺需要具备哪些能力？</span>
+              <p>答：创作平面设计作品集，很多同学们担心自己不会素描、速写、色彩，没有美术功底，申请不到好的国外院校。但其实国外院校作品集的考评标准与国内美术高考完全是两回事，国外更希望看到的是同学们独特的设计理念、鲜明的创作风格、多样的审视角度，以及个人创造潜力。而同学们展现这些个人能力的方式，并不局限于传统老三样，同学们可以尝试使用装置、拼贴等方式体现自己过人的创造性。</p>        
+            </li>
+            
+            
+            <li>
+              <span>1、做一个视觉平面类作品集申请伦艺需要具备哪些能力？</span>
+              <p>答：创作平面设计作品集，很多同学们担心自己不会素描、速写、色彩，没有美术功底，申请不到好的国外院校。但其实国外院校作品集的考评标准与国内美术高考完全是两回事，国外更希望看到的是同学们独特的设计理念、鲜明的创作风格、多样的审视角度，以及个人创造潜力。而同学们展现这些个人能力的方式，并不局限于传统老三样，同学们可以尝试使用装置、拼贴等方式体现自己过人的创造性。</p>        
+            </li>
+            
+            <li>
+              <span>1、做一个视觉平面类作品集申请伦艺需要具备哪些能力？</span>
+              <p>答：创作平面设计作品集，很多同学们担心自己不会素描、速写、色彩，没有美术功底，申请不到好的国外院校。但其实国外院校作品集的考评标准与国内美术高考完全是两回事，国外更希望看到的是同学们独特的设计理念、鲜明的创作风格、多样的审视角度，以及个人创造潜力。而同学们展现这些个人能力的方式，并不局限于传统老三样，同学们可以尝试使用装置、拼贴等方式体现自己过人的创造性。</p>        
+            </li>
+            
+            <li>
+              <span>1、做一个视觉平面类作品集申请伦艺需要具备哪些能力？</span>
+              <p>答：创作平面设计作品集，很多同学们担心自己不会素描、速写、色彩，没有美术功底，申请不到好的国外院校。但其实国外院校作品集的考评标准与国内美术高考完全是两回事，国外更希望看到的是同学们独特的设计理念、鲜明的创作风格、多样的审视角度，以及个人创造潜力。而同学们展现这些个人能力的方式，并不局限于传统老三样，同学们可以尝试使用装置、拼贴等方式体现自己过人的创造性。</p>        
+            </li>
+            
+            <li>
+              <span>1、做一个视觉平面类作品集申请伦艺需要具备哪些能力？</span>
+              <p>答：创作平面设计作品集，很多同学们担心自己不会素描、速写、色彩，没有美术功底，申请不到好的国外院校。但其实国外院校作品集的考评标准与国内美术高考完全是两回事，国外更希望看到的是同学们独特的设计理念、鲜明的创作风格、多样的审视角度，以及个人创造潜力。而同学们展现这些个人能力的方式，并不局限于传统老三样，同学们可以尝试使用装置、拼贴等方式体现自己过人的创造性。</p>        
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <!-- 滚动内容js -->
+    <script type="text/javascript">
+      marqueeUp("scrollList",535,30);
+    </script>
+    <div class="con_yywrap">
+      <div class="con_hdtitle">
+        预约报名<span>Booking registration</span>
+      </div>
+      <!-- 提交表单 -->
+      <div class="con_formwrap">
+        <div class="con_fw_itemwrap">
+          <label class="con_fw_item">
+            <span class="con_fw_t">姓名：</span>
+            <input type="text" class="con_fw_text">
+          </label>
+
+          <p class="con_fw_item con_fw_radiowrap">
+            <span class="con_fw_t">性别：</span>
+            <label class="con_fw_sex_wrap">
+              <input type="radio" name="sex" checked value="男" class="con_fw_radio">男
+            </label>
+            <label class="con_fw_sex_wrap">
+              <input type="radio" name="sex" value="女" class="con_fw_radio">女
+            </label>
+          </p>
+
+          <p class="con_fw_item con_fw_radiowrap">
+            <span class="con_fw_t">学历：</span>
+            <label class="con_fw_sex_wrap">
+              <input type="radio" name="study" checked value="研究生" class="con_fw_radio">研究生
+            </label>
+            <label class="con_fw_sex_wrap">
+              <input type="radio" name="study" value="本科" class="con_fw_radio">本科
+            </label>
+          </p>
+
+          <label class="con_fw_item">
+            <span class="con_fw_t">手机：</span>
+            <input type="text" class="con_fw_text">
+          </label>
+
+          <label class="con_fw_item">
+            <span class="con_fw_t">E-mail：</span>
+            <input type="text" class="con_fw_text">
+          </label>
+
+          <label class="con_fw_item con_fw_low" style="margin-right:29px;">
+            <span class="con_fw_t">工作年数：</span>
+            <input type="text" class="con_fw_text">
+          </label>
+
+          <label class="con_fw_item con_fw_low">
+            <span class="con_fw_t">管理年数：</span>
+            <input type="text" class="con_fw_text">
+          </label>
+          <div class="clear"></div>
+          <label class="con_fw_item">
+            <span class="con_fw_t">验证码：</span>
+            <input type="text" class="con_fw_text con_fw_code">
+            <a class="con_fw_flushcode" href="" title="看不清楚，换一换"><img src="images/photo/code.jpg" width="92" height="32"></a>
+          </label>        
+          <div class="clear"></div>
+          <div class="con_fw_submidwrap">
+            <p class="con_fw_tel">
+              <i>咨询热线<b>0871-65030787</b></i>
+            </p>
+            <a class="con_fw_submit" href="" title="提交">提交</a>
+          </div>
+          <div class="clear"></div>
+
+        </div>
+      </div>
+      <div class="clear"></div>
+    </div>
+    <div class="clear"></div>
+  </div>
+</div>
+
+
+
+
+
+<!-- 底部 -->
+<footer>
+  <div class="main footerinfomation">
+    <div class="f_info">
+      <a class="flogo" href="" title="" rel="nofollow"><img src="images/photo/footer_logo.png"></a>
+      <p class="f_desc">
+        <i></i>
+        <b>在这里，你可以真正的成为艺术家</b><br><span>Here, you can really become an artist</span>
+      </p>
+    </div>
+    <div class="f_ewm">
+      <p class="fewmitem">
+        <img src="images/photo/ewm.jpg" alt="" width="115" height="115">学院微信公众号
+      </p>
+      <p class="fewmitem">
+        <img src="images/photo/ewm.jpg" alt="" width="115" height="115">扫描访问触屏版
+      </p>
+    </div>
+    <div class="f_contact">
+      <p class="fconitem fadd">
+        地址 / address<br>中国云南省昆明市五华区翠湖北路云南大学昌新国际艺术学院
+      </p>
+      <p class="fconitem ftel">
+        热线 / tel<br><b>0871-88888888</b>
+      </p>
+      <p class="fconitem feml">
+        邮箱 / EML<br>changxiniac@163.com
+      </p>
+    </div>
+    <div class="clear"></div>
+  </div>
+  <div class="copy">
+    <div class="main">
+      版权所有©2015&nbsp;&nbsp;&nbsp;&nbsp;昌新国际艺术学院&nbsp;&nbsp;&nbsp;&nbsp;滇ICP备11005594号-1
+      <p class="fnav">        
+        <a class="trans" href="" title="" rel="nofollow">首页</a>|  
+        <a class="trans" href="" title="" rel="nofollow">学院概况</a>|  
+        <a class="trans" href="" title="" rel="nofollow">相关资讯</a>|  
+        <a class="trans" href="" title="" rel="nofollow">教育教学</a>|  
+        <a class="trans" href="" title="" rel="nofollow">科学研究</a>|  
+        <a class="trans" href="" title="" rel="nofollow">招生就业</a>|  
+        <a class="trans" href="" title="" rel="nofollow">合作交流</a>|  
+        <a class="trans" href="" title="" rel="nofollow">校园文化</a>|  
+        <a class="trans" href="" title="" rel="nofollow">联系我们</a>
+      </p>
+    </div>
+  </div>
+  
+</footer>
+
+<script type="text/javascript">
+
+</script>
+
+
+</body>
+</html>
