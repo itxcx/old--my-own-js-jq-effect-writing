@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script type="text/javascript" src="js/jquery.min.js"></script>
+    <style type="text/css">
+        *{margin:0;padding:0;}
+        li{list-style:none;}
+        a{text-decoration: none;}
+    </style>
+</head>
+<body>
+<script type="text/javascript">
+    $(function(){
+        //它是为jQuery类添加类方法，可以理解为添加静态方法。如：
+
+a.jQuery.extend({
+
+    min: function(a, b) { return a < b ? a : b; },
+
+    max: function(a, b) { return a > b ? a : b; }
+
+});
+
+        jQuery.min(2,3); //  2
+        jQuery.max(4,5); //  5
+
+        b. jQuery.extend(target, object1, [objectN])用一个或多个其他对象来扩展一个对象，返回被扩展的对象。
+var settings = { validate: false, limit: 5, name: "foo" };
+        var options = { validate: true, name: "bar" };
+        jQuery.extend(settings, options);
+
+
+//        结果：
+ settings == { validate: true, limit: 5, name: "bar" }
+    })
+</script>
+</body>
+</html>

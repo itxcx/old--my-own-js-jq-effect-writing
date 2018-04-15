@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <script type="text/javascript" src="js/jquery-1.4.2.min.js"></script>
+    <title>Title</title>
+    <style type="text/css">
+        *{margin:0;padding:0;}
+        li{list-style: none;}
+        a{text-decoration: none;}
+    </style>
+</head>
+<body>
+
+<script type="text/javascript">
+    $(function () {
+        console.log("-----------------js构造器，实例对象，追加方法，动静态方法----------------------------");
+//        重新梳理一遍
+//        js的构造函数 new一个新的对象，有构造器的全部属性
+//        构造器的.prototype 给构造函数的原型上追加属性 它的实例皆可获得此方法
+//        ------------分割线--------------------------------------------
+        //构造函数
+        function Man(name,age,position) {
+            this.name = name;
+            this.age = age;
+            this.position = position;
+        }
+        //new 一个新对象
+        var qxn = new Man("钱潇宁",18,"Web前端");
+        var qxn1 = new Man("钱潇宁1",18,"Web前端");
+        //测试其所有的属性
+//        console.log(qxn.name);console.log(typeof(qxn.name));
+//        console.log(qxn.age);console.log(typeof(qxn.age));
+//        console.log(qxn.position);
+        //用构造器的prototype属性追加新属性或方法  (实例方法)
+        Man.prototype.showname = function(){
+            console.log(this.name);
+        };
+//        Man.prototype.showname = this.name;
+        //看实例上的属性
+        qxn.showname();
+        qxn1.showname();
+//        console.log(qxn.showname);
+//        --------现在来看__proto__隐式原型----------------------------------------
+        console.log(Man.prototype === qxn.__proto__);
+        console.log(Man.prototype);//得到的都是一个对象
+        console.log(qxn.__proto__);//得到的都是一个对象
+        console.log(Man.prototype.prototype);//无
+        console.log(qxn.__proto__.__proto__);//有
+        console.log(qxn.__proto__.__proto__.__proto__);//无
+//        ---------------分割线---------------------------------------------
+        console.log("---------------------------------------------");
+//        hasOwnProperty是否是本身的属性，不包括prototype追加的
+        console.log(qxn.hasOwnProperty("name"));
+        console.log(qxn.hasOwnProperty("showname"));
+        console.log(qxn.hasOwnProperty("qqq"));
+        console.log("-----------------静态方法----------------------------");
+        Man.staticMethod = function(){
+            console.log(this);
+        }
+        Man.staticMethod();
+        console.log("-----------------jq中jQuery.extend和jQuery.fn.extend追加静动态方法----------------------------");
+        console.log("---------静态方法-------------");
+        jQuery.extend({
+            min:function(a,b){return a<b?a:b},
+            max:function(a,b){return a>b?a:b}
+        });
+        console.log(jQuery.min(2,3));
+        console.log(jQuery.max(2,3));
+        console.log($.min(2,3));
+        console.log($.max(2,3));
+        console.log("-----------------貌似只能给$和jQuery构造器追加静态方法----------------------------");
+//        console.log(Man.min(2,3));
+//        console.log(Man.max(2,3));
+        console.log("---------动态方法 貌似只能给jq对象追加动态方法-------------");
+        jQuery.fn.extend({
+            show11:function(){
+                return 11;
+            },
+            show22:function(){
+                return 22;
+            }
+        });
+//        console.log(qxn.show11());
+        console.log($(qxn).show11());
+        console.log($(qxn).show22());
+//        console.log($(".a").show11());
+        console.log("---------jQuery.extend拓展前一个对象-------------");
+        var settings = { validate: false, limit: 5, name: "foo" };
+        var options = { validate: true, name: "bar" };
+        jQuery.extend(settings, options);
+        settings == { validate: true, limit: 5, name: "bar" }
+        // 用这个方法，可以将所得的结果全部合并在{}中，并返回，而且还不会破坏原有的项的结构。
+        // var result=$.extend({},item,item1);
+        // bool型参数为true表示深拷贝，为false时表示浅拷贝。具体可以通过一下示例来说明：
+        // var result=$.extend(true,item,item1);
+        // var result1=$.extend(false,item,item1);
+    })
+</script>
+</body>
+</html>

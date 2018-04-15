@@ -1,0 +1,10 @@
+﻿[
+{"title":"标题1","src":"images/0.jpg","des":"描述1","price":"￥1"},
+{"title":"标题2","src":"images/1.jpg","des":"描述2","price":"￥2"},
+{"title":"标题3","src":"images/2.jpg","des":"描述3","price":"￥3"},
+{"title":"标题4","src":"images/3.jpg","des":"描述4","price":"￥4"},
+{"title":"标题5","src":"images/4.jpg","des":"描述5","price":"￥5"},
+{"title":"标题6","src":"images/5.jpg","des":"描述6","price":"￥6"},
+{"title":"标题7","src":"images/6.jpg","des":"描述7","price":"￥7"},
+{"title":"标题8","src":"images/7.jpg","des":"描述8","price":"￥8"}
+]

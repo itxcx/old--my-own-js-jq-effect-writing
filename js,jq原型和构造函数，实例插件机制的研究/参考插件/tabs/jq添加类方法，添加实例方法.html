@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script type="text/javascript" src="js/jquery-1.4.2.min.js"></script>
+    <style type="text/css">
+        *{margin:0;padding:0;}
+        li{list-style: none;}
+        a{text-decoration: none;}
+    </style>
+</head>
+<body>
+<script type="text/javascript">
+    //-----------------------------
+    //js类方法和实例方法的添加
+//    function A(){
+//
+//    }
+//    A.staticMethof = function(){
+//        alert('静态方法');
+//    }
+//    A.prototype.instaceMethod = function(){
+//        alert('实例方法');
+//    }
+//    A.staticMethof(); //类A直接调用
+//    var instace = new A();
+//    instace.instaceMethod();//A的实例对象instace调用
+    //-----------------------------
+    //jq类方法
+    $.extend({
+        hi:function(){console.log("hi")}
+    });
+    $.hi();
+    console.log($)
+    //自定义构造函数
+    function  EatWhat(breakfast,lunch,supper,name) {
+        this.breakfast = breakfast;
+        this.lunch = lunch;
+        this.supper = supper;
+        this.sss="12123";
+        this.play = function(){
+            console.log(name);
+            console.log(name+'go to park');
+            alert('1')
+        }
+        buy = function(ooo){
+            console.log(this+'pay the money');
+            alert(this.sss);
+        }
+    }
+    var aMan = new EatWhat(["bread","milk"],["rice","meat","vagetables"],["rice","fish","bean curd"],"aMan ");
+    aMan.play();
+    //目的 给EatWhat这个构造函数加一个方法
+    // buy:function(){
+    //      console.log('pay the money');
+    // }
+    console.log(EatWhat);
+EatWhat.prototype.
+    console.log(new EatWhat().buy());
+    console.log(EatWhat);
+
+
+
+//    console.log(aMan.breakfast);
+//    aMan.play();
+//    //用$.extend给EatWhat这个类添加方法
+//    var aManBuy = $.extend({},{
+//        buy:function(){
+//            console.log('pay the money')
+//        }
+//    });
+//    console.log(aMan);
+//    console.log(aManBuy);
+    //console.log(aMan.buy);
+    //console.log(EatWhat)
+</script>
+</body>
+</html>
+<!--
+构造函数（类）的prototype属性和 实例化后的对象的__proto__指的是同一个东西 即类的原型
+实例化后的对象的__proto__指的是构造函数的原型
+而实例化后的对象的.__proto__.__proto__指的是构造函数(函数)的构造函数是对象Object的原型  在对象里有一个属性方法hasOwnProperty属性方法   再.__proto__就是null了
+.hasOwnProperty()属性方法用来检验一个对象是否自己拥有一个属性而非通过进化链__proto__继承来的属性
+__proto__隐式原型   指向其构造函数的prototype原型
+-->

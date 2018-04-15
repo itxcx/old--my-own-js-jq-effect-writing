@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script type="text/javascript" src="js/jquery-1.4.2.min.js"></script>
+    <style type="text/css">
+        /*公共部分*/
+        *{margin: 0;padding: 0;}
+        li{list-style: none;}
+        a{text-decoration: none;}
+        /*页面部分*/
+        .tab_menu{font-size: 0;}
+        .tab_menu a{display: inline-block;width: 50px;height: 30px;font-size: 16px;background: #928383;}
+        .tab_menu a.on{background: #e0dfdf;}
+        .tab_box{}
+        .tab_box div{width:200px;height:200px;background: #e0dfdf;display: none;}
+        .tab_box div.on{display: block;}
+    </style>
+</head>
+<body>
+<!--demo1-->
+<div class="demo1">
+    <ul class="tab_menu">
+        <a class="on">111</a>
+        <a>222</a>
+        <a>333</a>
+        <a>444</a>
+    </ul>
+    <div class="tab_box">
+        <div class="on">111</div>
+        <div>222</div>
+        <div>333</div>
+        <div>444</div>
+    </div>
+</div>
+<!--demo2-->
+<div class="demo2">
+    <ul class="tab_menu">
+        <a class="on">111</a>
+        <a>222</a>
+        <a>333</a>
+        <a>444</a>
+    </ul>
+    <div class="tab_box">
+        <div class="on">111</div>
+        <div>222</div>
+        <div>333</div>
+        <div>444</div>
+    </div>
+</div>
+</body>
+<!--tab选项卡插件机制-->
+<script type="text/javascript">
+    //匿名函数 传参jQuery进去
+    ;(function($){
+        //extend添加 多个 示例方法
+        $.fn.extend({
+            //示例方法1
+            Tabs:function(options){
+                //配置条件
+                options = $.extend({
+                    //触发事件
+                    event : "mouseover",
+                },options);
+                //获取this对象，a 和 box
+                //self 当前示例
+                var self = $(this),
+                //盒子
+                tabBox = self.children("div.tab_box").children("div"),
+                //a的盒子
+                menu = self.children("ul.tab_menu"),
+                //a
+                items = menu.find("a"),
+                //定时器
+                timer;
+                //声明多个处理函数   传入元素 参数进入
+                //基本切换函数
+                var tabHandle = function(elem){
+                    //a的class切换
+                    elem.siblings("a")
+                        .removeClass("on")
+                        .end()
+                        .addClass("on");
+                    //box的class切换
+                    tabBox.siblings("div")
+                          .removeClass("on")
+                          .end()
+                          .eq(elem.index())
+                          .addClass("on");
+                },
+                //延时函数   要传入的参数
+                delay = function(elem,time){
+                    time?setTimeout(tabHandle(elem),time):tabHandle(elem);
+                },
+                start = function(){
+
+                },
+                autoRun = function(){
+
+                };
+                //以上处理函数结束
+                //以下 绑定了  options里的事件
+                items.bind( options.event, function(){
+                    delay( $(this), options.timeout );
+                    if( options.callback ){
+                        options.callback( self );
+                    }
+                });
+                //下面是一个判断  为了链式操作
+
+                //把值return出去
+                return this;
+            }
+        })
+    })(jQuery)
+</script>
+<!--页面调用部分-->
+<script type="text/javascript">
+    $(function(){
+        $('.demo1').Tabs();
+        $('.demo2').Tabs();
+    })
+</script>
+</html>

@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script type="text/javascript" src="../../js/jquery.min.js"></script>
+    <style type="text/css">
+        /*公共部分*/
+        *{margin: 0;padding: 0;}
+        li{list-style: none;}
+        a{text-decoration: none;}
+        /*页面部分*/
+        .tab_menu{font-size: 0;}
+        .tab_menu a{display: inline-block;width: 50px;height: 30px;font-size: 16px;background: #928383;}
+        .tab_menu a.on{background: #e0dfdf;}
+        .tab_box{}
+        .tab_box div{width:200px;height:200px;background: #e0dfdf;display: none;}
+        .tab_box div.on{display: block;}
+    </style>
+</head>
+<body>
+<!--demo1-->
+<div class="demo1">
+    <ul class="tab_menu">
+        <a class="on">111</a>
+        <a>222</a>
+        <a>333</a>
+        <a>444</a>
+    </ul>
+    <div class="tab_box">
+        <div class="on">111</div>
+        <div>222</div>
+        <div>333</div>
+        <div>444</div>
+    </div>
+</div>
+<!--demo2-->
+<div class="demo2">
+    <ul class="tab_menu">
+        <a class="on">111</a>
+        <a>222</a>
+        <a>333</a>
+        <a>444</a>
+    </ul>
+    <div class="tab_box">
+        <div class="on">111</div>
+        <div>222</div>
+        <div>333</div>
+        <div>444</div>
+    </div>
+</div>
+</body>
+<!--自己写的-->
+<script type="text/javascript">
+    //函数方法
+    function tabs(options){
+        //最普通原始的做法
+        //变量
+//        var father = $(elem);
+//        var a = father.find(".tab_menu").find("a");
+//        var box = father.find(".tab_box").find("div");
+//        //触发事件
+//        a.on(e,function(){
+//            //a的class变化
+//            $(this).addClass("on").siblings().removeClass("on");
+//            //box的变化
+//            box.eq($(this).index()).addClass("on").siblings().removeClass("on");
+//        });
+        //配置条件
+        options = $.extend({
+            event:"mouseover",
+            father:".demo1"
+        },options);
+        //变量
+        var a = $(options.father).find(".tab_menu").find("a");
+        var box = $(options.father).find(".tab_box").find("div");
+        //触发效果函数
+        var tabHandle = function(){
+            //a的class变化
+            $(this).addClass("on").siblings().removeClass("on");
+            //box的变化
+            box.eq($(this).index()).addClass("on").siblings().removeClass("on");
+        }
+        //绑定事件
+        a.on(options.event,tabHandle);
+    }
+    //原型添加方法
+    $.fn.tabs = function(options){
+        //各种条件  触发事件
+        options = $.extend({
+            event:'mouseover'
+        },options);
+        //需要的一些变量
+        var self = $(this);
+        var a = self.find(".tab_menu").find("a");
+        var box = self.find(".tab_box").find("div");
+        //处理函数
+        var tabHandle = function(){
+            //a的class变化
+            $(this).addClass("on").siblings().removeClass("on");
+            //box的变化
+            box.eq($(this).index()).addClass("on").siblings().removeClass("on");
+        }
+        //绑定
+        a.on(options.event,tabHandle)
+        //链式
+        return this;
+    }
+    //构造函数添加属性 实例化对象法
+    function Tabs(){
+        this.tabss = function(options){
+            //各种条件  触发事件
+            options = $.extend({
+                event:'mouseover',
+                self:'.demo1'
+            },options);
+            //需要的一些变量
+            var self = $(options.self);
+            var a = self.find(".tab_menu").find("a");
+            var box = self.find(".tab_box").find("div");
+            //处理函数
+            var tabHandle = function(){
+                //a的class变化
+                $(this).addClass("on").siblings().removeClass("on");
+                //box的变化
+                box.eq($(this).index()).addClass("on").siblings().removeClass("on");
+            }
+            //绑定
+            a.on(options.event,tabHandle)
+            //链式
+            return this;
+        };
+        this.name = "qqq";
+    }
+    //构造函数添加属性 实例化对象法 2
+    function Tabs2(options){
+        //各种条件  触发事件
+        options = $.extend({
+            event:'mouseover',
+            self:'.demo1'
+        },options);
+        //需要的一些变量
+        var self = $(options.self);
+        var a = self.find(".tab_menu").find("a");
+        var box = self.find(".tab_box").find("div");
+        //处理函数
+        var tabHandle = function(){
+            //a的class变化
+            $(this).addClass("on").siblings().removeClass("on");
+            //box的变化
+            box.eq($(this).index()).addClass("on").siblings().removeClass("on");
+        }
+        //绑定
+        a.on(options.event,tabHandle)
+        //链式
+        return this;
+    }
+</script>
+<!--页面调用部分-->
+<script type="text/javascript">
+    $(function(){
+        //函数调用
+//        tabs(".demo1","click");
+//        tabs(".demo2","mouseover");
+//        tabs({
+//            event:'mouseover',
+//            father:'.demo1'
+//        });
+//        tabs({
+//            event:'click',
+//            father:'.demo2'
+//        });
+//---------------------------------------------
+        //原型方法调用
+//        $('.demo1').tabs({
+//            event:'mouseover'
+//        });
+//        $('.demo2').tabs({
+//            event:'click'
+//        });
+//---------------------------------------------
+        //构造函数添加属性 实例化对象法 调用
+//        var demo1 = new Tabs();
+//        var demo2 = new Tabs();
+//        demo1.tabss({
+//            event:'click',
+//            self:'.demo1'
+//        });
+//        demo2.tabss({
+//            self:'.demo2'
+//        });
+//---------------------------------------------
+        //构造函数添加属性 实例化对象法 调用 2
+//        Tabs2({
+//            event:'click',
+//            self:'.demo1'
+//        });
+//        Tabs2({
+//            event:'mouseover',
+//            self:'.demo2'
+//        });
+        var demo1 = new Tabs2({
+            event:'click',
+            self:'.demo1'
+        });
+        var demo2 = new Tabs2({
+            self:'.demo2'
+        });
+//        var demo1 = new Tabs2;
+//        var demo2 = new Tabs2;
+//        console.log(demo1)
+//        demo1({
+//            event:'click',
+//            self:'.demo1'
+//        });
+//        demo2({
+//            self:'.demo2'
+//        });
+    })
+</script>
+</html>

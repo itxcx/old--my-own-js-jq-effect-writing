@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script type="text/javascript" src="js/jquery.min.js"></script>
+    <style type="text/css">
+        *{margin:0;padding:0;}
+        li{list-style:none;}
+        a{text-decoration: none;}
+    </style>
+</head>
+<body>
+<form action="" method="">
+    <input type="text" name="text"/><br/>
+    <input type="checkbox" name="checkbox1"/><br/>
+    <input type="checkbox" name="checkbox2"/><br/>
+    <input type="checkbox" name="checkbox3"/><br/>
+    <input type="radio" name="radio"/><br/>
+    <input type="radio" name="radio"/><br/>
+    <textarea name="textarea"></textarea><br/>
+    <input type="submit"/><br/>
+</form>
+<script type="text/javascript">
+    $(function(){
+        $('form').submit(function(e){
+            var e=e||window.event;
+            console.log($(this).serialize())
+            //console.log($(this).serializeArray())//
+            e.preventDefault();
+        })
+        //
+//        $('body').click(function(e){
+//            var e=e||window.event;
+//            e.stopPropagation();
+//            console.log($('form').serialize())
+//            console.log($('form').serializeArray())
+//
+//            e.preventDefault();
+//        })
+    })
+</script>
+</body>
+</html>
+            <!--//获取表单的系列化数据。这会生成一个A=valueA&B=valueB这种形式的字符串。-->
+            <!--var formData = $('form').serialize();-->
+
+
+jQuery ajax - serialize() 方法<br/>
+jQuery ajax - serializeArray() 方法
