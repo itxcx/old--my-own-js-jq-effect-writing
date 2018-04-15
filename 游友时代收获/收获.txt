@@ -1,0 +1,7 @@
+linux指令 操作git和cmd
+electron框架做跨平台pc应用
+用node socket通讯协议
+用node 内嵌式数据库sqlite3
+es6语法 let 箭头函数 promise异步
+h5 ajax以文件流的方式传输form信息 formData
+

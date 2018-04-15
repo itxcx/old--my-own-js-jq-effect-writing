@@ -1,0 +1,30 @@
+/*公共部分*/
+*{margin: 0;padding: 0;box-sizing: border-box;}
+li{list-style: none;}
+a{text-decoration: none;}
+.clear{clear:both;}
+/*页面部分*/
+.head{}
+.top{height:60px;background: #00a1ce;}
+.tableTop{height:60px;background: #f8f8f8;border-bottom:1px solid #e2e2e2;margin-left: 180px;overflow: hidden;position: relative;}
+.main{background: #fffbe8;overflow:hidden;}
+.rooms{width:180px;float: left;position: relative;}
+.roomsLi span{display: block;}
+.topLi{float:left;width:100px;height:60px;border-right:1px solid #e2e2e2;}
+.spe{width:180px;}
+.date1{display: block;}
+.nums{display: block;}
+.tableBody{overflow: scroll;background: #fff;}
+.bodyInner{position: relative;}
+.topUl{height:60px;position: absolute;top:0;left:0;}
+.roomsUl{position: absolute;top:0;left:0;}
+.bInnerLi{width:100px;height:60px;background: #fff;float: left;border-right:1px solid #e2e2e2;border-bottom:1px solid #e2e2e2;position: relative;}
+.roomsLi{width:180px;background:#f8f8f8;overflow: hidden;}
+.roomName{float: left;width:120px;text-align: center;border-right:1px solid #e2e2e2;border-bottom:1px solid #e2e2e2;}
+.roomNo{float: right;}
+.roomSpan{width:60px;height:60px;line-height:60px;text-align:center;display: block;border-right:1px solid #e2e2e2;border-bottom:1px solid #e2e2e2;}
+.greenF{background-color: #a7d6b8;border-radius: 4px;width: 95px;height: 56px;filter: alpha(opacity=60);-moz-opacity: .6;-khtml-opacity: .6;opacity: .6;margin: 2px;display: none;position: absolute;left:0;top:0;}
+.greenF span{display: block;font-size: 12px;}
+.blue{background: rgba(0,180,247,.1);}
+.selectCell{border-radius: 4px;width: 95px;height: 56px;margin: 2px;display: none;position: absolute;left:0;top:0;}
+.cellBg{background: url('../img/choose.png');}
