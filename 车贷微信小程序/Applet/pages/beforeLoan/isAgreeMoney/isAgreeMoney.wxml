@@ -1,0 +1,13 @@
+<!--pages/beforeLoan/isAgreeMoney/isAgreeMoney.wxml-->
+<form bindsubmit="bindFormSubmit">
+  <view class='wrap'>
+    <view class='flex jc-sb tit'>
+      <view>是否同意放款</view>
+      <switch bindchange='switch'></switch>
+    </view>
+    <textarea placeholder='请输入备注' name='textarea'></textarea>
+  </view>
+  <view class="btnBox">
+    <button type='primary' form-type="submit" class=''>提交</button>
+  </view>
+</form>

@@ -1,0 +1,95 @@
+<view class='container'>
+    <form bindsubmit="formSubmit">
+        <view class='inputbox radioBox'>
+            <radio-group name='MaritalStatus' class="radio-group" bindchange="radioChange">
+                <label class="radio" wx:for="{{radius}}" wx:for-item="item" wx:key="">
+                    <radio value="{{item.value}}" checked="{{item.checked}}" />{{item.name}}
+                </label>
+            </radio-group>
+        </view>
+        <view wx:if="{{formShow}}" class=''>
+            <view class='inputbox'>
+             <view class='ub'>
+                    <view class="name">身份证号</view>
+                    <view class='ub-f1'>
+                        <input  class="distinguish" name='SpouseIDcard' type='text' placeholder='输入身份证号' placeholder-class='c999' value='{{idcard.Value}}' name='SpouseIDcard'></input>
+                         <icon bindtap='getPhoto' data-id="idcard" class='iconfont icon-icon04'></icon>
+                    </view>
+                </view>
+                <view class='ub'>
+                    <view class="name">配偶姓名</view>
+                    <view class='ub-f1'>
+                        <input type='text' placeholder='输入姓名' placeholder-class='c999' value='{{idcard.Name}}' name='SpouseName'></input>
+                    </view>
+                </view>
+               
+                <view class='ub'>
+                    <view class="name">性别</view>
+                    <view class='ub-f1'>
+                        <radio-group name='SpouseGender' class="radio-group" bindchange="sexChange">
+                            <label class="radio">
+                                <radio value="0" checked='true' />男
+                            </label>
+                            <label class="radio">
+                                <radio value="1" />女
+                            </label>
+                        </radio-group>
+                    </view>
+                </view>
+                <view class='ub'>
+                    <view class="name">手机号码</view>
+                    <view class='ub-f1'>
+                        <input name='SpouseMobile' type='text' placeholder='输入手机号码' placeholder-class='c999' value='{{myData.SpouseMobile}}' name='SpouseMobile'></input>
+                    </view>
+                </view>
+                <view class='ub'>
+                    <view class="name">户籍地址</view>
+                    <view class='ub-f1 chooseMore' data-name="live" bindtap='showPickerArea'>
+                           <input name='live' style="color:#444;" disabled='disabled'  type="text" placeholder='请选择户籍地址' value="{{live.address}}"></input>
+                            <icon class='iconfont icon-down'></icon>
+                    </view>
+                </view>
+                <view class='ub'>
+                    <view class='ub-f1'>
+                        <input bindblur='changeMess' data-name='liveMess' name='liveMess' type='text' placeholder='详细地址' placeholder-class='c999' value='{{live.mess}}'></input>
+                    </view>
+                </view>
+                <view class='ub'>
+                    <view class="name">居住地址</view>
+                   
+                         <view class='ub-f1 chooseMore' data-name="work"  bindtap='showPickerArea'>
+                           <input name='work' style="color:#444;" disabled='disabled'  type="text" placeholder='请选择居住地址' value="{{work.address}}"></input>
+                            <icon class='iconfont icon-down'></icon>
+                    </view>
+   
+                </view>
+                <view class='ub'>
+                    <view class='ub-f1'>
+                        <input  bindblur='changeMess' data-name='workMess' name='workMess' type='text' placeholder='详细地址' placeholder-class='c999' value='{{work.mess}}'></input>
+                    </view>
+                </view>
+            </view>
+        </view>
+        <view class='btnBox'>
+            <button type='primary' form-type='submit' disabled='{{disabled}}'>确认</button>
+        </view>
+    </form>
+</view>
+<view wx:if="{{isShow}}" class="picker-shadow"></view>
+<view animation="{{myAnimation}}"  class="picker-view">
+<view class="btnBox">
+<button size='mini' bindtap='hidePicker'>取消</button>
+<button size='mini' bindtap='confirmAddress' class="float-right" type="primary">确定</button>
+</view>
+<picker-view indicator-style="height: 40px;" style="width: 100%; height:200px;" value="{{value}}" bindchange="bindChange">
+  <picker-view-column>
+    <view wx:for="{{proviceData}}" wx:key="" class="addr-item">{{item.AreaName}}</view>
+  </picker-view-column>
+  <picker-view-column>
+    <view wx:for="{{cityData}}" wx:key="" class="addr-item">{{item.AreaName}}</view>
+  </picker-view-column>
+  <picker-view-column>
+    <view wx:for="{{districtData}}"  wx:key="" class="addr-item">{{item.AreaName}}</view>
+  </picker-view-column>
+</picker-view>
+</view>

@@ -1,0 +1,42 @@
+<form bindsubmit='formsubmit'>
+  <view class='container'>
+    <view class='serverPic'>
+      <image src='/images/server.png' mode='widthFix'></image>
+    </view>
+    <view class='ub'>
+      <view class='icon'>
+        <icon class='iconfont icon-phone'></icon>
+      </view>
+      <view class='ub-f1'>
+        {{phoneNumber}}
+      </view>
+      <view>
+        {{serverName}}
+      </view>
+    </view>
+    <view class='ub'>
+      <view class='icon'>
+        <icon class='iconfont icon-password'></icon>
+      </view>
+      <view class='ub-f1'>
+        <input name='serverPass' bindinput='getServerPass' type='text' password='true' placeholder='请输入服务密码'></input>
+      </view>
+    </view>
+    <view wx:if="{{serverPass}}" class='ub'>
+      <view class='icon'>
+        <icon class='iconfont icon-safe'></icon>
+      </view>
+      <view class='ub-f1'>
+        <input name='mark' type='text' placeholder='请输入验证码'></input>
+      </view>
+      <view>
+        <button wx:if="{{timer}}" type='blue' disabled='true' plain='true'>{{timerText}}</button>
+        <button bindtap='getMark' wx:else  type='blue' plain='true'>获取验证码</button>
+      </view>
+    </view>
+  </view>
+  <view class='btnBox'>
+    <button type='primary' form-type='submit'>立即验证</button>
+     <button wx:if="{{show}}" type='primary' bindtap='skipCheck'>跳过验证</button>
+  </view>
+</form>

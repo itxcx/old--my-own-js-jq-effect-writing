@@ -1,0 +1,60 @@
+/* pages/beforeLoan/idCardMess/idCardMess.wxss */
+.messMain{
+  background: #fff;
+  padding:0 30rpx;
+}
+.messMain .messBox{
+  line-height: 88rpx;
+  border-bottom:1px solid #e5e5e5;
+}
+.messMain .messBox:last-child{
+  border-bottom:0;
+}
+.messMain .messBox name{
+  width: 200rpx;
+}
+.messMain .messBox .ub-f1{
+  text-align: right;
+  color:#999;
+}
+.messMain .messBox .ub-f1.address{
+    line-height: 1.4;
+    padding:8px 0 8px 10px;
+}
+.messMain .messBox .piclist{
+  padding:20rpx 0;
+  overflow: hidden;
+}
+.messMain .messBox .piclist .item{
+  width: 46.5%;
+  float:left;
+  margin:0 1.533%;
+}
+.messMain .messBox .piclist .item image{
+  height: 200rpx;
+}
+.shadeBox{
+  position: fixed;
+  width: 100%;
+  height:100%;
+  background: rgba(0,0,0,0.5);
+  top:0;
+  left:0;
+}
+.shadeBox .ub-f1{
+  width: 100%;
+}
+.shadeBox .swiper{
+  width: 100%;
+  text-align: center;
+  height:60%;
+  position:absolute;
+margin:auto;
+top:0;
+bottom:0;z-index:20;}
+.shadeBox swiper{
+  height:100%;
+}
+.shadeBox swiper image{
+  height:100%;
+}

@@ -1,0 +1,39 @@
+<view class="messMain">
+  <view class='messBox ub'>
+    <view class='name'>姓名</view>
+    <view class='ub-f1'>{{myData.RealName}}</view>
+  </view>
+  <view class='messBox ub'>
+    <view class='name'>身份证号</view>
+    <view class='ub-f1'>{{myData.IDcard}}</view>
+  </view>
+   <!-- <view class='messBox ub ub-ac'>
+    <view class='name'>户籍地址</view>
+    <view class='ub-f1 address'>{{myData.PermanentAddress}}</view>
+  </view> -->
+  <!-- <view class='messBox ub'>
+    <view class='name'>有效期</view>
+    <view class='ub-f1'>2020-12-12</view>
+  </view> -->
+  <view class='messBox picBox'>
+    <view class='name'>证件照片</view>
+    <view class="piclist">
+      <view class='item' wx:for="{{imgs}}" data-index="{{index}}" wx:key=""  bindtap='showSwiper'>
+        <image src='{{item}}' mode='aspectFit'></image>
+      </view>
+    </view>
+  </view>
+</view>
+<view wx:if="{{swiper}}" class='shadeBox ub ub-ver ub-ac' bindtap='closeSwiper'>
+  <!-- <view bindtap='closeSwiper' class='ub-f1'></view> -->
+  <view class='shadeMain swiper'>
+    <swiper indicator-dots="true" autoplay="false" current='{{current}}' indicator-color='#eee' indicator-active-color='#d20000'>
+      <block wx:for="{{imgs}}" wx:key="*this" wx:for-item="src">
+        <swiper-item>
+          <image src='{{src}}' mode='aspectFit'></image>
+        </swiper-item>
+      </block>
+    </swiper>
+  </view>
+  <view bindtap='closeSwiper' class='ub-f1'></view>
+</view>

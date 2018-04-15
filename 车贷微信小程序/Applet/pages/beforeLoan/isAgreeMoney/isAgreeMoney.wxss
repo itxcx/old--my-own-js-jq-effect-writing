@@ -1,0 +1,10 @@
+/* pages/beforeLoan/isAgreeMoney/isAgreeMoney.wxss */
+.wrap{margin: 20rpx 0;background: #fff;padding: 20rpx;font-size: 30rpx;color:#888;}
+.wrap .tit{height:64rpx;line-height: 64rpx;}
+textarea{border:1rpx solid #eee;
+width:100%;
+height:300rpx;
+border-radius:10rpx;
+margin-top:20rpx;
+padding:20rpx;
+box-sizing:border-box;color: #000;}

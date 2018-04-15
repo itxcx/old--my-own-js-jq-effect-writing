@@ -1,0 +1,42 @@
+<view class='ub ub-ver full-height'>
+    <view class='ub-f1'>
+        <view class='listBox'>
+            <view class="listMess" wx:if="{{!install}}" bindtap='addPic'>
+                <view class="pic addPic">
+                    <icon class="iconfont icon-jia"></icon>
+                </view>
+            </view>
+            <view class="listMess" wx:for="{{urls}}" wx:key="">
+                <view class="pic" bindtap='picSwiper' data-index='{{index}}'>
+                    <image src="{{item}}" model="widthFix"></image>
+                </view>
+            </view>
+        </view>
+    </view>
+    <view class="foot-btn">
+        <text bindtap='navBack'>返回</text>
+        <text bindtap='savePic'>保存</text>
+    </view>
+</view>
+<!--遮罩  -->
+<view class='layer' hidden='{{layer}}' bindtap='layerHide'></view>
+<!--弹窗  -->
+<view class='box flex flex-col' animation="{{boxAnimation}}">
+    <image src='{{ex_pic}}'></image>
+    <text>• 请按照示例图提交照片</text>
+    <text>• 照片要四角对齐，如有模糊、遮挡、无法识别等情况则不予认证</text>
+    <button type='primary' class='' bindtap='uploadPic'>上传图片</button>
+</view>
+<view class='swiperBox ub ub-ver' animation="{{swiperAnimation}}">
+    <view bindtap='hideSwiper' class='ub-f1'></view>
+    <view class='picBox'>
+        <swiper indicator-dots="{{swiper.indicatorDots}}" current="{{swiper.current}}" duration="{{swiper.duration}}" indicator-color='{{swiper.indicatorColor}}' indicator-active-color='{{swiper.indicatorActive}}'>
+            <block wx:for="{{urls}}" wx:key="">
+                <swiper-item>
+                    <image src="{{item}}" class="slide-image" mode="widthFix" />
+                </swiper-item>
+            </block>
+        </swiper>
+    </view>
+    <view bindtap='hideSwiper' class='ub-f1'></view>
+</view>
