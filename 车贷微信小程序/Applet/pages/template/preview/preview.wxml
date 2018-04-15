@@ -1,0 +1,17 @@
+<template name="preview">
+<view class="picPreview" wx:if="{{show}}">
+<view class="ub ub-ver full-height">
+    <view bindtap='movePreview' class='ub-f1'></view>
+    <view class='picBox'>
+        <swiper indicator-dots="true"  indicator-color='#eee' indicator-active-color='#d20000' current="{{current}}">
+            <block wx:for="{{img}}" wx:key="">
+                <swiper-item>
+                    <image src="{{item}}" class="slide-image" mode='aspectFit' />
+                </swiper-item>
+            </block>
+        </swiper>
+    </view>
+    <view bindtap='movePreview' class='ub-f1'></view>
+</view>
+</view>
+</template>

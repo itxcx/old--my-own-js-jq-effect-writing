@@ -1,0 +1,39 @@
+.model{
+    background: #fff;
+    margin-top:20rpx;
+    border:1px solid #e5e5e5;
+}
+.model .infoMess{
+    height:88rpx;
+    line-height: 88rpx;
+    border-bottom: 1px solid #eee;
+    padding:0 20rpx
+}
+.model .infoMess:last-child{
+    border-bottom: 0;
+}
+.model .infoMess .name{
+    width: 160rpx;
+}
+.model .infoMess .text{
+    color:#666;
+    text-align: right;
+}
+
+.centerFoot{
+    padding:20rpx;
+}
+.top{background: #fff;padding: 0 20rpx;position: relative;height:160rpx;line-height:160rpx;}
+.top image{width:120rpx;
+height:120rpx;
+margin:10px 0;
+}
+.top .name{font-size:59rpx;
+color:#323232;
+margin-left:20rpx;
+}
+.top .position{font-size:34rpx;
+color:#5cadf2;
+margin-left:20rpx;
+}
+.text.ub-f1{font-size:30rpx;}

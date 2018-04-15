@@ -1,0 +1,41 @@
+<view class='ub ub-ver full-height'>
+    <view class="ub-f1">
+        <view class='top flex'>
+          <image src='/images/comLogo.png'></image>
+          <view>
+            <text class='name'>{{info.UserName}}</text>
+            <text class='position'>{{info.PostName}}</text>
+          </view>          
+        </view>
+        <view class="model">            
+            <view class="infoMess ub">
+                <view class='name'>所属门店</view>
+                <view class='text ub-f1'>{{info.ShopName}}</view>
+            </view>
+            <view class="infoMess ub">
+                <view class='name'>手机号码</view>
+                <view class='text ub-f1'>{{info.Mobile==null?'':info.Mobile}}</view>
+            </view>
+            <view class="infoMess ub">
+                <view class='name'>E-mail</view>
+                <view class='text ub-f1'>{{info.Email==null?'':info.Email}}</view>
+            </view>
+            <view class="infoMess ub">
+                <view class='name'>微信</view>
+                <view class='text ub-f1'>{{info.WeChat==null?'':info.WeChat}}</view>
+            </view>
+        </view>
+        <view class="model">
+            <navigator url='./personalPassword' class="infoMess ub">
+                <view class='name'>修改密码</view>
+                <view class='text ub-f1'>
+                  <text class='v'>点击修改</text>
+                  <icon class="iconfont icon-right alink"></icon>
+                </view>
+            </navigator>          
+        </view>                    
+    </view>
+    <view class='centerFoot'>
+        <button bindtap='Unbind' type='primary'>退出登录</button>
+    </view>
+</view>
