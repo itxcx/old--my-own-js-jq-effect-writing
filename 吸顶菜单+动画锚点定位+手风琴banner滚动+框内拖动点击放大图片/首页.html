@@ -1,0 +1,346 @@
+<!doctype html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta http-equiv="Content-Language" content="zh-CN">
+<title>暂无标题</title>
+<meta name="keywords" content="">
+<meta name="description" content="">
+<meta name="copyright" content="" />
+<!--[if IE]>
+   <script src="js/html5.js"></script>
+<![endif]-->
+<script src="js/jquery-1.9.1.min.js"></script>
+<script src="js/common.js"></script>
+<script src="js/swiper.min.js"></script>
+
+<link href="css/common.css" rel="stylesheet" type="text/css" />
+<link href="css/swiper.min.css" rel="stylesheet" type="text/css" />
+<link href="css/style.css" rel="stylesheet" type="text/css" />
+
+<script type="text/javascript">
+  $(document).ready(function(){
+	  pcNavDown("#mainnav","li","sel","menu");
+	  pcBannerCartoon(".bannerbox","a","#bannernum","span","numsel",500,5000,true,"#adlast","#adnext");
+      //首页nav宽度居中
+      navCenter();
+      //首页吸顶菜单
+      navTop();
+     //首页package轮播
+      convey();
+  });
+</script>
+</head>
+<body>
+<header class="index">
+    <div class="logo">
+        <a href=""><img src="images/index_logo.png"/></a>
+    </div>
+    <div class="title">
+        <span>lonely as a</span>
+        <b class="a">cloud</b>
+        <span>dances with the</span>
+        <b class="b">Flower</b>
+        <span>And then，my heart with </span>
+        <b class="c">pleasure</b>
+        <span>fills</span>
+    </div>
+    <div class="comment">
+        <b>云朵朵鲜花 · </b><span>订制你的幸福</span>
+    </div>
+</header>
+<nav class="nav">
+    <ul>
+        <li>
+            <a href="javascript:void(0)" onclick="$('html,body').animate({scrollTop:$('.index').offset().top-90},500)">首页</a>
+        </li>
+        <li>
+            <a href="javascript:void(0)" onclick="$('html,body').animate({scrollTop:$('.package').offset().top-90},500)">产品套餐</a>
+        </li>
+        <li>
+            <a href="javascript:void(0)" onclick="$('html,body').animate({scrollTop:$('.story').offset().top-90},500)">鲜花故事</a>
+        </li>
+        <li>
+            <a href="javascript:void(0)" onclick="$('html,body').animate({scrollTop:$('.how').offset().top-90},500)">如何购买</a>
+        </li>
+        <li>
+            <a href="javascript:void(0)" onclick="$('html,body').animate({scrollTop:$('.about').offset().top-90},500)">关于云朵朵</a>
+        </li>
+        <li>
+            <a href="javascript:void(0)" onclick="$('html,body').animate({scrollTop:$('.contact').offset().top-90},500)">联系我们</a>
+        </li>
+        <li>
+            <a href="">云朵朵动态</a>
+        </li>
+        <li>
+            <a href="">登录</a>
+        </li>
+    </ul>
+</nav>
+<section class="package">
+    <div class="top">
+        <div class="qrcode">
+            <img src="images/qrcode_img.png"/>
+        </div>
+    </div>
+    <div class="bottom">
+        <div class="con">
+            <ul>
+                <li>
+                    <div class="tit">
+                        <h3>单束·鲜花月套餐111</h3>
+                        <div class="p">
+                            <p>精选当季时令花材，</p>
+                            <p>每周一次，每月4束，品种随机</p>
+                        </div>
+                    </div>
+                    <div class="pic">
+                        <img src="images/package_pic.jpg"/>
+                        <a href="" class="pic_a">
+                            <i class="circle">
+                                <span class="in">单混·鲜花月套餐</span>
+                            </i>
+                        </a>
+                    </div>
+                </li>
+                <li>
+                    <div class="tit">
+                        <h3>单束·鲜花月套餐222</h3>
+                        <div class="p">
+                            <p>精选当季时令花材，</p>
+                            <p>每周一次，每月4束，品种随机</p>
+                        </div>
+                    </div>
+                    <div class="pic">
+                        <img src="images/package_pic.jpg"/>
+                        <a href="" class="pic_a">
+                            <i class="circle">
+                                <span class="in">单混·鲜花月套餐</span>
+                            </i>
+                        </a>
+                    </div>
+                </li>
+                <li>
+                    <div class="tit">
+                        <h3>单束·鲜花月套餐333</h3>
+                        <div class="p">
+                            <p>精选当季时令花材，</p>
+                            <p>每周一次，每月4束，品种随机</p>
+                        </div>
+                    </div>
+                    <div class="pic">
+                        <img src="images/package_pic.jpg"/>
+                        <a href="" class="pic_a">
+                            <i class="circle">
+                                <span class="in">单混·鲜花月套餐</span>
+                            </i>
+                        </a>
+                    </div>
+                </li>
+                <li>
+                    <div class="tit">
+                        <h3>单束·鲜花月套餐444</h3>
+                        <div class="p">
+                            <p>精选当季时令花材，</p>
+                            <p>每周一次，每月4束，品种随机</p>
+                        </div>
+                    </div>
+                    <div class="pic">
+                        <img src="images/package_pic.jpg"/>
+                        <a href="" class="pic_a">
+                            <i class="circle">
+                                <span class="in">单混·鲜花月套餐</span>
+                            </i>
+                        </a>
+                    </div>
+                </li>
+                <li>
+                    <div class="tit">
+                        <h3>单束·鲜花月套餐555</h3>
+                        <div class="p">
+                            <p>精选当季时令花材，</p>
+                            <p>每周一次，每月4束，品种随机</p>
+                        </div>
+                    </div>
+                    <div class="pic">
+                        <img src="images/package_pic.jpg"/>
+                        <a href="" class="pic_a">
+                            <i class="circle">
+                                <span class="in">单混·鲜花月套餐</span>
+                            </i>
+                        </a>
+                    </div>
+                </li>
+            </ul>
+        </div>
+        <a href="javascript:void(0)" class="prev"></a>
+        <a href="javascript:void(0)" class="next"></a>
+    </div>
+</section>
+<section class="story">
+    <div class="title">
+        <i></i>
+        <span class="en">flower</span>
+        <span class="en">sroty</span>
+        <span class="ch">鲜花故事</span>
+    </div>
+    <div class="story_slide">
+        <ul>
+            <li>
+                <a href="javascript:void(0)">
+                    <img src="images/index_banner.jpg"/>
+                </a>
+            </li>
+            <li>
+                <a href="javascript:void(0)">
+                    <img src="images/about_bg.jpg"/>
+                </a>
+            </li>
+            <li>
+                <a href="javascript:void(0)">
+                    <img src="images/index_banner.jpg"/>
+                </a>
+            </li>
+            <li>
+                <a href="javascript:void(0)">
+                    <img src="images/index_banner.jpg"/>
+                </a>
+            </li>
+            <li>
+                <a href="javascript:void(0)">
+                    <img src="images/index_banner.jpg"/>
+                </a>
+            </li>
+            <li>
+                <a href="javascript:void(0)">
+                    <img src="images/index_banner.jpg"/>
+                </a>
+            </li>
+            <li>
+                <a href="javascript:void(0)">
+                    <img src="images/index_banner.jpg"/>
+                </a>
+            </li>
+        </ul>
+    </div>
+
+    <p class="comment">把握黄金时间点做好采后保鲜，花床般的养护条件，鲜花自然冻龄，始终如一的蓬勃生命力。</p>
+</section>
+<section class="how">
+    <div class="inside">
+        <div class="fl">
+            <span class="en">How</span>
+            <span class="en">to buy</span>
+            <span class="ch">如何购买</span>
+            <p>扫二维码，或者搜索 <span class="phra">云朵朵</span> 微信公众号，
+                关注后，点击左下角鲜花预定。</p>
+            <img src="images/how_qrcode.png" class="how_qrcode"/>
+            <img src="images/how_btn.jpg" class="how_btn"/>
+        </div>
+        <div class="fr">
+            <img src="images/how_r.jpg"/>
+        </div>
+    </div>
+</section>
+<section class="about">
+    <div class="title">
+        <i></i>
+        <span class="en">about</span>
+        <span class="en">us</span>
+        <span class="ch">关于云朵朵</span>
+    </div>
+    <div class="about_phra">云朵朵品牌成立于2016年初，颠覆了传统鲜花消费多在节庆、纪念日的礼品花模式，捕捉都市人日常鲜花消费的市场空白，通过手机端下单、包月制宅配，向客户传递随时随地用 鲜花点亮生活、点亮心情的理念，培育日常用花的消费模式。</div>
+</section>
+<section class="contact">
+    <div class="inside">
+        <div class="top">
+            <span class="en">Contact</span>
+            <span class="en">us</span>
+            <span class="ch">联系我们</span>
+        </div>
+        <div class="bottom">
+            <div class="addr" style="margin-top:44px;">
+                <img src="images/i1.png" class="i1"/>
+                <p>昆明市五华区鹤望路679号亿达北虹创业园2号楼4楼云朵朵</p>
+            </div>
+            <div class="addr" style="margin-top:30px;">
+                <img src="images/i2.png" class="i2"/>
+                <p>联系电话：4008885928</p>
+            </div>
+            <div class="share">
+                <ul>
+                    <li>
+                        <a href="" class="s1"></a>
+                    </li>
+                    <li>
+                        <a href="" class="s2"></a>
+                    </li>
+                    <li>
+                        <a href="" class="s3"></a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</section>
+<section class="ways">
+    <div class="inside">
+        <ul>
+            <li class="li1">
+                <i class="fl"></i>
+                <div class="fr">
+                    <p>鲜花送到家</p>
+                    <p>一周一花, 周六周一送达</p>
+                </div>
+            </li>
+            <li class="li2">
+                <i class="fl"></i>
+                <div class="fr">
+                    <p>微信下单</p>
+                    <p>省力、方便、快捷</p>
+                </div>
+            </li>
+            <li class="li3">
+                <i class="fl"></i>
+                <div class="fr">
+                    <p>021-59570260</p>
+                    <p>工作时间9:30 - 18:00</p>
+                </div>
+            </li>
+        </ul>
+    </div>
+</section>
+<footer class="index_f">
+    <div class="inside">
+        <div class="fl">
+            <div class="share" style="margin-top:36px;">
+                <ul>
+                    <li>
+                        <a href="" class="s1"></a>
+                    </li>
+                    <li>
+                        <a href="" class="s2"></a>
+                    </li>
+                    <li>
+                        <a href="" class="s3"></a>
+                    </li>
+                </ul>
+            </div>
+            <p>COPYRIGHT (©) 2016昆明云朵朵鲜花有限公司 ALL RIGHTS RESERVED.   滇ICP备16006666号	<a href="http://www.ynyes.com" title="云南网站建设" target="_blank">网站建设</a>支持：<a href="http://www.ynyes.com" title="昆明天度网络公司" target="_blank">天度网络</a></p>
+        </div>
+        <div class="fr">
+            <img src="images/footer_qrcode.png"/>
+        </div>
+    </div>
+</footer>
+<!--story放大遮罩层-->
+<div class="enlarge">
+    <img src=""/>
+</div>
+</body>
+</html>
+<script type="text/javascript">
+    //首页story_roll
+    var img = $(".story .story_slide ul li a img");
+    img.onload = storyRoll();
+</script>
