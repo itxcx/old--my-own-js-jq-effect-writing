@@ -1,0 +1,26 @@
+<view class='inputbox mt20 pd'>
+    <view class='ub'>
+        <view class="name yellow">车辆是否有异常</view>
+        <view class='ub-f1 chooseMore'>
+            <switch class='switchR' checked='checked' bindchange="switch" />
+        </view>
+    </view>
+    <block wx:for="{{links}}">
+        <navigator wx:if="{{switchFlag}}" class='ub' url="{{item.url}}">
+            <view class="name">{{item.name}}</view>
+            <view class='ub-f1 chooseMore'>
+                <icon class='iconfont icon-right more'></icon>
+            </view>
+        </navigator>
+        <view wx:else class='ub'>
+            <view class="name c999">{{item.name}}</view>
+            <view class='ub-f1 chooseMore'>
+                <icon class='iconfont icon-right more'></icon>
+            </view>
+        </view>
+    </block>
+</view>
+<view class="btnBox">
+    <button type='primary' bindtap='submit' class='' hidden='{{!switchFlag}}'>提交</button>
+    <button type='primary' bindtap='nextStep' class='' hidden='{{switchFlag}}'>下一步</button>
+</view>

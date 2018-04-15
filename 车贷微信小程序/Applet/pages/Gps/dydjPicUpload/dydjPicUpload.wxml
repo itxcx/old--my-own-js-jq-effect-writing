@@ -1,0 +1,19 @@
+<import src='/pages/template/preview/preview.wxml'/>
+<view class='listBox'>
+    <view class='tit'>{{tit}}</view>     
+    <view class="listmess" bindtap='bindGPS'>
+        <view class="pic addPic">
+            <icon class="iconfont icon-jia"></icon>
+        </view>        
+    </view>
+    <view class="listmess" wx:for="{{list}}" wx:key="{{CarId}}" data-id="{{item.CarId}}" data-index="{{index}}"  bindtap='operGps'>
+        <view class="pic">
+            <image src="{{item.Original_path}}"></image>            
+        </view>        
+    </view>
+</view>
+<view class="btnBox">
+  <button type='primary' bindtap='sure' class=''>确定</button>
+</view>
+<template is="preview" data="{{...imgUrls}}"></template>
+ 

@@ -1,0 +1,58 @@
+<import src='/pages/template/preview/preview.wxml'/>
+<view class='tit'>重大事故异常照片</view> 
+<view class='listBox'>        
+    <view class="listmess" wx:for="{{list1}}" wx:key="{{CarId}}" data-id="{{item.CarId}}" bindtap='operGps' data-index='1'>
+        <view class="pic">
+            <image src="{{item.Original_path}}" mode='aspectFit'></image>            
+        </view>        
+    </view>
+    <view class="listmess" wx:if='{{!list1L}}'>
+        <view class="pic">
+            无
+        </view>        
+    </view>
+</view>
+<view class='tit'>可疑人员异常照片</view> 
+<view class='listBox'>        
+    <view class="listmess" wx:for="{{list2}}" wx:key="{{CarId}}" data-id="{{item.CarId}}" bindtap='operGps' data-index='2'>
+        <view class="pic">
+            <image src="{{item.Original_path}}" mode='aspectFit'></image>            
+        </view>        
+    </view>
+    <view class="listmess" wx:if='{{!list2L}}'>
+        <view class="pic">
+            无
+        </view>        
+    </view>
+</view>
+<view class='tit'>违禁物品异常照片</view> 
+<view class='listBox'>        
+    <view class="listmess" wx:for="{{list3}}" wx:key="{{CarId}}" data-id="{{item.CarId}}" bindtap='operGps' data-index='3'>
+        <view class="pic">
+            <image src="{{item.Original_path}}" mode='aspectFit'></image>            
+        </view>        
+    </view>
+    <view class="listmess" wx:if='{{!list3L}}'>
+        <view class="pic">
+            无
+        </view>        
+    </view>
+</view>
+<view class='tit'>其他异常照片</view> 
+<view class='listBox'>        
+    <view class="listmess" wx:for="{{list4}}" wx:key="{{CarId}}" data-id="{{item.CarId}}" bindtap='operGps' data-index='4'>
+        <view class="pic">
+            <image src="{{item.Original_path}}"></image>            
+        </view>        
+    </view>
+    <view class="listmess" wx:if='{{!list4L}}'>
+        <view class="pic">
+            无
+        </view>        
+    </view>
+</view>
+<view class="btnBox">
+  <button type='primary' bindtap='sure' class=''>返回</button>
+</view>
+<template is="preview" data="{{...imgUrls}}"></template>
+ 

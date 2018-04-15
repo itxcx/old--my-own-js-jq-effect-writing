@@ -1,0 +1,24 @@
+<view class="ub ub-ver full-height">
+    <view class="ub-f1 map_container">
+        <!-- <map id="myMap" class="map" longitude="{{longitude}}" latitude="{{latitude}}" scale="14" show-location="true" markers="{{markers}}" bindmarkertap="makertap"/> -->
+        <map id="map" longitude="{{longitude}}" latitude="{{latitude}}" scale="15"  bindmarkertap="makertap" markers ="{{markers }}" show-location="true" ></map>
+    </view>
+    <view class='mapMess'>
+        <view class='ub'>
+            <view class="name">地址：</view>
+            <view class='ub-f1'>{{rgcData.address}}</view>
+        </view>
+        <view class='ub'>
+            <view class="name">在线状态：</view>
+            <view class='ub-f1'>{{rgcData.status}}</view>
+        </view>
+        <view class='ub'>
+            <view class="name">在线状态时间：</view>
+            <view class='ub-f1'>{{rgcData.times}}</view>
+        </view>
+        <view class='ub'>
+            <view class="name">信号：</view>
+            <view class='ub-f1'>{{rgcData.signal}}</view>
+        </view>
+    </view>
+</view>

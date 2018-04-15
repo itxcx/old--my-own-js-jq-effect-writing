@@ -1,0 +1,42 @@
+
+.data-main {
+    height: 100%;
+    position: relative;
+}
+.top-bar {
+    height: 80rpx;
+    line-height: 80rpx;
+    background: #fff;
+    border-top: 1px solid #e5e5e5;
+    border-bottom: 1px solid #e5e5e5;
+    position: fixed;
+    width: 100%;
+    top:0;
+    z-index: 10;
+}
+
+.top-bar .ub-f1 {
+    width: 25%;
+    text-align: center;
+}
+
+.top-bar .cur {
+    background: #4e8dee;
+    color: #fff;
+}
+swiper {
+  min-height:100%;
+   padding-top:80rpx;
+}
+swiper swiper-item{box-sizing: border-box;}
+.oldpicker{margin:20rpx 0 ;padding:0 20rpx;width: 100%;overflow: hidden;}
+.oldpicker picker{float:left;height:72rpx;line-height:72rpx;width: 50%;border:1px solid #e5e5e5;padding:0 60rpx 0 10rpx;background: #fff;position:relative;font-size:26rpx;box-sizing: border-box;}
+.oldpicker picker view{padding-right:60rpx;}
+.oldpicker picker icon{position:absolute;text-align: center;width: 60rpx;line-height: 72rpx;top:0;right:0;font-size:28rpx;color:#999;}
+.oldpicker text{font-size:24rpx;float: right;line-height: 72rpx;color:#666;}
+.old .olddata{
+    padding:0 10rpx;margin:20rpx 0;
+}
+.old .olddata .ub-f1{margin:10rpx;background: #fff;padding:20rpx;border:1px solid #e5e5e5;width: 33.33%;}
+.old .olddata .ub-f1 view{margin:10rpx;}
+.old .olddata .ub-f1 view icon{position: relative;top:2rpx;}

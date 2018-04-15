@@ -1,0 +1,28 @@
+<import src='/pages/template/preview/preview.wxml'/>
+<view class='listBox'>
+    <view class='tit'>{{tit}}</view>     
+    <view class="listmess" wx:for="{{keylist}}" wx:key="{{picid}}" data-id="{{item.picid}}" bindtap='operPics' data-index="{{index}}">
+        <view class="pic">
+            <image src="{{item.url}}"  mode='aspectFit'></image>            
+        </view>        
+    </view>
+    <view class="listmess" bindtap='addPic'>
+        <view class="pic addPic">
+            <icon class="iconfont icon-jia"></icon>
+        </view>        
+    </view>
+</view>
+<view class="btnBox">
+  <button type='primary' bindtap='sure' class=''>确定</button>
+</view>
+<template is="preview" data="{{...imgUrls}}"></template>
+<!--遮罩  -->
+<view class='layer' hidden='{{layer}}' bindtap='layerHide'></view>
+<!--弹窗  -->
+<view class='box flex flex-col' animation="{{boxAnimation}}">
+    <image src='{{ex_pic}}'></image>
+    <text>• 请按照示例图提交照片</text>
+    <text>• 照片要四角对齐，如有模糊、遮挡、无法识别等情况则不予认证</text>
+    <button type='primary' class='' bindtap='uploadPic'>上传图片</button>
+</view>
+ 

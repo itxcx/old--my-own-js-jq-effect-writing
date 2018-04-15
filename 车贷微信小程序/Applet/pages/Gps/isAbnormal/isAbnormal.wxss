@@ -1,0 +1,48 @@
+/* pages/beforeLoan/perfectData/index.wxss */
+
+form {
+    display: block;
+}
+
+.title {
+    margin-top: 10rpx;
+    padding: 20rpx;
+    color: #666;
+    position: relative;
+}
+
+.title .iconfont {
+    position: absolute;
+    right: 24rpx;
+    top: 20rpx;
+    line-height: 100%;
+    color: #9cabcd;
+    font-size: 40rpx;
+}
+
+.pd .ub .ub-f1 .pd_tit {
+    height: 100%;
+    line-height: normal;
+    color: #b2b2b2;
+    font-size: 32rpx;
+    text-align: right;
+}
+
+.pd .icon-wancheng {
+    color: #10aeff !important;
+    right: 46rpx !important;
+}
+.progress{
+    position: absolute;
+    left:45%;
+}
+.inputbox .ub .chooseMore .icon-over1{
+    color:#3dc16e;
+    font-size:60rpx;
+}
+.inputbox .ub .chooseMore .icon-unfinish{
+    color:#f55549;
+    font-size:60rpx;
+}
+.switchR{position:absolute;
+right:16rpx;}

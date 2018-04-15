@@ -1,0 +1,50 @@
+<view class="indexWrap">
+  <!-- 头部 -->
+  <view class='indexHead'>
+    <!--背景图  -->
+    <image src='/images/indexHead.jpg'></image>
+    <!--字  -->
+    <text class='headTit'>进行中的订单（单）</text>
+    <text class='headNum'>{{StatsData.Undering}}</text>
+    <!-- 三项 -->
+    <view class='headThree flex jc-sa text-center'>
+        <view>
+          <text>今日进件</text>
+          <text>{{StatsData.TodayCreate}}</text>
+        </view>       
+        <view>
+          <text>今日成交</text>
+          <text>{{StatsData.TodayCompleted}}</text>
+        </view>       
+        <view>
+          <text>过单率</text>
+          <text>{{StatsData.CompleteRate}}%</text>
+        </view>        
+    </view>
+  </view> 
+  <!-- 七项  -->  
+  <view class='sevenItem flex flex-wrap'>    
+    <navigator wx:if="{{item.EnCode=='ddll'||item.EnCode=='ddgl'||item.EnCode=='gpsaz'||item.EnCode=='gpsjk'||item.EnCode=='dydj'||item.EnCode=='dkjsq'}}" wx:for="{{ModuleList}}" wx:key='' open-type="navigate" url="{{item.UrlAddress}}">
+      <image src='/images/menuList/icon_{{item.EnCode}}.png' mode='widthFix'></image>
+      <text>{{item.Description}}</text>
+    </navigator>           
+  </view>
+  <!--待办事项  -->
+  <navigator open-type="switchTab" url="/pages/newsCenter/index" class='todo ub ub-ac'> 
+  <!-- <navigator url="../beforeLoan/vehicleEvaluation/index" class='todo flex'> -->
+    <image src='/images/todo.png'></image>
+    <view class='list ub-f1'>
+      <block wx:for="{{NoticeList}}" wx:key='' wx:if='{{index<2}}'>
+        <view class="ub">
+          <view class='tit ub-f1'>• {{item.NoticeHeaders}}</view>
+          <view class='hour'>{{item.Description}}</view>
+        </view>
+      </block>      
+    </view>
+    <view class='btn'>
+       <text>{{UnReadCount}}</text>
+      <image class='rightA' src='/images/rightA.png'></image>
+    </view>
+  </navigator>
+</view>
+

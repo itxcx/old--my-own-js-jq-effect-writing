@@ -1,0 +1,56 @@
+<import src='/pages/template/preview/preview.wxml' />
+<view class="notice">
+    <icon class="iconfont icon-noto"></icon>
+    已安装：有线GPS
+    <text>{{GPSnum[0].over}}/{{GPSnum[0].total}}</text> 个，无线GPS
+    <text>{{GPSnum[1].over}}/{{GPSnum[1].total}} </text> 个
+</view>
+<view class='listBox'>
+    <view class="title">绑定GPS</view>
+    <view class="listmess">
+        <view class="item" wx:if="{{!location}}" bindtap='bindGPS'>
+            <view class="pic addPic">
+                <icon class="iconfont icon-jia"></icon>
+            </view>
+            <view class="text">绑定GPS</view>
+        </view>
+        <view class="item" wx:for="{{list}}" wx:key="{{id}}" data-index="{{index}}" data-id="{{item.GPSId}}" data-num='{{item.GPSNum}}' bindtap='operGps'>
+            <view class="pic">
+                <image src="{{item.GPSPicsList[0].FilePath}}" class="{{item.status?'':'bw'}}" mode='aspectFit'></image>
+                <view wx:if="{{item.GPSStatus==4}}" class="picMark">
+                    <text>离线</text>
+                </view>
+            </view>
+            <view class="text" wx:if="{{item.GPSType==2}}">有线</view>
+            <view class="text" wx:else>无线</view>
+        </view>
+    </view>
+</view>
+<view class='listBox carkey'  wx:if="{{!location}}">
+    <view class="title">备用钥匙</view>
+    <view class="listmess">
+        <view class="item" wx:for="{{keylist}}" wx:key="{{id}}" data-index='{{index}}' data-id="{{item.picid}}" bindtap='operKey'>
+            <view class="pic">
+                <image src="{{item.url}}" mode='aspectFit'></image>
+            </view>
+        </view>
+        <view class="item" bindtap='uploadPic'>
+            <view class="pic addPic">
+                <icon class="iconfont icon-jia"></icon>
+            </view>
+        </view>
+    </view>
+</view>
+ <view class="btnBox">
+        <button type="primary" bindtap='bindOver'>确认完成</button>
+    </view>
+<template is="preview" data="{{...imgUrls}}"></template>
+<!--遮罩  -->
+<view class='layer' hidden='{{layer}}' bindtap='layerHide'></view>
+<!--弹窗  -->
+<view class='box flex flex-col' animation="{{boxAnimation}}">
+    <image src='{{ex_pic}}'></image>
+    <text>• 请按照示例图提交照片</text>
+    <text>• 照片要四角对齐，如有模糊、遮挡、无法识别等情况则不予认证</text>
+    <button type='primary' class='' bindtap='uploadPic'>上传图片</button>
+</view>

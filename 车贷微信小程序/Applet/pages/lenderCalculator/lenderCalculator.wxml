@@ -1,0 +1,68 @@
+<!--pages/lenderCalculator/lenderCalculator.wxml-->
+<view class='lc_up'>
+  <form bindsubmit='sub'>
+    <view class='inputbox'>
+      <view class='ub ub-ac'>
+        <view class="name">借款金额</view>
+        <view class='ub-f1'>
+          <input name='loanAmount' type='digit' placeholder='请输入借款金额' placeholder-class='c999'></input>
+        </view>
+        <view class="text">万元</view>
+      </view>      
+      <view class='ub'>
+        <view class="name">首次还款时间</view>
+        <view class='ub-f1 chooseMore'>
+            <picker name='firstRepayTime' mode="date" value="{{firstRepayTime}}" start="2000-01-01" bindchange="firstRepayTimeChange">
+                <view style="color:{{c2}}" class='picker'>{{firstRepayTime}}</view>
+                <icon class='iconfont icon-down more'></icon>
+            </picker>       
+        </view>
+      </view>
+      <view class='ub'>
+        <view class="name">借款期限</view>
+        <view class='ub-f1 chooseMore'>
+            <picker name='loanTime' bindchange="loanTimeChange" value="{{loanTimeIndex}}" range="{{loanTimeArr}}">
+                <view style="color:{{c1}}" class='picker'>{{loanTimeArr[loanTimeIndex]}}</view>
+                  <icon class='iconfont icon-down more'></icon>
+            </picker>      
+        </view>
+      </view>   
+      <view class='ub'>
+        <view class="name">借款类型</view>
+        <view class='ub-f1 chooseMore'>       
+          <view class='picker'>{{loanType}}</view>            
+        </view>
+      </view>         
+      <view class='ub'>
+        <view class="name">借款利率</view>
+        <view class='ub-f1 chooseMore'>       
+          <view class='picker'>{{loanRate}}</view>            
+        </view>
+      </view>
+    </view>  
+    <view class="btnBox">
+      <button type='primary' form-type='submit' class=''>提交</button>
+    </view>
+  </form>
+  <view class='tip'>计算结果仅供参考！与实际金额可能会有误差！</view>
+</view>
+<view class='lc_down' hidden='{{length==0}}'>
+  <!--点  -->
+  <view class='dot l'></view>
+  <view class='dot r'></view>
+  <view class='lcd_up flex jc-sb'>
+    <view>期限</view>
+    <view class='c'>还款日</view>
+    <view>月还款额</view>
+  </view>
+  <view class='lcd_down'>
+    <view class='inputbox'>
+      <view class='flex jc-sb' wx:for='{{myData}}'>
+        <view class="name">第{{index+1}}/{{length}}期</view>
+        <view class="name">{{item.RepaymentDate}}</view>
+        <view class="name r">{{item.RepaymentAmount}}</view>
+      </view>      
+    </view>
+  </view>
+</view>
+

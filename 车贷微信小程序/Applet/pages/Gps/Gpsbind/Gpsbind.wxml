@@ -1,0 +1,80 @@
+<import src='/pages/template/preview/preview.wxml' />
+<form bindsubmit='submitform'>
+    <view class="notice">
+        <icon class="iconfont icon-noto"></icon>
+        已安装：有线GPS
+        <text>{{GPSnum[0].over}}/{{GPSnum[0].total}}</text> 个，无线GPS
+        <text>{{GPSnum[1].over}}/{{GPSnum[1].total}} </text> 个
+    </view>
+    <view class="main">
+        <view class='inputbox'>
+            <view class='ub'>
+                <view class="name">GPS编号</view>
+                <view class='ub-f1'>
+                    <input bindblur='getNum' name="GPSNum" type='text' placeholder='请输入GPS编号' placeholder-class='c999' value='{{GPSinfo.GPSNum}}'></input>
+                </view>
+            </view>
+        </view>
+        <view class='inputbox'>
+            <view class='ub'>
+                <view class="name">SIM卡号</view>
+                <view class='ub-f1'>
+                    <input name="SIMNum" type='text' placeholder='请输入SIM卡号' placeholder-class='c999' value='{{GPSinfo.SIMNum}}'></input>
+                </view>
+            </view>
+        </view>
+        <view class='inputbox'>
+            <view class='ub'>
+                <view class="name">GPS类型</view>
+                <view class='ub-f1'>
+                    <view class="swichBox">
+                        无线
+                        <switch bindchange="swichChange" checked='{{GPSinfo.GPSType==2 ? true:false}}' name="switch" /> 有线
+                    </view>
+                </view>
+            </view>
+        </view>
+        <view class='inputbox'>
+            <view class='ub'>
+                <view class="name">位置说明</view>
+                <view class='ub-f1'>
+                    <textarea name="Description" placeholder='请输入说明' value="{{GPSinfo.Description==null?'':GPSinfo.Description}}"></textarea>
+                </view>
+            </view>
+        </view>
+        <view class='inputbox' style='border-bottom:0;'>
+            <view class='ub'>
+                <view class="name">位置照片</view>
+                <view class='ub-f1 addpic'>
+                    <image  wx:if="{{GPSedit}}" bindtap='uploadPic' src='/images/add.png' mode='widthFix'></image>
+                    <image  wx:else bindtap='subChoosePic' src='/images/add.png' mode='widthFix'></image>
+                </view>
+            </view>
+        </view>
+        <view class='imglist' wx:if="{{GPSedit}}">
+            <block  wx:for="{{GPSPics}}" wx:key="">
+                <image src='{{item.FilePath}}' data-index='{{index}}' data-GPSId='{{GPSinfo.GPSId}}' data-picId='{{item.PicsId}}' mode='aspectFit' bindtap='operPic'></image>
+            </block>
+        </view>
+         <view class='imglist' wx:else>
+         <block  wx:for="{{chooseImgs}}" wx:key="">
+                <image src='{{item}}' data-index='{{index}}' data-GPSId='' data-picId='' mode='aspectFit' bindtap='operPic'></image>
+            </block>
+            </view>
+    </view>
+    <view class="btnBox">
+        <button type="primary" form-type='submit'>提交</button>
+    </view>
+</form>
+<!--遮罩  -->
+<view class='layer' hidden='{{layer}}' bindtap='layerHide'></view>
+<!--弹窗  -->
+<view class='box flex flex-col' animation="{{boxAnimation}}">
+    <image src='{{ex_pic}}'></image>
+    <text>• 请按照示例图提交照片</text>
+    <text>• 照片要四角对齐，如有模糊、遮挡、无法识别等情况则不予认证</text>
+    <button wx:if="{{GPSedit}}" type='primary' class='' bindtap='uploadPic'>上传图片</button>
+    <button wx:else type='primary' class='' bindtap='subChoosePic'>上传图片</button>
+</view>
+
+<template is="preview" data="{{...imgUrls}}"></template>

@@ -1,0 +1,62 @@
+<view class="data-main">
+    <view class="top-bar ub">
+        <view wx:for="{{topbar}}" bindtap="barClick" data-index="{{index}}" class="ub-f1 {{item.target?'cur':''}}" wx:key="">{{item.name}}</view>
+    </view>
+    <swiper current="{{current}}" bindchange="touchmove" bindanimationfinish="" duration="0">
+        <swiper-item class="old">
+            <view class="oldpicker">
+                <picker bindchange="oldPickerChange" value="{{oldPicker.index}}" range="{{oldPicker.data}}">
+                    <view class="picker">
+                        {{oldPicker.data[oldPicker.index]}}
+                    </view>
+                    <icon class="iconfont icon-down"></icon>
+                </picker>
+                <text>数据更新至：2018年2月1日</text>
+            </view>
+            <view class="ub olddata">
+                <view class="ub-f1">
+                    <view>进件数</view>
+                    <view class="yellow">1000</view>
+                    <view class="fs12">日：10.5%
+                        <icon class="iconfont icon-iconup green"></icon>
+                    </view>
+                    <view class="fs12">月：9.8%
+                        <icon class="iconfont icon-icondown red"></icon>
+                    </view>
+                    <view class="fs12">年：10000
+                        <text class="fs16 red">+</text>
+                    </view>
+                </view>
+                <view class="ub-f1">
+                <view>放款数</view>
+                    <view class="yellow">1000</view>
+                    <view class="fs12">日：10.5%
+                        <icon class="iconfont icon-iconup green"></icon>
+                    </view>
+                    <view class="fs12">月：9.8%
+                        <icon class="iconfont icon-icondown red"></icon>
+                    </view>
+                    <view class="fs12">年：10000
+                        <text class="fs16 red">+</text>
+                    </view>
+                </view>
+                <view class="ub-f1">
+                <view>目标完成量</view>
+                    <view class="yellow">500万</view>
+                    <view class="fs12">日：10.5%
+                        <icon class="iconfont icon-iconup green"></icon>
+                    </view>
+                    <view class="fs12">月：9.8%
+                        <icon class="iconfont icon-icondown red"></icon>
+                    </view>
+                    <view class="fs12">年：10000
+                        <text class="fs16 red">+</text>
+                    </view>
+                </view>
+            </view>
+        </swiper-item>
+        <swiper-item class="item">2</swiper-item>
+        <swiper-item class="item">3</swiper-item>
+        <swiper-item class="item">4</swiper-item>
+    </swiper>
+</view>
