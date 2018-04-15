@@ -1,0 +1,18 @@
+/* pages/lenderCalculator/lenderCalculator.wxss */
+page{padding: 30rpx 0 0;}
+.lc_up{background: #fff;padding: 20rpx;border-radius:8rpx;}
+.inputbox{border:0;padding-left:0;}
+.inputbox .ub input{text-align: right;padding-right:20rpx;}
+.inputbox .ub .text{color:#999;}
+.inputbox .picker{text-align: right;color:#444;}
+.inputbox .ub .chooseMore .iconfont{right:0;}
+.inputbox .ub .chooseMore{padding-right:74rpx;}
+.inputbox .ub:last-child{border-bottom:1px solid #eee;}
+.inputbox .flex{border-bottom:1px solid #eee;}
+.inputbox .flex:last-child{border-bottom:0;}
+.inputbox .ub .name{padding-left:10rpx;}
+.inputbox .flex .name {line-height:88rpx;height:100%;min-width:160rpx;}
+.inputbox .flex:last-child{border-bottom:1px solid #eee;}
+.inputbox .flex .name{padding-left:10rpx;}
+.inputbox .flex .r{text-align: right;padding-right:10rpx;}
+.tip{font-size: 24rpx;color:#b2b2b2;text-align: center;}

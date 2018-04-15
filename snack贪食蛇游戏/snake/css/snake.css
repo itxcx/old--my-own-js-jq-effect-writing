@@ -1,0 +1,25 @@
+/* common */
+*{margin:0;padding:0;}
+a{text-decoration:none;}
+li{list-style:none;}
+body{user-select:none;}
+.db{display:block;}
+/* index */
+.wrap{width:300px;height:300px;border:1px solid #442a2a;;margin:0 auto;position:relative;}
+.dot{width:20px;height:20px;position:absolute;left:0;top:0;background:url('../images/person.gif') no-repeat center/20px 20px;display:none;transition:all .1s;}
+.start{width: 180px;
+    height: 50px;
+    line-height: 50px;
+    background: #b37474;
+    position: absolute;
+    bottom: 120px;
+    color: #fff;
+    font-size: 24px;
+    text-align: center;
+    left: 50%;
+    margin-left: -90px;cursor:pointer;}
+.start:hover{background:#885757;}
+.layer{position:absolute;width:100%;height:100%;background:#000;opacity:.5;}
+.randomDot{width:20px;height:20px;position:absolute;left:40px;top:40px;background:url('../images/food.png') no-repeat center/20px 20px;display:none;}
+.funny{margin-left:20px;}
+.adjustSpeed{margin-left:50px;}

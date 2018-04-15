@@ -1,0 +1,28 @@
+<!--pages/lenderCalculatorResult/lenderCalculatorResult.wxml-->
+<view class='lc_down' hidden='{{length==0}}'>
+  <!--点  -->
+  <view class='dot l'></view>
+  <view class='dot r'></view>
+  <view class='lcd_up flex jc-sb'>
+    <view>期限</view>
+    <view class='c'>还款日</view>
+    <view>月还款额</view>
+  </view>
+  <view class='lcd_down'>
+    <view class='inputbox'>
+      <view class='flex jc-sb' wx:for='{{myData.Info}}'>
+        <view class="name">第{{index+1}}/{{length}}期</view>
+        <view class="name">{{item.RepaymentDate}}</view>
+        <view class="name r">{{item.RepaymentAmount}}</view>
+      </view>   
+      <view class='flex jc-sb'>
+        <view class="name">合计</view>
+        <view class="name"></view>
+        <view class="name r">{{myData.TotalAmount}}</view>
+      </view>   
+    </view>
+  </view>
+  <view class="btnBox1">
+    <button type='primary' class='' bindtap='backCal'>重新计算</button>
+  </view>
+</view>
