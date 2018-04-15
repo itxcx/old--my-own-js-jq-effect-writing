@@ -1,0 +1,22 @@
+<scroll-view  scroll-y="{{scroll}}" bindscrolltolower="scrollUp" lower-threshold='20'>
+<view class="newsList">
+<block wx:for="{{list}}" wx:key=''>
+   <view bindtap='newsDetail' class="item" data-index="{{index}}" data-read='{{item.IsRead}}' data-orderid='{{item.OrderId}}' data-url='{{item.LinkUrl}}' data-taskid='{{item.NoticeTaskId}}'>
+        <view>
+           <icon wx:if="{{!item.IsRead}}"></icon>
+            <text class="title">{{item.NoticeHeaders}}</text>
+            <text class="time">{{item.CreateDate}}</text>
+        </view>
+        <view class="desc ">
+             {{item.NoticeContent}}
+        </view>
+    </view>
+</block>
+</view>
+<view class="noneList" wx:if='{{noneList}}'>暂无消息</view>
+<view class="weui-loadmore" wx:if="{{showLoad}}">
+          <view class="weui-loading" hidden="{{searchLoading}}"></view>
+          <view class="weui-loadmore__tips" wx:if="{{searchLoading}}">亲，没有更多加载了！</view>
+          <view class="weui-loadmore__tips" wx:else>加载中</view>
+        </view>
+</scroll-view>

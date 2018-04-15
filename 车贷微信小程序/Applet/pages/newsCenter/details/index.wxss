@@ -1,0 +1,43 @@
+.detail{
+    padding:0 20rpx 30rpx;
+}
+.item{
+    margin-top:30rpx;
+}
+.time{
+    text-align: center;
+}
+.time text{
+    display: inline-block;
+    background: #d0d0d4;
+    color:#fff;
+    padding:0 20rpx;
+    font-size:24rpx;
+    margin-bottom:20rpx;
+    border-radius:0.2em;
+ }
+ .detailBox{
+     background: #fff;
+     border-radius:0.3em;
+     box-shadow: 0 0 10px rgba(0,0,0,0.2);
+     padding:0 40rpx;
+ }
+ .title{
+     font-size:32rpx;
+     padding:30rpx 0 0;
+ }
+ .mess{
+     padding:20rpx 0;
+     border-bottom:1px solid #eee;
+     font-size:26rpx;
+ }
+ navigator{
+     display: block;
+     padding:20rpx 0;
+ }
+ navigator icon{
+     float:right;
+     position: relative;
+     top:-6rpx;
+     color:#999;
+ }

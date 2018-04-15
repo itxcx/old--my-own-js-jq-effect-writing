@@ -1,0 +1,16 @@
+<view class="detail">
+    <!-- <block wx:for="{{list}}" wx:key=''> -->
+     <view class='item'>
+        <view class='time'>
+            <text>{{list.CreateDate}}</text>
+        </view>
+        <view class='detailBox'>
+            <view class='title'>{{list.NoticeHeaders}}</view>
+            <view class='mess'>{{list.NoticeContent}}</view>
+            <navigator open-type='redirect' url='{{orderLink.OrderStatus==1?"../../beforeLoan/vehicleEvaluation/evaluationMess/evaluationMess?OrderId="+orderLink.OrderId:(orderLink.OrderStatus==2&&orderLink.IsAssessment!=1&&orderLink.IsConfirm==1&&orderLink.IsServicePWDVerification==0?"../../beforeLoan/vehicleEvaluation/fillInloan/fillInloan?OrderId="+orderLink.OrderId:"../../orderM/orderDetails/orderDetails?OrderId="+orderLink.OrderId+"&pageEnter="+s)}}'>
+                <view>立即查看<icon class="iconfont icon-right"></icon></view>
+            </navigator>
+        </view>
+    </view>
+    <!-- </block> -->
+</view>
