@@ -1,0 +1,10 @@
+//×ó²àÊ÷ËÑË÷¿ò»Ø³µËÑË÷¹¦ÄÜ
+function enterSearch1() {
+    var btn = $('#searchstr');
+    btn.keydown(function (e) {
+        var e = e || window.event;
+        if (e.keyCode == 13) {
+            mySearch(this);
+        }
+    })
+}
