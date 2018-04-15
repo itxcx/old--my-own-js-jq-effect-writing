@@ -1,0 +1,4 @@
+page{
+    background: url('https://www.huiby.net/Resource/PictureFile/mini/welcome.png') center center no-repeat;
+    background-size: contain;
+}
