@@ -1,0 +1,74 @@
+.main{
+    height:100%;
+}
+.oc_s{padding:20rpx 0;background: #f8f8f8;overflow: hidden;}
+.oc_s input{width:644rpx;padding:0 22rpx;height:70rpx;border:1rpx solid #e6e6e6;border-radius:30rpx;background: #fff;margin:0 auto;position: relative;}
+.oc_s input icon{position:absolute;top:0;left:258rpx;z-index:1;color:#ccc;height:100%;line-height:70rpx;}
+.oc_s input text{position:absolute;top:0;left:300rpx;z-index:1;font-size: 28rpx;color:#b2b2b2;height:100%;line-height:70rpx;}
+.main > .ub-f1{
+    overflow: hidden;
+    overflow-y: auto;
+}
+scroll-view{
+    height:100%;
+    border-top:1px solid #e6e6e6;
+}
+.model{
+    margin-top:20rpx;
+    border:1px solid #e6e6e6;
+}
+.model .top,.model .bottom{
+    height:80rtpx;
+    line-height: 80rpx;
+     background: #fff;
+    padding:0 20rpx;
+}
+.model .top icon{
+    display: block;
+    width: 30rpx;
+    height:30rpx;
+    border-radius: 50%;
+    color:#fff;
+    font-size:24rpx;
+    position: relative;
+    margin:4rpx 10rpx 0 0;
+}
+.model .top icon.red-bk{
+    background: #f55549;
+}
+.model .top icon.blue-bk{
+    background: #4e8dee;
+}
+.model .top icon::before{
+   position: absolute;
+   top:2rpx;
+   width: 100%;
+   line-height: 30rpx;
+   text-align: center;
+}
+.model .top .phone{
+    margin-left:40rpx;
+}
+.model .center{
+    background: #f8f8f8;
+    padding:20rpx;
+    text-align: center;
+    border:1px solid #e6e6e6;
+}
+.model .center .name{
+    font-size:26rpx;
+    color:#999;
+}
+.model .center .mess{
+    margin-top:10rpx;
+     line-height: 60rpx;
+     height:60rpx;
+}
+.model .center .star view{
+ width:30rpx;
+    display: inline-block;
+    margin:0 10rpx 0 0;
+}
+.model .center .star image{
+   width: 100%;
+}

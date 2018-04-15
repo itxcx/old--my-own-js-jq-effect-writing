@@ -1,0 +1,40 @@
+.model{
+  background: #fff;
+  margin-top:20rpx;
+  padding: 0 20rpx;
+}
+.model .price{
+    padding:40rpx 0;
+    text-align: center;
+}
+.model .price .text{
+    font-size:26rpx;
+}
+.model .modelbox{
+    height:92rpx;
+    line-height: 92rpx;
+ }  
+ .model .modelbox input{
+     height:92rpx;
+     width: 100%;
+     padding-left:40rpx;
+ }
+.model .border{
+ border-bottom:1px solid #eee;
+}
+.model .price input{
+    font-size:40rpx;
+    margin-top:40rpx;
+}
+.star{
+   text-align: center;
+   padding:40rpx 0 0 0;
+ }
+  .star .starBox{
+      display: inline-block;
+      margin:0 10rpx;
+  }
+  .star image{
+    height:63rpx;
+    width: 63rpx;
+  }

@@ -1,0 +1,53 @@
+<form bindsubmit='formsubmit'>
+<view class="ub ub-ver full-height">
+  <view class="ub-f1">
+    <view class='sv_list'>
+      <view class='svl_up'>
+        <icon class="iconfont {{myData0.Gender==1?'icon-nv':'icon-nan2'}}"></icon>           
+        <text class='name'>{{myData0.CustomerInfo.CustomerName}}</text>
+        <text class='phone'>{{myData0.CustomerInfo.Mobile}}</text>
+        <!-- <text class='status'>{{myData0.Explain}}</text> -->
+      </view>
+      <view class='svl_mid'>             
+        <image src='/images/carLogo/{{myData0.CarInfo.BrandPinyin}}.png' wx:if='{{myData0.CarInfo.BrandPinyin}}' binderror="imageError"></image>                         
+        <view class='mid'>
+          <text class='tit'>{{myData0.CarInfo.ModelName}}</text>                
+          <text class='num'>{{myData0.CarInfo.CarNum}}</text>
+        </view>
+        <view class='right'>
+          <text>{{myData0.CustomerInfo.LoanAmount}}万</text>
+          <text class='time'>{{myData0.CustomerInfo.LoanTerm}}期</text>
+        </view>
+        <view class='clear'></view>
+      </view>      
+    </view>
+    <view class="model">
+      <view class="text1">
+        <view>审核通过，放款金额</view>
+        <view class="h1 yellow">{{myData.ReviewAmount}}万元</view>
+      </view>
+      <view class="text2 ub">
+        <view class="ub-f1">申请额度{{myData.LoanAmount}}万元</view>
+        <view class="ub-f1">车辆估价{{myData.AssAmount}}万元</view>
+      </view>
+      <view class="modeText ub">
+         <view class="ub-f1">保证金</view>
+        <view>{{myData.BondAmount}}元</view>
+      </view>
+    </view>
+     <view class="model">
+      <view class="modeText ub ub-ac">
+        <view>备注</view>
+        <view class="ub-f1 pl10">
+        <input name="remarks" type="text" disabled='true' value='{{myData.ReviewRemark}}'></input>
+        </view>
+      </view>
+    </view>
+  </view>
+  <view class="footer ub">
+     <view class="ub-f1" wx:if='{{stateBtn==1}}'><button type="blue" data-status="notaccept" form-type='submit'>不接受</button></view>
+    <view class="ub-f1" wx:if='{{stateBtn==1}}'><button type="primary" data-status="accept" form-type='submit' >接受</button></view>     
+    <view class="ub-f1 sin" wx:if='{{stateBtn==0}}'><button type="primary" bindtap='goToDetail'>查看详情</button></view>
+  </view>
+</view>
+</form>

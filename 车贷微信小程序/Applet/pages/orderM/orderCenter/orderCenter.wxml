@@ -1,0 +1,134 @@
+<!-- ddgl模板 -->
+<template name='ddglList'>  
+<!-- IsAssessment参数 测试用   -->
+   <!-- <navigator url='{{"../../beforeLoan/vehicleEvaluation/evaluationMess/evaluationMess?IsAssessment="+item.IsAssessment+"&OrderId="+item.OrderId}} class='sv_list' wx:for='{{d}}' wx:key="">    -->
+    <navigator url='{{item.OrderStatus==1?"../../beforeLoan/vehicleEvaluation/evaluationMess/evaluationMess?OrderId="+item.OrderId:(item.OrderStatus==2&&item.IsAssessment!=1&&item.IsConfirm==1&&item.IsServicePWDVerification==0?"../../beforeLoan/vehicleEvaluation/fillInloan/fillInloan?OrderId="+item.OrderId:"../../orderM/orderDetails/orderDetails?OrderId="+item.OrderId+"&pageEnter="+s)}}' class='sv_list' wx:for='{{d}}'  wx:key="">          
+    <view class='svl_up'>
+      <icon class="iconfont {{item.Gender==1?'icon-nv':'icon-nan2'}}"></icon>           
+      <text class='name'>{{item.Name}}</text>
+      <text class='phone'>{{item.Mobile}}</text>
+      <text class='status'>{{item.Explain}}</text>
+    </view>
+    <view class='svl_mid'>             
+      <image src='/images/carLogo/{{item.BrandName}}.png' wx:if='{{item.BrandName}}' binderror="imageError"></image>                         
+      <view class='mid'>
+        <text class='tit'>{{item.ModelName}}</text>                
+        <text class='num'>{{item.CarNum}}</text>
+      </view>
+      <view class='right'>
+        <text>{{item.LoanAmount}}万</text>
+        <text class='time'>{{item.LoanTerm}}</text>
+      </view>
+      <view class='clear'></view>
+    </view>
+    <view class='svl_down flex jc-sb'>
+      <text>{{item.DepartName}}</text>
+      <text>{{item.CreateTimeDes}}</text>
+    </view>
+  </navigator>
+</template>
+<!-- gpsaz模板 -->
+<template name='gpsazList'> 
+  <navigator url='../../orderM/orderDetails/orderDetails?OrderId={{item.OrderId}}&pageEnter={{s}}' class='sv_list' wx:for='{{d}}'  wx:key="">
+    <view class='svl_up'>
+      <icon class="iconfont {{item.Gender==1?'icon-nv':'icon-nan2'}}"></icon>           
+      <text class='name'>{{item.RealName}}</text>
+      <text class='phone'>{{item.Mobile}}</text>
+      <text class='status'>{{item.IsGpsInstall==0?'未安装':'已安装'}}</text>
+    </view>
+    <view class='svl_mid'>             
+      <image src='/images/carLogo/{{item.BrandName}}.png' wx:if='{{item.BrandName}}'></image>                         
+      <view class='mid'>
+        <text class='tit'>{{item.ModelName}}</text>                
+        <text class='num'>{{item.CarNum}}</text>
+      </view>
+      <view class='right'>
+        <text>{{item.LoanAmount}}万</text>
+        <text class='time'>{{item.LoanTerm}}</text>
+      </view>
+      <view class='clear'></view>
+    </view>
+    <view class='svl_down flex jc-sb'>
+      <text>{{item.DepartmentName}}</text>
+      <text>{{item.CreateTimeDes}}</text>
+    </view>
+  </navigator>
+</template>
+<!-- gpsjk模板 -->
+<template name='gpsjkList'> 
+  <navigator url='../../orderM/orderDetails/orderDetails?OrderId={{item.OrderId}}&pageEnter={{s}}' class='sv_list' wx:for='{{d}}'  wx:key="">
+    <view class='svl_up'>
+      <icon class="iconfont {{item.Gender==1?'icon-nv':'icon-nan2'}}"></icon>           
+      <text class='name'>{{item.RealName}}</text>
+      <text class='phone'>{{item.Mobile}}</text>
+      <!-- <text class='status'>{{item.OrderStatusDes}}</text> -->
+    </view>
+    <view class='svl_mid'>             
+      <image src='/images/carLogo/{{item.BrandName}}.png' wx:if='{{item.BrandName}}'></image>                         
+      <view class='mid'>
+        <text class='tit'>{{item.ModelName}}</text>                
+        <text class='num'>{{item.CarNum}}</text>
+      </view>
+      <view class='right'>
+        <text>{{item.LoanAmount}}万</text>
+        <text class='time'>{{item.LoanTerm}}</text>
+      </view>
+      <view class='clear'></view>
+    </view>
+    <view class='svl_down flex jc-sb'>
+      <text>{{item.DepartmentName}}</text>
+      <text>{{item.CreateTimeDes}}</text>
+    </view>
+  </navigator>
+</template>
+<!-- dydj模板 -->
+<template name='dydjList'> 
+  <navigator url='../../orderM/orderDetails/orderDetails?OrderId={{item.OrderId}}&pageEnter={{s}}' class='sv_list' wx:for='{{d}}' wx:key="">
+    <view class='svl_up'>
+      <icon class="iconfont {{item.Gender==1?'icon-nv':'icon-nan2'}}"></icon> 
+      <text class='name'>{{item.RealName}}</text>
+      <text class='phone'>{{item.Mobile}}</text>
+      <text class='status'>{{item.IsMortgage==0?'待抵押':'抵押完成'}}</text>
+    </view>
+    <view class='svl_mid'>             
+      <image src='/images/carLogo/{{item.BrandName}}.png' wx:if='{{item.BrandName}}'></image>                         
+      <view class='mid'>
+        <text class='tit'>{{item.ModelName}}</text>                
+        <text class='num'>{{item.CarNum}}</text>
+      </view>
+      <view class='right'>
+        <text>{{item.LoanAmount}}万</text>
+        <text class='time'>{{item.LoanTerm}}</text>
+      </view>
+      <view class='clear'></view>
+    </view>
+    <view class='svl_down flex jc-sb'>
+      <text>{{item.DepartmentName}}</text>
+      <text>{{item.CreateTimeDes}}</text>
+    </view>
+  </navigator>
+</template>
+<!--pages/orderM/orderCenter111/orderCenter111.wxml-->
+<view class='oc'>
+  <view class='oc_s'>
+    <input confirm-type='search' bindinput='ocs_inp' bindconfirm='ocs_confirm' value='{{inpValue}}'>      
+      <icon class='iconfont icon-sousuo' hidden='{{ocs_i}}'></icon>
+      <text hidden='{{ocs_i}}'>搜索</text>
+    </input>
+  </view>
+  <scroll-view class='oc_nav' scroll-x="true" scroll-with-animation='true' scroll-left='0'>
+    <view class="nav_item {{index==swiperI?'active':''}}" wx:for='{{oc_nav}}' bindtap='navTap' data-index='{{index}}' style='width:{{liWidth}}'  wx:key="">{{item}}</view>            
+  </scroll-view>
+  <swiper class='oc_swiper' current='{{swiperI}}' duration ='300' bindchange="switchTab" style='height:{{swiperHeight}}rpx'>  
+    <!--四个sv_list窗体  -->
+    <swiper-item wx:for='{{sv_list}}'  wx:key="">
+      <scroll-view scroll-y="true" scroll-with-animation='true' scroll-top='0' bindscrolltolower='scrollLoading' lower-threshold='10'>
+        <template is="{{pageEnter}}" data="{{...item}}"/> 
+        <view class="weui-loadmore">
+          <view class="weui-loading" hidden="{{item.l.p}}"></view>
+          <view class="weui-loadmore__tips">{{item.l.t}}</view>
+        </view>
+      </scroll-view>
+    </swiper-item>       
+  </swiper> 
+</view>

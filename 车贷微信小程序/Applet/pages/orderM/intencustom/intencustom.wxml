@@ -1,0 +1,42 @@
+<view class="main ub ub-ver">
+    <view class='oc_s'>
+        <input confirm-type='search' bindinput='ocs_inp' bindconfirm=''>
+        <icon class='iconfont icon-sousuo' hidden='{{ocs_i}}'></icon>
+        <text hidden='{{ocs_i}}'>搜索</text>
+        </input>
+    </view>
+    <view class="ub-f1">
+            <view wx:for="{{custemMess}}" wx:for-item="list" wx:key="id" class="model">
+                <view class="top ub ub-ac">
+                    <view>
+                        <icon class="iconfont {{list.sex?'icon-nan2':'icon-nv'}} {{list.sex?'blue-bk':'red-bk'}}"></icon>
+                    </view>
+                    <view>{{list.name}}</view>
+                    <view class="ub-f1 phone c999">{{list.telephone}}</view>
+                </view>
+                <view class="center ub">
+                    <view>
+                        <view class="name">车牌号码</view>
+                        <view class="mess">{{list.carnumber}}</view>
+                    </view>
+                    <view class="ub-f1">
+                        <view class="name">意向登记</view>
+                        <view class="mess star">
+                        <view wx:for="{{list.grade}}"  wx:key="">
+                            <image wx:if="{{item}}" src='/images/star_y.png' mode="widthFix"></image>
+                            <image wx:else src='/images/star_h.png' mode="widthFix"></image>
+                        </view>
+                        </view>
+                    </view>
+                    <view>
+                         <view class="name">最新回访时间</view>
+                        <view class="mess fs13">{{list.timeget}}</view>
+                    </view>
+                </view>
+                <view class="bottom ub c999 fs13">
+                <view class="ub-f1">苏州市虎丘店</view>
+                <view>{{list.timeset}}</view>
+                </view>
+            </view>
+    </view>
+</view>

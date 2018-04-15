@@ -1,0 +1,55 @@
+<form bindsubmit='formsubmit'>
+    <view class="model">
+        <view class="ub ub-ac price">
+            <view class="ub-f1">
+                <view class="text">申请额度（万）</view>
+                <view class="yellow">{{myData.LoanAmount}}</view>
+            </view>
+            <view class="ub-f1">
+                <view class="text">车辆估价（万）</view>
+                <view class="yellow">{{myData.AssAmount}}</view>
+            </view>
+            <view class="ub-f1">
+                <view class="text">最终定价（万）</view>
+                <view class="yellow">{{myData.ReviewAmount}}</view>
+            </view>
+        </view>
+    </view>
+    <view class="model">
+        <view class='modelbox border ub' wx:if='{{IsReCheck!=1}}'>
+            <view class="ub-f1">是否重新申请</view>
+            <view>
+                <switch name="apply" color="#4e8dee" checked='true' bindchange='switchChange'/>
+            </view>
+        </view>
+        <view class='price border' hidden='{{!switchV}}'>
+            <view>输入贷款金额（万）</view>
+            <view>
+                <input name="price" type="digit" placeholder='请再次输入贷款金额' ></input>
+            </view>
+        </view>        
+        <view class='modelbox' hidden='{{!switchV}}'>
+            <view class="ub-f1 fs13 c999 text-center">系统估价与真实情况有差异，最终结果以评估师的为准</view>
+        </view>
+        <view class='price border' hidden='{{switchV}}'>
+            <view>客户意向等级</view>
+                <view class='star'>
+                    <view class='starBox' wx:for="{{stars}}" wx:for-index="index" wx:for-item="status" wx:key="">
+                        <image wx:if="{{status}}" bindtap='chooseStar' data-index='{{index}}' src='{{star_y}}'></image>
+                        <image wx:else bindtap='chooseStar' data-index='{{index}}' src='{{star_h}}'></image>
+                    </view>
+                </view>
+        </view>
+    </view>    
+    <view class="model">
+        <view class="modelbox ub">
+            <view>备注</view>
+            <view class="ub-f1">
+                <input name="remarks" type="text" placeholder='请输入备注'></input>
+            </view>
+        </view>
+    </view>
+    <view class="btnBox">
+    <button type="primary" form-type='submit'>确认</button>
+    </view>
+</form>

@@ -1,0 +1,43 @@
+<view class='cbppw_all flex jc-sb flex-wrap'>
+        <block wx:for='{{MortgagePic}}' wx:key=''>
+            <view class='cbpp_wrap'>
+                <view class='cbp_pic' bindtap='picOper' data-index='{{index}}' data-id="{{item.picid}}" data-type='BankFlow'>
+                    <image src='{{item.url}}'  mode='aspectFit'></image>
+                </view>
+            </view>
+        </block>
+        <view class='cbpp_wrap' wx:if="{{!detail}}">
+            <view class='cbp_pic' bindtap='uploadPic' data-type='Mortgage' data-form='Mortgage'>
+                <image src='{{camare}}' mode='aspectFit'></image>
+            </view>
+        </view>
+    </view>
+
+    <view class='bottomFill'></view>
+<view class="bottom">
+    <button  wx:if="{{!detail}}" type='primary' class='' bindtap='nextStep'>确定</button>
+    <button  wx:else type='primary' bindtap='navBack'>返回</button>
+</view>
+<!--遮罩  -->
+<view class='layer' hidden='{{layer}}' bindtap='layerHide'></view>
+<!--弹窗  -->
+<view class='box flex flex-col' animation="{{boxAnimation}}">
+    <image src='{{ex_pic}}'></image>
+    <text>• 请按照示例图提交照片</text>
+    <text>• 照片要四角对齐，如有模糊、遮挡、无法识别等情况则不予认证</text>
+    <button type='primary' class='' bindtap='uploadPic'>上传图片</button>
+</view>
+
+<view wx:if="{{swiper}}" class='shadeBox ub ub-ver ub-ac'>
+  <view bindtap='closeSwiper' class='ub-f1'></view>
+  <view class='shadeMain swiper'>
+    <swiper indicator-dots="true"  indicator-color='#eee' indicator-active-color='#d20000' current="{{swiperind}}">
+      <block wx:for="{{swiperImg}}" wx:key="*this" wx:for-item="src">
+        <swiper-item>
+          <image src='{{src}}' mode='aspectFit'></image>
+        </swiper-item>
+      </block>
+    </swiper>
+  </view>
+  <view bindtap='closeSwiper' class='ub-f1'></view>
+</view>

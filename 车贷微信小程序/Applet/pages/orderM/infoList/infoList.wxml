@@ -1,0 +1,10 @@
+<!--pages/orderM/infoList/infoList.wxml-->
+<view class='iL'>
+  <navigator wx:for='{{datalist}}' url='{{item.alink}}' class='od_basic flex jc-sb datalist'>
+    <view class='left'>{{item.name}}</view>
+    <view class='right'>      
+      <text class='cir' wx:if='{{item.type=="pic"}}'>{{item.num}}</text>
+      <icon class="iconfont icon-right alink"></icon>     
+    </view>    
+  </navigator>    
+</view>

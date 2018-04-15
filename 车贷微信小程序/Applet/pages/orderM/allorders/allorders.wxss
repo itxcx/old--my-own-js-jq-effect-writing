@@ -1,0 +1,28 @@
+/* pages/orderM/orderCenter/orderCenter.wxss */
+.oc_s{height:88rpx;background: #f8f8f8;overflow: hidden;}
+.oc_s input{width:644rpx;padding:0 22rpx;height:70rpx;border:1rpx solid #e6e6e6;border-radius:30rpx;background: #fff;margin: 10rpx auto 0;position: relative;}
+.oc_s input icon{position:absolute;top:0;left:258rpx;z-index:1;color:#ccc;height:100%;line-height:70rpx;}
+.oc_s input text{position:absolute;top:0;left:300rpx;z-index:1;font-size: 28rpx;color:#b2b2b2;height:100%;line-height:70rpx;}
+.oc_nav{white-space: nowrap;width:100%;background: #fff;}
+.oc_nav .nav_item{width: 33.3333%; height: 88rpx;line-height: 88rpx; display: inline-block;font-size: 30rpx;color:#353535;text-align: center;position: relative;} 
+.oc_nav .nav_item.active{color:#ff5000;}
+.oc_nav .nav_item.active::after{content: '';position: absolute;bottom:0;left:0;width:100%;height:3rpx;background:#ff5000;}
+.oc_swiper swiper-item scroll-view{height:100%;}
+.sv_list{background: #fff;border-top:1rpx solid #e5e5e5;border-bottom:1rpx solid #e5e5e5;margin-top: 20rpx;}
+.svl_up{height:82rpx;line-height:82rpx;padding: 0 30rpx;font-size: 30rpx;}
+.svl_up icon{font-size: 20rpx;width:30rpx;height:30rpx;border-radius: 50%;color:#fff;position: relative;text-align:center;line-height:30rpx;display:inline-block;vertical-align:middle;}
+.svl_up .icon-nv{background: #f98180;}
+.svl_up .icon-nan2{background: #71a3f1;}
+.svl_up text{display:inline-block;vertical-align:middle;}
+.svl_up icon:before{position: absolute;top:3rpx;left:0;right:0;bottom:0;}
+.svl_up .name{margin-left: 10rpx;}
+.svl_up .phone{margin-left: 20rpx;color:#888;}
+.svl_up .status{color:#ff5000;float:right;}
+.svl_mid{background: #f8f8f8;padding: 20rpx 30rpx;height:160rpx;}
+.svl_mid image{width:120rpx;height:120rpx;float: left;}
+.svl_mid .mid{float: left;margin: 0 15rpx;width:414rpx;}
+.svl_mid .mid .tit{font-size: 28rpx;display: block;height:88rpx;overflow: hidden;}
+.svl_mid .mid .num{font-size: 26rpx;color:#888;display: block;}
+.svl_mid .right{float: right;width:126rpx;font-size: 30rpx;text-align: right;}
+.svl_mid .right .time{font-size: 28rpx;color:#666;}
+.svl_down{height:77rpx;line-height:77rpx;background: #fff;padding: 0 30rpx;font-size: 26rpx;color:#999;}

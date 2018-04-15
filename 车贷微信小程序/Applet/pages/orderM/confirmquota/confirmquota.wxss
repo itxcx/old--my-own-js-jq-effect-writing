@@ -1,0 +1,74 @@
+form{
+  display: block;
+  height:100%;
+}
+.model{
+  background: #fff;
+  padding:0 20rpx;
+  margin-top:20rpx;
+}
+.model .text1{
+  padding:40rpx 0;
+  width: 80%;
+  margin:0 auto;
+  border-bottom:1px solid #eee;
+  text-align: center;
+  line-height: 2;
+}
+.model .text1 .h1{
+  font-size:40rpx;
+}
+.model .text2{
+   border-bottom:1px solid #eee;
+   padding:20rpx;
+  text-align: center;
+  font-size:26rpx;
+  color:#666;
+}
+.model .text2 .ub-f1{
+  border-right:1px solid #eee;
+  width: 50%;
+}
+.model .text2 .ub-f1:last-child{
+  border-right:0;
+}
+.model  .modeText{
+  line-height: 92rpx;
+  height:92rpx;
+}
+.model  .modeTex input[type=text]{
+  width: 100%;
+  height:92rpx;
+  line-height: 92rpx;
+}
+.footer{
+  height:96rpx;
+  line-height: 96rpx;
+  text-align: center;
+  border-top:1px solid #e6e6e6; 
+}
+.footer .ub-f1{width: 50%;}
+.footer .ub-f1.sin{width: 100%;}
+.footer .ub-f1 button{
+  border-radius: 0;
+}
+.footer .ub-f1 button::after{
+  border:0;
+}
+.sv_list{background: #fff;border-top:1rpx solid #e5e5e5;border-bottom:1rpx solid #e5e5e5;margin-top: 20rpx;}
+.svl_up{height:82rpx;line-height:82rpx;padding: 0 30rpx;font-size: 30rpx;}
+.svl_up icon{font-size: 20rpx;width:30rpx;height:30rpx;border-radius: 50%;color:#fff;position: relative;text-align:center;line-height:30rpx;display:inline-block;vertical-align:middle;}
+.svl_up icon:before{position: absolute;top:3rpx;left:0;right:0;bottom:0;}
+.svl_up .icon-nv{background: #f98180;}
+.svl_up .icon-nan2{background: #71a3f1;}
+.svl_up text{display:inline-block;vertical-align:middle;}
+.svl_up .name{margin-left: 10rpx;}
+.svl_up .phone{margin-left: 20rpx;color:#888;}
+.svl_up .status{color:#ff5000;float:right;}
+.svl_mid{background: #f8f8f8;padding: 20rpx 30rpx;height:160rpx;}
+.svl_mid image{width:120rpx;height:120rpx;float: left;background:#fff;}
+.svl_mid .mid{float: left;margin: 0 15rpx;width:360rpx;}
+.svl_mid .right{float: right;width:146rpx;font-size: 30rpx;text-align: right;}
+.svl_mid .mid .tit{font-size: 28rpx;display: block;height:88rpx;overflow: hidden;}
+.svl_mid .mid .num{font-size: 26rpx;color:#888;display: block;}
+.svl_mid .right .time{font-size: 28rpx;color:#666;display: block;}

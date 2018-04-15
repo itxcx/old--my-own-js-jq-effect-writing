@@ -1,0 +1,521 @@
+<!-- 总模板 -->
+<template>
+    <view class='od_basic flex jc-sb'>
+        <view class='left'>基本要求</view>
+        <view class='right flex'>
+            <view class='item'>
+                <icon class="iconfont icon-wancheng {{IsMortgage=='0'?false:(IsMortgage=='1'?true:'')}}"></icon>
+                <text>抵押登记</text>
+            </view>
+            <view class='item'>
+                <icon class="iconfont icon-wancheng {{IsGpsInstall=='0'?false:(IsGpsInstall=='1'?true:'')}}"></icon>
+                <text>GPS安装</text>
+            </view>
+        </view>
+    </view>
+    <navigator url='{{mR.alink}}' class='od_basic flex jc-sb addM'>
+        <view class='left'>上传抵押登记证明</view>
+        <view class='right'>
+            <text class='v'>{{mR.name}}</text>
+            <icon class="iconfont icon-icon04 alink"></icon>
+        </view>
+    </navigator>
+    <navigator url='{{gps.alink}}' class='od_basic flex jc-sb addM'>
+        <view class='left'>绑定GPS</view>
+        <view class='right'>
+            <text class='v'>{{gps.name}}</text>
+            <icon class="iconfont icon-right alink"></icon>
+        </view>
+    </navigator>
+    <!-- <navigator url='{{addInfoUrl}}' class='od_basic flex jc-sb addM'>
+        <view class='left'>附加材料</view>
+        <view class='right'>
+            <text class='v'>{{addM.name}}</text>
+            <icon class="iconfont icon-right alink"></icon>
+        </view>
+    </navigator>
+    <navigator url='{{guarantee}}' class='od_basic flex jc-sb gua'>
+        <view class='left'>担保人</view>
+        <view class='right'>
+            <text class='v'>{{CustomerInfo.GuarantorName}}</text>
+            <icon class="iconfont icon-right alink"></icon>
+        </view>
+    </navigator> -->
+    <navigator url='{{abnorPic.alink}}' class='od_basic flex jc-sb datalist'>
+        <view class='left'>车辆异常照片</view>
+        <view class='right'>
+            <icon class="iconfont icon-icon04 alink"></icon>
+        </view>
+    </navigator>
+    <view class='od_basic'>
+        <text class='create'>创建时间：{{ScheduleList[ScheduleList.length-1].Processingdate}} {{ScheduleList[ScheduleList.length-1].Processingtime}}</text>
+    </view>
+</template>
+<!-- 总模板 -->
+<template>
+    <!-- <button bindtap='viewProgress'>查看进度</button>
+    <button>修改</button>
+    <button class='oran'>确认额度</button>
+    <button class='oran'>提交核验</button>
+    <button>上传放款凭证</button>
+    <button class='oran'>签约完成</button>
+    <button class='oran'>完成安装</button>
+    <button class='oran'>提交</button>
+    <button>GPS定位</button>
+    <button class='oran'>联系客户</button>
+    <button class='oran'>完善信息</button> -->
+</template>
+<!-- ddgl 模板 -->
+<template name='ddgl_List'>
+    <view class='od_basic flex jc-sb'>
+        <view class='left'>基本要求</view>
+        <view class='right flex'>
+            <view class='item'>
+                <icon class="iconfont icon-wancheng {{IsContractSign!='0'?'true':'false'}}"></icon>
+                <text>合同签订</text>
+            </view>
+            <view class='item'>
+                <icon class="iconfont icon-wancheng {{IsMortgage=='0'?false:(IsMortgage=='1'?true:'')}}"></icon>
+                <text>抵押登记</text>
+            </view>
+            <view class='item'>
+                <icon class="iconfont icon-wancheng {{IsGpsInstall=='0'?false:(IsGpsInstall=='1'?true:'')}}"></icon>
+                <text>GPS安装</text>
+            </view>
+        </view>
+    </view>
+    <navigator url='{{addInfoUrl}}' class='od_basic flex jc-sb addM'>
+        <view class='left'>附加材料</view>
+        <view class='right'>
+            <text class='v'>{{addM.name}}</text>
+            <icon class="iconfont icon-right alink"></icon>
+        </view>
+    </navigator>
+    <navigator url='{{guarantee}}' class='od_basic flex jc-sb gua'>
+        <view class='left'>担保人</view>
+        <view class='right'>
+            <text class='v'>{{CustomerInfo.GuarantorName}}</text>
+            <icon class="iconfont icon-right alink"></icon>
+        </view>
+    </navigator>
+    <view class='od_basic'>
+        <text class='create'>创建时间：{{ScheduleList[ScheduleList.length-1].Processingdate}} {{ScheduleList[ScheduleList.length-1].Processingtime}}</text>
+    </view>
+</template>
+<!-- gpsaz 已安装 模板 -->
+<template name='gpsaz_yaz_List'>
+    <view class='od_basic flex jc-sb'>
+        <view class='left'>基本要求</view>
+        <view class='right flex'>
+            <view class='item'>
+                <icon class="iconfont icon-wancheng {{IsContractSign!='0'?'true':'false'}}"></icon>
+                <text>合同签订</text>
+            </view>
+            <view class='item'>
+                <icon class="iconfont icon-wancheng {{IsMortgage=='0'?false:(IsMortgage=='1'?true:'')}}"></icon>
+                <text>抵押登记</text>
+            </view>
+            <view class='item'>
+                <icon class="iconfont icon-wancheng {{IsGpsInstall=='0'?false:(IsGpsInstall=='1'?true:'')}}"></icon>
+                <text>GPS安装</text>
+            </view>
+        </view>
+    </view>
+    <navigator url='/pages/Gps/Gpslist/Gpslist' class='od_basic flex jc-sb addM'>
+        <view class='left'>绑定GPS</view>
+        <view class='right'>
+            <text class='v'>{{GPSnum[0]}}有线/{{GPSnum[1]}}无线</text>
+            <icon class="iconfont icon-right alink"></icon>
+        </view>
+    </navigator>
+    <view class='od_basic flex jc-sb addM' bindtap='riskSub'>
+        <view class='left'>风险提交</view>
+        <view class='right'>
+            <text class='v'></text>
+            <icon class="iconfont icon-right alink"></icon>
+        </view>
+    </view>
+    <navigator url='{{carAbnormalPic}}' class='od_basic flex jc-sb datalist'>
+        <view class='left'>车辆异常照片</view>
+        <view class='right'>
+            <icon class="iconfont icon-right alink"></icon>
+        </view>
+    </navigator>
+    <!-- <navigator url='{{addInfoUrl}}' class='od_basic flex jc-sb addM'>
+        <view class='left'>附加材料</view>
+        <view class='right'>
+            <text class='v'>{{addM.name}}</text>
+            <icon class="iconfont icon-right alink"></icon>
+        </view>
+    </navigator>
+    <navigator url='{{guarantee}}' class='od_basic flex jc-sb gua'>
+        <view class='left'>担保人</view>
+        <view class='right'>
+            <text class='v'>{{CustomerInfo.GuarantorName}}</text>
+            <icon class="iconfont icon-right alink"></icon>
+        </view>
+    </navigator> -->
+    <view class='od_basic'>
+        <text class='create'>创建时间：{{ScheduleList[ScheduleList.length-1].Processingdate}} {{ScheduleList[ScheduleList.length-1].Processingtime}}</text>
+    </view>
+</template>
+<!-- gpsaz 已安装 模板 -->
+<template name='gpsaz_yaz_ListBtn'>
+    
+</template>
+<!-- gpsaz 未安装2 模板 -->
+<template name='gpsaz_waz_List'>
+    <view class='od_basic flex jc-sb'>
+        <view class='left'>基本要求</view>
+        <view class='right flex'>
+            <view class='item'>
+                <icon class="iconfont icon-wancheng {{IsContractSign!='0'?'true':'false'}}"></icon>
+                <text>合同签订</text>
+            </view>
+            <view class='item'>
+                <icon class="iconfont icon-wancheng {{IsMortgage=='0'?false:(IsMortgage=='1'?true:'')}}"></icon>
+                <text>抵押登记</text>
+            </view>
+            <view class='item'>
+                <icon class="iconfont icon-wancheng {{IsGpsInstall=='0'?false:(IsGpsInstall=='1'?true:'')}}"></icon>
+                <text>GPS安装</text>
+            </view>
+        </view>
+    </view>    
+    <navigator wx:if="{{IsGpsLoanApply==2||IsSceneInvestigation!=0}}" url='/pages/Gps/Gpslist/Gpslist' class='od_basic flex jc-sb addM'>
+        <view class='left'>绑定GPS</view>
+        <view class='right'>
+            <text class='v'>未绑定，请尽快完成</text>
+            <icon class="iconfont icon-right alink"></icon>
+        </view>
+    </navigator>    
+    <navigator wx:else url='/pages/Gps/isAbnormal/isAbnormal' class='od_basic flex jc-sb addM'>
+        <view class='left'>绑定GPS</view>
+        <view class='right'>
+            <text class='v'>未绑定，请尽快完成</text>
+            <icon class="iconfont icon-right alink"></icon>
+        </view>
+    </navigator>
+    <view class='od_basic flex jc-sb addM' bindtap='riskSub'>
+        <view class='left'>风险提交</view>
+        <view class='right'>
+            <text class='v'></text>
+            <icon class="iconfont icon-right alink"></icon>
+        </view>
+    </view>
+    <!-- <navigator url='{{addInfoUrl}}' class='od_basic flex jc-sb addM'>
+        <view class='left'>附加材料</view>
+        <view class='right'>
+            <text class='v'>{{addM.name}}</text>
+            <icon class="iconfont icon-right alink"></icon>
+        </view>
+    </navigator>
+    <navigator url='{{guarantee}}' class='od_basic flex jc-sb gua'>
+        <view class='left'>担保人</view>
+        <view class='right'>
+            <text class='v'>{{CustomerInfo.GuarantorName}}</text>
+            <icon class="iconfont icon-right alink"></icon>
+        </view>
+    </navigator> -->
+    <view class='od_basic'>
+        <text class='create'>创建时间：{{ScheduleList[ScheduleList.length-1].Processingdate}} {{ScheduleList[ScheduleList.length-1].Processingtime}}</text>
+    </view>
+</template>
+<!-- gpsaz 未安装2 模板 -->
+<template name='gpsaz_waz_ListBtn'>
+    
+    <!-- <button wx:if='{{IsGpsInstall=="0"}}' bindtap='bindGpsBtn'>绑定GPS</button>  
+  <button wx:if='{{myData.IsGpsLoanApply==1}}' bindtap='moneySureBtn'>放款确认</button>      -->
+</template>
+<!-- gpsjk 模板 -->
+<template name='gpsjk_List'>
+    <view class='od_basic flex jc-sb'>
+        <view class='left'>基本要求</view>
+        <view class='right flex'>
+            <view class='item'>
+                <icon class="iconfont icon-wancheng {{IsContractSign!='0'? 'true':'false'}}"></icon>
+                <text>合同签订</text>
+            </view>
+            <view class='item'>
+                <icon class="iconfont icon-wancheng {{IsMortgage=='0'?false:(IsMortgage=='1'?true:'')}}"></icon>
+                <text>抵押登记</text>
+            </view>
+            <view class='item'>
+                <icon class="iconfont icon-wancheng {{IsGpsInstall=='0'?false:(IsGpsInstall=='1'?true:'')}}"></icon>
+                <text>GPS安装</text>
+            </view>
+        </view>
+    </view>
+    <navigator url='/pages/Gps/Gpslist/Gpslist?location=true' class='od_basic flex jc-sb addM'>
+        <view class='left'>查看GPS</view>
+        <view class='right'>
+            <text class='v'>{{GPSnum[0]}}有线/{{GPSnum[1]}}无线</text>
+            <icon class="iconfont icon-right alink"></icon>
+        </view>
+    </navigator>
+    <view class='od_basic flex jc-sb addM' bindtap='riskSub'>
+        <view class='left'>风险提交</view>
+        <view class='right'>
+            <text class='v'></text>
+            <icon class="iconfont icon-right alink"></icon>
+        </view>
+    </view>
+    <!-- <navigator url='{{addInfoUrl}}' class='od_basic flex jc-sb addM'>
+        <view class='left'>附加材料</view>
+        <view class='right'>
+            <text class='v'>{{addM.name}}</text>
+            <icon class="iconfont icon-right alink"></icon>
+        </view>
+    </navigator>
+    <navigator url='{{guarantee}}' class='od_basic flex jc-sb gua'>
+        <view class='left'>担保人</view>
+        <view class='right'>
+            <text class='v'>{{CustomerInfo.GuarantorName}}</text>
+            <icon class="iconfont icon-right alink"></icon>
+        </view>
+    </navigator> -->
+    <view class='od_basic'>
+        <text class='create'>创建时间：{{ScheduleList[ScheduleList.length-1].Processingdate}} {{ScheduleList[ScheduleList.length-1].Processingtime}}</text>
+    </view>
+</template>
+<!-- gpsjk 模板 -->
+<template name='gpsjk_ListBtn'>
+    
+</template>
+<!-- dydj 已抵押 模板 -->
+<template name='dydj_ydy_List'>
+    <view class='od_basic flex jc-sb'>
+        <view class='left'>基本要求</view>
+        <view class='right flex'>
+            <view class='item'>
+                <icon class="iconfont icon-wancheng {{IsContractSign!='0'?'true':'false'}}"></icon>
+                <text>合同签订</text>
+            </view>
+            <view class='item'>
+                <icon class="iconfont icon-wancheng {{IsMortgage=='0'?false:(IsMortgage=='1'?true:'')}}"></icon>
+                <text>抵押登记</text>
+            </view>
+            <view class='item'>
+                <icon class="iconfont icon-wancheng {{IsGpsInstall=='0'?false:(IsGpsInstall=='1'?true:'')}}"></icon>
+                <text>GPS安装</text>
+            </view>
+        </view>
+    </view>
+    <navigator url='/pages/orderM/mortgagePic/index' class='od_basic flex jc-sb addM'>
+        <view class='left'>上传抵押登记证明</view>
+        <view class='right'>
+            <text class='v'>已上传（{{GetMorNum}}）</text>
+            <icon class="iconfont icon-icon04 alink"></icon>
+        </view>
+    </navigator>
+    <view class='od_basic flex jc-sb addM' bindtap='riskSub'>
+        <view class='left'>风险提交</view>
+        <view class='right'>
+            <text class='v'></text>
+            <icon class="iconfont icon-right alink"></icon>
+        </view>
+    </view>
+    <!-- <navigator url='{{addInfoUrl}}' class='od_basic flex jc-sb addM'>
+        <view class='left'>附加材料</view>
+        <view class='right'>
+            <text class='v'>{{addM.name}}</text>
+            <icon class="iconfont icon-right alink"></icon>
+        </view>
+    </navigator>
+    <navigator url='{{guarantee}}' class='od_basic flex jc-sb gua'>
+        <view class='left'>担保人</view>
+        <view class='right'>
+            <text class='v'>{{CustomerInfo.GuarantorName}}</text>
+            <icon class="iconfont icon-right alink"></icon>
+        </view>
+    </navigator> -->
+    <view class='od_basic'>
+        <text class='create'>创建时间：{{ScheduleList[ScheduleList.length-1].Processingdate}} {{ScheduleList[ScheduleList.length-1].Processingtime}}</text>
+    </view>
+</template>
+<!-- dydj 已抵押 模板 -->
+<template name='dydj_ydy_ListBtn'>
+    <!-- <button bindtap='viewProgress'>查看进度</button> -->
+</template>
+<!-- dydj 未抵押2 模板 -->
+<template name='dydj_wdy_List'>
+    <view class='od_basic flex jc-sb'>
+        <view class='left'>基本要求</view>
+        <view class='right flex'>
+            <view class='item'>
+                <icon class="iconfont icon-wancheng {{IsContractSign!='0'?'true':'false'}}"></icon>
+                <text>合同签订</text>
+            </view>
+            <view class='item'>
+                <icon class="iconfont icon-wancheng {{IsMortgage=='0'?false:(IsMortgage=='1'?true:'')}}"></icon>
+                <text>抵押登记</text>
+            </view>
+            <view class='item'>
+                <icon class="iconfont icon-wancheng {{IsGpsInstall=='0'?false:(IsGpsInstall=='1'?true:'')}}"></icon>
+                <text>GPS安装</text>
+            </view>
+        </view>
+    </view>
+    <navigator url='/pages/orderM/mortgagePic/index' class='od_basic flex jc-sb addM'>
+        <view class='left'>上传抵押登记证明</view>
+        <view class='right'>
+            <text class='v red'>未上传</text>
+            <icon class="iconfont icon-icon04 alink"></icon>
+        </view>
+    </navigator>
+    <view class='od_basic flex jc-sb addM' bindtap='riskSub'>
+        <view class='left'>风险提交</view>
+        <view class='right'>
+            <text class='v'></text>
+            <icon class="iconfont icon-right alink"></icon>
+        </view>
+    </view>
+    <!-- <navigator url='{{addInfoUrl}}' class='od_basic flex jc-sb addM'>
+        <view class='left'>附加材料</view>
+        <view class='right'>
+            <text class='v'>{{addM.name}}</text>
+            <icon class="iconfont icon-right alink"></icon>
+        </view>
+    </navigator>
+    <navigator url='{{guarantee}}' class='od_basic flex jc-sb gua'>
+        <view class='left'>担保人</view>
+        <view class='right'>
+            <text class='v'>{{CustomerInfo.GuarantorName}}</text>
+            <icon class="iconfont icon-right alink"></icon>
+        </view>
+    </navigator> -->
+    <view class='od_basic'>
+        <text class='create'>创建时间：{{ScheduleList[ScheduleList.length-1].Processingdate}} {{ScheduleList[ScheduleList.length-1].Processingtime}}</text>
+    </view>
+</template>
+<!-- dydj 未抵押2 模板 -->
+<template name='dydj_wdy_ListBtn'>
+    <!-- <button bindtap='viewProgress'>查看进度</button> -->
+    <!-- <button wx:if='{{IsMortgage=="0"}}' bindtap='bindDydjBtn'>上传证明</button>        
+     <button wx:if='{{myData.IsMorLoanApply==1}}' bindtap='dydjmoneySureBtn'>放款确认</button> -->
+</template>
+<!--pages/orderM/orderDetails/orderDetails.wxml-->
+<view class='od flex flex-col'>
+    <view class='f_up fg-1'>
+        <view class='cbpW_tit' animation="{{closeAnimation}}" wx:if='{{!ReviewRemark==""}}'>
+            风控提醒：{{ReviewRemark}}
+            <!-- <icon class='iconfont icon-cha' bindtap='titClose'></icon> -->
+        </view>
+        <view class='od_up'>
+            <!--背景层  -->
+            <image src="/images/od_up.png"></image>
+            <view class='flex topH'>
+                <icon class='iconfont icon-kmbqiache'></icon>
+                <view class='odu_t flex flex-col ac-sb'>
+                    <text class='name'>{{myData.ScheduleList[0].ProcessingRecord}}</text>
+                    <text class='time'>{{myData.ScheduleList[0].Processingdate}} {{myData.ScheduleList[0].Processingtime}}</text>
+                </view>
+            </view>
+        </view>
+        <view class='od_up od_per'>
+            <navigator class='flex' url='../../beforeLoan/basicInfoV/basicInfoV?OrderId={{orderId}}'>
+                <icon class="iconfont {{myData.CustomerInfo.Gender==1?'icon-nv':(myData.CustomerInfo.Gender==0?'icon-nan2':'')}} sex"></icon>
+                <view class='odp_t odu_t flex flex-col ac-sb'>
+                    <view class='name'>{{myData.CustomerInfo.CustomerName}} {{myData.CustomerInfo.Mobile}}</view>
+                    <view class='time'>
+                        <text class='a'>借款金额：</text>
+                        <text class='b'>{{myData.CustomerInfo.LoanAmount}}万</text>
+                        <text class='a ml'>贷款期限：</text>
+                        <text class='b'>{{myData.CustomerInfo.LoanTerm}}期</text>
+                    </view>
+                    <view class='time'>
+                        <text class='a'>放款金额：</text>
+                        <text class='b' wx:if="{{!myData.BorrowAmount}}">{{myData.BorrowAmount}}</text>
+                         <text class='b' wx:else>{{myData.BorrowAmount}}万</text>
+                    </view>
+                </view>
+                <icon class="iconfont icon-right alink"></icon>
+            </navigator>
+        </view>
+        <navigator url='../../beforeLoan/perfectCarMessV/perfectCarV?OrderId={{orderId}}' class='od_shop'>
+            <view class='up'>
+                <icon class="iconfont icon-dianpu"></icon>
+                <text>{{myData.CustomerInfo.ShopName}}</text>
+            </view>
+            <view class='mid flex'>
+                <image src='/images/carLogo/{{myData.CarInfo.BrandPinyin}}.png' wx:if='{{myData.CarInfo.BrandPinyin}}'></image>
+                <view class='mid_up'>
+                    <view class='tit'>{{myData.CarInfo.ModelName}}</view>
+                    <view class='intro'>
+                        <text>{{myData.CarInfo.CarNum}}</text>
+                        <text class='ml'>{{myData.CarInfo.ApparentMileage}}万公里</text>
+                    </view>
+                </view>
+            </view>
+            <view class='bottom'>
+                <text>罚款 <text class='num'>{{myData.CarInfo.IllegalFine}}</text> 元</text>
+                <text class='ml'>扣 <text class='num'>{{myData.CarInfo.IllegalDeduction}}</text> 分</text>
+                <text class='ml'>未处理 <text class='num'>{{myData.CarInfo.NotHandle}}</text></text>
+            </view>
+        </navigator>
+        <template is="{{pageEnter}}_List" data="{{...myData}}" />
+    </view>
+    <view class='f_bottom flex jc-fe ai-c flex-wrap'>
+        <template is="{{pageEnter}}_ListBtn" />
+        <view class="ub">
+        <block wx:if='{{pageEnter!="gpsjk"}}'>
+        <button  class='ub-f1' type='primary' bindtap='viewProgress'>查看进度</button>
+        </block>
+          <block wx:else>
+        <button class="ub-f1" type='warm' bindtap='gpsLocation'>GPS定位</button>
+         <button class="ub-f1" type='primary'  bindtap='contactCust'>联系客户</button>
+        </block>
+        
+        <block wx:for='{{myData.ActionNames}}' wx:key="">
+        <button class='ub-f1' type="warm" wx:if='{{item=="重新申请"}}' bindtap='reApply'>{{item}}</button>
+        <button class='ub-f1' wx:if='{{item=="风控审核中"}}'>{{item}}</button>
+        <button class='ub-f1'  type="warm" wx:if='{{item=="完成并提交审核"}}' bindtap='subAudit'>{{item}}</button>
+        <button class='ub-f1'  type="red" wx:if='{{item=="额度确认"}}' bindtap='quotaConfir'>{{item}}</button>
+        <button class='ub-f1'  type="warm" wx:if='{{item=="申请放款"}}' bindtap='applyLenders'>{{item}}</button>
+        <button class='ub-f1' wx:if='{{item=="已申请放款，请耐心等待"}}'>{{item}}</button>
+        <button class='ub-f1' wx:if='{{item=="等待还款"}}'>{{item}}</button>
+        </block>
+        <block wx:if='{{myData.OrderStatus=="2"}}'>
+            <button class='ub-f1' wx:if='{{myData.IsConfirm==0}}' bindtap='quotaCarPrice'>车价确认</button>
+        </block>
+        <block wx:if='{{pageEnter=="gpsaz_waz"}}'>
+            <button class='ub-f1' type="warm" wx:if='{{IsGpsInstall=="0"}}' bindtap='bindGpsBtn'>绑定GPS</button>
+            <button class='ub-f1' type="red" wx:if='{{myData.IsGpsLoanApply==1}}' bindtap='moneySureBtn'>放款确认</button>
+        </block>
+        <block wx:if='{{pageEnter=="dydj_wdy"}}'>
+            <button class='ub-f1' type="warm" wx:if='{{IsMortgage=="0"}}' bindtap='bindDydjBtn'>上传证明</button>
+            <button class='ub-f1' type="red" wx:if='{{myData.IsMorLoanApply==1}}' bindtap='dydjmoneySureBtn'>放款确认</button>
+        </block>
+        </view>
+        
+
+    </view>
+    <!--遮罩  -->
+    <view class='layer' hidden='{{layer}}'></view>
+    <!--弹窗  -->
+    <view class='pop' animation='{{popA}}'>
+        <view class='box'>
+            <view class='up'>
+                <image src='/images/carLogo/{{myData.CarInfo.BrandPinyin}}.png' wx:if='{{myData.CarInfo.BrandPinyin}}'></image>
+                <text>{{myData.CarInfo.ModelName}}</text>
+            </view>
+            <view class='bottom'>
+                <view class='list flex {{index==0?"fir":""}}' wx:for='{{myData.ScheduleList}}' wx:key="">
+                    <view class='left flex ai-c ac-c flex-wrap'>
+                        <text class='hour'>{{item.Processingtime}}</text>
+                        <text class='day'>{{item.DTimeDesc}}</text>
+                    </view>
+                    <view class='mid {{index==popListLength-1?"h0":""}}'>                      
+                        <icon class='iconfont {{index==0?"icon-wancheng":"dot"}}'></icon>
+                    </view>
+                    <view class='right flex ai-c ac-c flex-wrap'>
+                        <text>{{item.ProcessingRecord}}</text>
+                        <text wx:if='{{item.OrderOperation!=""}}'>操作：{{item.OrderOperation}}</text>
+                        <text wx:if='{{item.OrderDescription!=""}}'>备注：{{item.OrderDescription}}</text>
+                    </view>
+                </view>
+            </view>
+        </view>
+        <icon class='iconfont icon-cha1 close' bindtap='popClose'></icon>
+    </view>
+</view>

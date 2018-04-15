@@ -1,0 +1,130 @@
+<!--pages/orderM/orderCenter111/orderCenter111.wxml-->
+<view class='oc'>
+  <view class='oc_s'>
+    <input confirm-type='search' bindinput='ocs_inp' bindconfirm=''>      
+      <icon class='iconfont icon-sousuo' hidden='{{ocs_i}}'></icon>
+      <text hidden='{{ocs_i}}'>搜索</text>
+    </input>
+  </view>
+  <scroll-view class='oc_nav' scroll-x="true" scroll-with-animation='true' scroll-left='0'>
+    <view class="nav_item {{index==swiperI?'active':''}}" wx:for='{{oc_nav}}' bindtap='navTap' data-index='{{index}}'>{{item.name}}</view>            
+  </scroll-view>
+  <swiper class='oc_swiper' current='{{swiperI}}' duration ='300' bindchange="switchTab" style='height:{{swiperHeight}}rpx'>  
+    <!--第一个sv_list接口  -->
+    <swiper-item>
+      <scroll-view scroll-y="true" scroll-with-animation='true' scroll-top='0'>
+        <navigator url='{{item.link}}' class='sv_list' wx:for='{{sv_list}}'>
+          <view class='svl_up'>
+            <icon class="iconfont {{item.sex==0?'icon-nv':'icon-nan2'}}"></icon>           
+            <text class='name'>{{item.upName}}</text>
+            <text class='phone'>{{item.upPhone}}</text>
+            <text class='status'>{{item.upStatus}}</text>
+          </view>
+          <view class='svl_mid'>
+            <image src='{{item.midSrc}}'></image>
+            <view class='mid'>
+              <text class='tit'>{{item.midTit}}</text>                
+              <text class='num'>{{item.midNum}}</text>
+            </view>
+            <view class='right'>
+              <text>{{item.midPri}}</text>
+              <text class='time'>{{item.midTime}}</text>
+            </view>
+            <view class='clear'></view>
+          </view>
+          <view class='svl_down flex jc-sb'>
+            <text>{{item.downName}}</text>
+            <text>{{item.downMin}}</text>
+          </view>
+        </navigator>
+      </scroll-view>
+    </swiper-item>    
+    <!--第二个sv_list接口  -->
+    <swiper-item>
+      <scroll-view scroll-y="true" scroll-with-animation='true' scroll-top='0'>
+        <navigator url='{{item.link}}' class='sv_list' wx:for='{{sv_list}}'>
+          <view class='svl_up'>
+            <icon class="iconfont {{item.sex==0?'icon-nv':'icon-nan2'}}"></icon>           
+            <text class='name'>{{item.upName}}</text>
+            <text class='phone'>{{item.upPhone}}</text>
+            <text class='status'>{{item.upStatus}}</text>
+          </view>
+          <view class='svl_mid'>
+            <image src='{{item.midSrc}}'></image>
+            <view class='mid'>
+              <text class='tit'>{{item.midTit}}</text>                
+              <text class='num'>{{item.midNum}}</text>
+            </view>
+            <view class='right'>
+              <text>{{item.midPri}}</text>
+              <text class='time'>{{item.midTime}}</text>
+            </view>
+            <view class='clear'></view>
+          </view>
+          <view class='svl_down flex jc-sb'>
+            <text>{{item.downName}}</text>
+            <text>{{item.downMin}}</text>
+          </view>
+        </navigator>
+      </scroll-view>
+    </swiper-item>
+    <!--第三个sv_list接口  -->
+    <swiper-item>
+      <scroll-view scroll-y="true" scroll-with-animation='true' scroll-top='0'>
+        <navigator url='{{item.link}}' class='sv_list' wx:for='{{sv_list}}'>
+          <view class='svl_up'>
+            <icon class="iconfont {{item.sex==0?'icon-nv':'icon-nan2'}}"></icon>           
+            <text class='name'>{{item.upName}}</text>
+            <text class='phone'>{{item.upPhone}}</text>
+            <text class='status'>{{item.upStatus}}</text>
+          </view>
+          <view class='svl_mid'>
+            <image src='{{item.midSrc}}'></image>
+            <view class='mid'>
+              <text class='tit'>{{item.midTit}}</text>                
+              <text class='num'>{{item.midNum}}</text>
+            </view>
+            <view class='right'>
+              <text>{{item.midPri}}</text>
+              <text class='time'>{{item.midTime}}</text>
+            </view>
+            <view class='clear'></view>
+          </view>
+          <view class='svl_down flex jc-sb'>
+            <text>{{item.downName}}</text>
+            <text>{{item.downMin}}</text>
+          </view>
+        </navigator>
+      </scroll-view>
+    </swiper-item>    
+    <!--第四个sv_list接口  -->
+    <swiper-item>
+      <scroll-view scroll-y="true" scroll-with-animation='true' scroll-top='0'>
+        <navigator url='{{item.link}}' class='sv_list' wx:for='{{sv_list}}'>
+          <view class='svl_up'>
+            <icon class="iconfont {{item.sex==0?'icon-nv':'icon-nan2'}}"></icon>           
+            <text class='name'>{{item.upName}}</text>
+            <text class='phone'>{{item.upPhone}}</text>
+            <text class='status'>{{item.upStatus}}</text>
+          </view>
+          <view class='svl_mid'>
+            <image src='{{item.midSrc}}'></image>
+            <view class='mid'>
+              <text class='tit'>{{item.midTit}}</text>                
+              <text class='num'>{{item.midNum}}</text>
+            </view>
+            <view class='right'>
+              <text>{{item.midPri}}</text>
+              <text class='time'>{{item.midTime}}</text>
+            </view>
+            <view class='clear'></view>
+          </view>
+          <view class='svl_down flex jc-sb'>
+            <text>{{item.downName}}</text>
+            <text>{{item.downMin}}</text>
+          </view>
+        </navigator>
+      </scroll-view>
+    </swiper-item>    
+  </swiper> 
+</view>

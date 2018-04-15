@@ -1,0 +1,11 @@
+.od_basic{background: #fff;border-top:1px solid #e5e5e5;border-bottom:1px solid #e5e5e5;margin-top: 21rpx;height:86rpx;line-height:86rpx;padding: 0 30rpx;}
+.od_basic .left{font-size: 30rpx;}
+.od_basic .right{font-size: 28rpx;}
+.od_basic .right .item{margin-left: 50rpx;}
+.od_basic .right .item text{margin-left: 22rpx;}
+.od_basic .right icon.true{color:#4e8cee;}
+.od_basic .right .alink{color:#999;font-size:34rpx;display: inline-block;vertical-align: middle;}
+.od_basic .right .v{display: inline-block;vertical-align: middle;}
+.od_basic .right .cir{display: inline-block;background: #4e8cee;width:60rpx;height:36rpx;border-radius: 20rpx;color:#fff;line-height: 36rpx;text-align: center;font-size: 26rpx;vertical-align: middle;}
+.od_basic .create,.od_basic{font-size: 28rpx;color:#888;}
+.f_bottom{height:90rpx;background:#fff;border-top:1px solid #e5e5e5;padding: 0 30rpx;}
