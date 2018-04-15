@@ -1,0 +1,90 @@
+<form>
+    <view class='ub ub-ver full-height'>
+        <view class='ub-f1'>
+            <view class='messBox'>
+                <view class='mess'>
+                    {{carMess.ModelName}}
+                </view>
+                <view class='messFrom'>                    
+                    <text class="yellow">{{carMess.Amount=='车价评估中！'?'车价评估中！':(carMess.Amount+'万元')}}</text>（最终贷款金额，以终审金额为准）
+                </view>
+            </view>
+
+            <view class='inputbox'>
+                <view class='ub'>
+                    <view class="name">借款金额</view>
+                    <view class='ub-f1'>
+                        <input name="LoanAmount" type='digit' placeholder='输入借款金额' placeholder-class='c999' value='{{Amount}}' bindblur='getAmount'></input>
+                    </view>
+                    <view class="text yellow">万元</view>
+                </view>
+            </view>
+            <view class='inputbox'>
+                <view class='ub'>
+                    <view class="name">借款类型</view>
+                    <view class='ub-f1'>
+                        <picker name='LoanType' bindchange="LoanChange" value="{{indexloanType}}" range="{{loanType}}">
+                            <view style='color:{{c1}}'>{{loanType[indexloanType]}}</view>
+                            <icon class='iconfont icon-down more'></icon>
+                        </picker>
+                    </view>
+                </view>
+                <view class='ub'>
+                    <view class="name">借款期限</view>
+                    <view class='ub-f1'>
+                        <picker name='LoanTerm' bindchange="TimeChange" value="{{indexTime}}" range="{{timeType}}">
+                            <view style='color:{{c2}}'>{{timeType[indexTime]}}</view>
+                            <icon class='iconfont icon-down more'></icon>
+                        </picker>
+                    </view>
+                </view>
+                <view class='ub'>
+                    <view class="name">还款方式</view>
+                    <view class='ub-f1'>
+                        <text class='mess'>{{payMethod}}</text>
+                    </view>
+                </view>
+                <view class='ub'>
+                    <view class="name">还款利率</view>
+                    <view class='ub-f1'>
+                        <text class='mess'>{{payRate}}</text>
+                    </view>
+                </view>
+            </view>
+            <!-- <view class='inputbox'>
+        <view class='ub'>
+          <view class="name">收款账号</view>
+          <view class='ub-f1'>
+            <input type='text' placeholder='请输入银行卡号' placeholder-class='c999' value='{{carMess.}}'></input>
+            <icon bindtap='getPhoto' class='iconfont icon-icon04'></icon>
+          </view>
+        </view>
+        <view class='ub'>
+          <view class="name">开户行</view>
+          <view class='ub-f1'>
+           <picker bindchange="BankChange" value="{{indexbank}}" range="{{bankType}}">
+              <view style='color:{{c3}}'>{{bankType[indexbank]}}</view>
+              <icon class='iconfont icon-down more'></icon>
+            </picker>
+          </view>
+        </view>
+        <view class='ub'>
+          <view class="name">开户支行</view>
+          <view class='ub-f1'>
+            <input type='text' placeholder='请输入支行名称' placeholder-class='c999'></input>
+
+          </view>
+        </view>
+      </view> -->
+
+        </view>
+        <view class='footBtn ub'>
+            <view class='ub-f1'>
+                <button bindtap='formsubmit' id='1' form-type='submit' type='myBtn' class='blueText'>保存</button>
+            </view>
+             <view class='ub-f1' wx:if='{{IsAssessment!="1"}}'>
+                <button  bindtap='formsubmit'  id='2' form-type='submit' type='primary'>下一步</button>
+            </view> 
+        </view>
+    </view>
+</form>

@@ -1,0 +1,35 @@
+
+<form>
+<view class='container'>
+  <view class='inputbox'>    
+    <view>
+    <view class='ub'>
+      <view class="name">违章罚款</view>
+      <view class='ub-f1'>
+        <input disabled='true' name='fine' type='digit' placeholder='' placeholder-class='c999' value='{{myData.IllegalFine}}'></input>
+      </view>
+      <view class="text">元</view>
+    </view>
+     <view class='ub'>
+      <view class="name">违章扣分</view>
+      <view class='ub-f1'>
+        <input disabled='true' name='points' type='number' placeholder='' placeholder-class='c999' value='{{myData.IllegalDeduction}}'></input>
+      </view>
+    </view>
+     <view class='ub'>
+      <view class="name">未处理数</view>
+      <view class='ub-f1'>
+        <input disabled='true' name='handle' type='text' placeholder='' placeholder-class='c999'  value='{{myData.UntreatedNum}}'></input>
+      </view>
+    </view>
+    </view>
+  </view>
+  </view>
+  <view class='btnBox'>
+<button type='primary' bindtap='nBack'>返回</button>
+<!-- <button bindtap='' type='warn'>违章查询</button> -->
+</view>
+</form>
+
+
+

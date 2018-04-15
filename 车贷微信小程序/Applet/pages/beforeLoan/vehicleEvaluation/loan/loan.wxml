@@ -1,0 +1,23 @@
+<form bindsubmit='submitForm'>
+<view class='container'>
+  <view class='text-center price'>
+    <view>评估师报价（万）</view>
+    <view class='yellow'>{{carMess.AssAmount}}</view>
+  </view>
+  <view class='grade'>
+    <view class='title'>客户意向等级</view>
+    <view class='star'>
+      <view class='starBox' wx:for="{{stars}}" wx:for-index="index" wx:for-item="status" wx:key="">
+        <image wx:if="{{status}}" bindtap='chooseStar' data-index='{{index}}' src='{{star_y}}'></image>
+        <image wx:else bindtap='chooseStar' data-index='{{index}}' src='{{star_h}}'></image>
+      </view>
+    </view>
+    <view class='textarea'>
+        <textarea name="remarks" placeholder='备注' placeholder-class='c999'></textarea>
+    </view>
+  </view>
+  <view class='btnBox'>
+  <button type='primary' form-type='submit'>提交</button>
+  </view>
+</view>
+</form>

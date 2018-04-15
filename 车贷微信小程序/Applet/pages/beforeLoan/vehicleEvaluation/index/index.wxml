@@ -1,0 +1,155 @@
+<!--pages/beforeLoan/vehicleEvaluation/index.wxml-->
+
+<view animation="{{animationData}}" class='errorMess'>
+    <text>{{errorMess}}</text>
+</view>
+
+<form bindsubmit='formSubmit'>
+    <view class='inputbox'>
+        <view class='ub'>
+            <view class="name">身份证号</view>
+            <view class='ub-f1'>
+                <input class="distinguish" name="IdCard" type='text' placeholder='输入身份证号' placeholder-class='c999' value="{{idcard.Value}}"></input>
+                <icon bindtap='getPhoto' data-id="idcard" class='iconfont icon-icon04'></icon>
+            </view>
+        </view>
+        <view class='ub'>
+            <view class="name">姓名</view>
+            <view class='ub-f1'>
+                <input name='Name' type='text' placeholder='输入姓名' placeholder-class='c999' value="{{idcard.Name}}"></input>
+            </view>
+        </view>
+        
+        <view class='ub'>
+            <view class="name">户籍地址</view>
+           <view class='ub-f1 chooseMore' bindtap='showPickerArea'>
+              <input name='Address' style="color:#444;" disabled='disabled'  type="text" placeholder-class='c999' placeholder='请选择居住地址' value="{{myAddress.addressMess}}"></input>
+              <icon class='iconfont icon-down'></icon>
+          </view>
+        </view>
+          <view class='ub'>
+          <view class='ub-f1'>
+            <input bindblur='addressDetailChange' name="AddressMess" type='text' placeholder='户籍详细地址' placeholder-class='c999' value='{{myAddress.addressDetail}}'></input>
+          </view>
+        </view>   
+        <!-- <view class='ub' wx:else>
+            <view class="name">户籍地址</view>
+            <view class='ub-f1'>
+                <input name='Address' type='text' placeholder='输入户籍地址' placeholder-class='c999' value="{{idcard.Address}}"></input>
+            </view>
+        </view> -->
+        <view class='ub'>
+            <view class="name">手机号码</view>
+            <view class='ub-f1'>
+                <input name='Mobile' type='number' placeholder='输入手机号码' placeholder-class='c999' value="{{myData.Mobile}}"></input>
+            </view>
+        </view>
+    </view>
+    <view class='title'>
+        <text>车辆信息</text>
+        <!-- <icon class='iconfont icon-gantanhao'></icon> -->
+    </view>
+    <view class='inputbox'>
+        <view class='ub'>
+            <view class="name">VIN码</view>
+            <view class='ub-f1'>
+                <input name='Vin' class="distinguish" type='text' placeholder='输入VIN码' placeholder-class='c999' bindconfirm='getCarMess' bindblur='getCarMess' value='{{carvin.Value}}'></input>
+                <icon bindtap='getPhoto' data-id="carvin" class='iconfont icon-icon04'></icon>
+            </view>
+        </view>
+        <!-- <view class='ub'>
+      <view class="name">具体车型</view>
+      <view class='ub-f1'>
+        <input type='text' placeholder='根据VIN自动获取' placeholder-class='c999' value='{{cartype}}'></input>
+      </view>
+    </view> -->
+        <view class='ub'>
+            <view class="name">具体车型</view>
+            <view class='ub-f1 chooseMore'>
+                <picker name='CarModel' bindchange="bindCarChange" value="{{CarModelName}}" range="{{pickerCar.arr}}">
+                    <view style="color:{{c5}}">{{pickerCar.arr[pickerCar.index]}}</view>
+                    <icon class='iconfont icon-down more'></icon>
+                </picker>
+
+            </view>
+        </view>
+        <view class='ub'>
+            <view class="name">车辆号码</view>
+            <view class='ub-f1 flex flex-box-center'>
+                <view class='chooseMore'>
+                    <picker bindchange="plateChange" value="{{indexCar}}" range="{{carplate}}" range-key="Code">
+                        <view style="color:{{c1}}">{{carplate[indexCar].Code}}</view>
+                        <icon class='iconfont icon-down'></icon>
+                    </picker>
+
+                </view>
+                <view class='input'>
+                    <input bindblur='changVal' name='CarNum' type='text' placeholder='请输入车牌号码' placeholder-class='c999' value='{{carNum}}'></input>
+                </view>
+            </view>
+        </view>
+        <view class='ub ub-ac'>
+            <view class="name">表显里程</view>
+            <view class='ub-f1'>
+                <input name='ApparentMileage' type='digit' placeholder='输入表显里程数' placeholder-class='c999' value='{{myData.ApparentMileage}}'></input>
+            </view>
+            <view class="text">万公里</view>
+        </view>
+        <view class='ub'>
+            <view class="name">车身颜色</view>
+            <view class='ub-f1 chooseMore'>
+                <picker name='CarColor' bindchange="bindColorChange" value="{{indexColor}}" range="{{colorArr}}">
+                    <view style="color:{{c2}}">{{colorArr[indexColor]}}</view>
+                    <icon class='iconfont icon-down more'></icon>
+                </picker>
+
+            </view>
+        </view>
+        <view class='ub'>
+            <view class="name">出厂年月</view>
+            <view class='ub-f1 chooseMore'>
+                <picker name='ManufactureDate' mode="date" value="{{date2}}" start="2000-01-01" bindchange="bindFactureChange">
+                    <view style="color:{{c4}}">{{date2}}</view>
+                    <icon class='iconfont icon-down more'></icon>
+                </picker>
+            </view>
+        </view>
+        <view class='ub'>
+            <view class="name">上牌时间</view>
+            <view class='ub-f1 chooseMore'>
+                <picker name='FirstLicenceTime' mode="date" value="{{date1}}" start="2000-01-01" bindchange="bindDateChange">
+                    <view style="color:{{c3}}">{{date1}}</view>
+                    <icon class='iconfont icon-down more'></icon>
+                </picker>
+            </view>
+        </view>
+        <view class='ub'>
+            <view class="name">过户次数</view>
+            <view class='ub-f1'>
+                <input name='TransferNum' type='number' placeholder='输入过户次数' placeholder-class='c999' value='{{myData.TransferNum}}'></input>
+            </view>
+        </view>
+    </view>
+
+    <view class="btnBox">
+        <button type='primary' form-type='submit' class=''>下一步</button>
+    </view>
+</form>
+<view wx:if="{{isShow}}" class="picker-shadow"></view>
+<view animation="{{myAnimation}}"  class="picker-view">
+<view class="btnBox">
+<button size='mini' bindtap='hidePicker'>取消</button>
+<button size='mini' bindtap='confirmAddress' class="float-right" type="primary">确定</button>
+</view>
+<picker-view indicator-style="height: 40px;" style="width: 100%; height:200px;" value="{{value}}" bindchange="bindChange">
+  <picker-view-column>
+    <view wx:for="{{proviceData}}" wx:key="" class="addr-item">{{item.AreaName}}</view>
+  </picker-view-column>
+  <picker-view-column>
+    <view wx:for="{{cityData}}" wx:key="" class="addr-item">{{item.AreaName}}</view>
+  </picker-view-column>
+  <picker-view-column>
+    <view wx:for="{{districtData}}"  wx:key="" class="addr-item">{{item.AreaName}}</view>
+  </picker-view-column>
+</picker-view>
+</view>

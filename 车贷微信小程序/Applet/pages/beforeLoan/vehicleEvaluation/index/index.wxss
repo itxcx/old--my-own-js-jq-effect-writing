@@ -1,0 +1,25 @@
+/* pages/beforeLoan/vehicleEvaluation/index.wxss */
+form {
+  display: block;
+}
+.title {
+  margin-top: 10rpx;
+  padding:20rpx;
+  color: #666;
+  position: relative;
+}
+
+.title .iconfont {
+  position: absolute;
+  z-index: 10;
+  right: 24rpx;
+  top: 20rpx;
+  line-height: 100%;
+  color: #9cabcd;
+  font-size: 40rpx;
+}
+.distinguish{
+    display: block;
+    margin-right:88rpx;
+    width:auto;
+}

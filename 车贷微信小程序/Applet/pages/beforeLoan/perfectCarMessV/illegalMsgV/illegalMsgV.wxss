@@ -1,0 +1,15 @@
+.container{
+  height:auto;
+  background: #fff;
+  padding:0;
+}
+switch{
+  float:right;
+  margin-top:10rpx;
+}
+.inputbox{
+  margin-top:20rpx;
+}
+.btnBox button{
+  margin-top:20rpx;
+}

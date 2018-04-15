@@ -1,0 +1,35 @@
+<view class='container'>
+  <form bindsubmit='formSubmit'>    
+    <view class=''>
+      <view class='inputbox'>
+        <view class='ub'>
+          <view class="name">公司名称</view>
+          <view class='ub-f1'>
+            <input type='text' placeholder='请输入公司名称' placeholder-class='c999' value='{{myData.WorkUnit}}' name='WorkUnit'></input>
+          </view>
+        </view>
+        <view class='ub'>
+          <view class="name">单位地址</view>
+          <view class='ub-f1'>
+            <input type='text' placeholder='请输入单位地址' placeholder-class='c999' value='{{myData.CompanyAddress}}' name='CompanyAddress'></input>
+          </view>
+        </view>
+        <view class='ub'>
+          <view class="name">工作年限</view>
+          <view class='ub-f1' style='line-height:88rpx;'>
+            <input class="workYear" type='number' placeholder='请输入工作年限' placeholder-class='c999' value='{{myData.WorkLife}}' name="WorkLife" ></input>年            
+          </view>
+        </view>
+        <view class='ub'>
+          <view class="name">单位电话</view>
+          <view class='ub-f1'>
+            <input type='number' placeholder='请输入单位电话' placeholder-class='c999' value='{{myData.CompanyMobile}}' name='CompanyMobile'></input>
+          </view>
+        </view>                
+      </view>
+    </view>
+    <view class='btnBox'>
+      <button form-type='submit' type='primary'>保存</button>
+    </view>
+  </form>
+</view>

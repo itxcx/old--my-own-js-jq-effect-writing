@@ -1,0 +1,41 @@
+
+<form bindsubmit="formSubmit">
+<view class='container'>
+  <view class='inputbox'>
+    <view class='ub'>
+      <view class="name">有无违章</view>
+      <view class='ub-f1'>
+          <switch name='switch' checked='{{illegal.illegal}}' bindchange="switchChange" color='#4e8dee'/>
+      </view>
+    </view>
+    <view wx:if="{{illegal.illegal}}">
+    <view class='ub'>
+      <view class="name">违章罚款</view>
+      <view class='ub-f1'>
+        <input name='fine' type='digit' placeholder='请输入罚款金额' placeholder-class='c999' value='{{illegal.mess.IllegalFine}}'></input>
+      </view>
+      <view class="text">元</view>
+    </view>
+     <view class='ub'>
+      <view class="name">违章扣分</view>
+      <view class='ub-f1'>
+        <input name='points' type='number' placeholder='请输入所扣分数' placeholder-class='c999' value='{{illegal.mess.IllegalDeduction}}'></input>
+      </view>
+    </view>
+     <view class='ub'>
+      <view class="name">未处理数</view>
+      <view class='ub-f1'>
+        <input name='handle' type='number' placeholder='次请输入未处理数' placeholder-class='c999'  value='{{illegal.mess.UntreatedNum}}'></input>
+      </view>
+    </view>
+    </view>
+  </view>
+  </view>
+  <view class='btnBox'>
+<button type='primary' form-type='submit'>确认</button>
+<!-- <button bindtap='' type='warn'>违章查询</button> -->
+</view>
+</form>
+
+
+

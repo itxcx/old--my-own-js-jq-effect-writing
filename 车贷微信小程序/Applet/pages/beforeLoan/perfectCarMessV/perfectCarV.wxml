@@ -1,0 +1,81 @@
+<view class='listMode'>
+  <view class='messBox'>
+    <view class='mess'>
+      {{myData.ModelName}}
+    </view>
+    <view class='messFrom'>
+      <text>{{myData.FirstLicenceTime}}上牌/{{myData.CarNumArea+myData.CarNum}}</text>
+      <text class='float-right'>车辆估价： <text class='yellow'>{{myData.OfflineAssAmount}}万</text></text>
+    </view>
+  </view>
+</view>
+<form>
+  <view class='inputbox'>
+    <view class='ub'>
+      <view class="name">出厂年月</view>
+      <view class='ub-f1'>
+        <input value='{{myData.ManufactureDate}}' disabled='true' type='text' placeholder='次数' placeholder-class='c999'></input>
+      </view>
+    </view>
+    <view class='ub'>
+      <view class="name">抵押次数</view>
+      <view class='ub-f1'>
+        <input value='{{myData.MortgageNum}}' disabled='true' type='text' placeholder='次数' placeholder-class='c999'></input>
+      </view>      
+    </view>
+    <view class='ub'>
+      <view class="name">最近解押时间</view>
+      <view class='ub-f1'>
+        <input value='{{myData.LastMortgageTime}}' disabled='true' type='text' placeholder='次数' placeholder-class='c999'></input>
+      </view>
+    </view>
+    <view class='ub'>
+      <view class="name">最近上牌时间</view>
+      <view class='ub-f1'>
+        <input value='{{myData.LastLicenceTime}}' disabled='true' type='text' placeholder='次数' placeholder-class='c999'></input>
+      </view>
+    </view>
+    <view class='ub'>
+      <view class="name">商业险到期时间</view>
+      <view class='ub-f1'>
+        <input value='{{myData.CommercialImaturitydate}}' disabled='true' type='text' placeholder='次数' placeholder-class='c999'></input>
+      </view>
+    </view>
+    <view class='ub'>
+      <view class="name">交强险到期时间</view>
+      <view class='ub-f1'>
+        <input value='{{myData.CompulsoryImaturitydate}}' disabled='true' type='text' placeholder='次数' placeholder-class='c999'></input>
+      </view>
+    </view>
+    <view class='ub' wx:if="{{!isIllegal}}">
+      <view class="name">违章信息</view>
+      <view class='ub-f1'>
+        <view class='text-right'>          
+          <text class="">没有违章</text>
+        </view>        
+      </view>
+    </view>
+    <navigator wx:else url='illegalMsgV/illegalMsgV' class='ub'>
+      <view class="name">违章信息</view>
+      <view class='ub-f1'>
+        <view class=' text-right'>
+          <text class="blue">有违章</text>          
+        </view>
+        <icon class='iconfont icon-right more'></icon>
+      </view>
+    </navigator> 
+    <view class='ub'>
+      <view class="name"> 保险单</view>
+      <view class='ub-f1' bindtap='insList'>
+        <view class='mess'>
+        <block wx:for="{{insArr}}" wx:for-item="item" wx:key="">
+         <text  class='yellow'>{{item}}</text>
+        </block>   
+        </view>        
+      </view>
+    </view>
+  </view>
+  <view class='btnBox'>
+  <button type='primary' bindtap='nBack'>返回</button>
+</view>
+</form>

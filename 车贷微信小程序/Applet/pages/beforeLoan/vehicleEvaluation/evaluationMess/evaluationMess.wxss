@@ -1,0 +1,95 @@
+.content{
+    padding:20rpx 0 100rpx;
+}
+
+.listMode{
+  margin:0 0 20rpx;
+  background: #fff;
+}
+.messBox{
+  padding:20rpx;
+  border-bottom: 1px solid #eee;
+}
+.messBox:last-child{
+  border-bottom:0;
+}
+.messBox .messFrom{
+  color:#999;
+}
+.messBox .ub-f1{
+    font-size:26rpx;
+    width: 25%;
+}
+.messBox .ub-f1 view{
+text-align:center;
+}
+.messBox .c999{
+  color:#999;
+}
+.messBox .fs16{
+  font-size:32rpx;
+}
+.messBox .yellow{
+  color:#ff6600;
+  font-size:70rpx;
+  height:112rpx;line-height:112rpx;
+}
+.messBox .yellow.fs28{
+    font-size:26rpx;
+}
+.messBox .black{    
+  height:112rpx;line-height:112rpx;
+}
+ .prompt{
+  font-size:26rpx;
+  color:#999;
+  text-align: center;
+  padding:20rpx 0;
+}
+
+.material{
+  padding:20rpx;
+}
+.material .title{
+  width: 70%;
+  margin:0 auto;
+  font-size:26rpx;
+  color:#999;
+  position: relative;
+  text-align: center;
+  line-height:80rpx;
+}
+.material .title .line{
+  position: absolute;
+  width: 100%;
+  height:40rpx;
+  border-bottom: 1px solid #e5e5e5;
+}
+.material .title text{
+ display: inline-block;
+  background: #efeff4;
+  position: relative;
+  z-index: 5;
+  padding:0 40rpx;
+}
+.materialList{
+  text-align: center;
+  padding-bottom:20rpx;
+}
+
+
+.footBtn{
+  text-align: center;
+  position: fixed;
+  width: 100%;
+  bottom:0;
+  z-index: 10;
+  background: #fff;
+}
+.footBtn .ub-f1:first-child{
+  color:#4e8dee;
+}
+.footBtn .ub-f1:last-child{
+  background-color:#4e8dee;
+  color:#fff;
+}

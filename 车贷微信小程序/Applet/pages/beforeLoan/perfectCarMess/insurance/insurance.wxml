@@ -1,0 +1,16 @@
+<form bindsubmit='formsubmit'>
+<view class='container'>
+    <view class='title'>选择险种</view>
+    <view class='checkmode'>
+        <checkbox-group bindchange="checkboxChange" name="checkBox">
+            <label class="checkbox" wx:for="{{ins}}" wx:for-index="index" wx:for-item="item" wx:key="this">
+                <checkbox   value="{{item.name}}" checked="{{item.check}}" />{{item.name}}
+            </label>
+        </checkbox-group>
+        <textarea name="text" wx:if="{{textarea}}" placeholder='请输入其他险种' value='{{text}}'></textarea>
+    </view>
+</view>
+<view class='btnBox'>
+    <button type='primary' form-type='submit'>确认</button>
+</view>
+</form>

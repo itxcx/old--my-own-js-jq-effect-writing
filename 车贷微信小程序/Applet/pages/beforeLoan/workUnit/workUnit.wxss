@@ -1,0 +1,27 @@
+.container{
+  padding:0;
+  margin-top:20rpx;
+  background: #fff;
+  height:auto;
+}
+form{
+  display: block;
+}
+.radioBox{
+  border:0;
+}
+.radio-group{
+  line-height: 100rpx;
+  text-align: center;
+}
+.radio-group label{
+  margin-right:40rpx;
+}
+.chooseMore{
+  padding-right:0;
+}
+.inputbox .ub .workYear
+{
+    float:left;
+    width: 80%;
+}

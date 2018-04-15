@@ -1,0 +1,21 @@
+.container{
+  padding:0 20rpx;
+  background: #fff;
+}
+.input-box{
+  border-bottom:1px solid #e6e6e6;
+}
+.input-box input{
+  height:88rpx;
+  line-height: 88rpx;
+}
+.input-box button{
+  line-height: 2.2;
+}
+.input-box button::after{
+  width: 0;
+  height:0;
+}
+.btnBox{
+  padding:20rpx 0;
+}

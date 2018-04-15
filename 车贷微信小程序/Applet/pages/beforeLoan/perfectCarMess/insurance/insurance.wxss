@@ -1,0 +1,22 @@
+
+.container{
+  height:auto;
+  background: #fff;
+}
+.title{
+  padding:0 0 20rpx;
+}
+.checkmode label{
+  display: block;
+  margin:10rpx 20rpx 20rpx 10rpx;
+  line-height:60rpx; 
+}
+textarea{
+    box-sizing: border-box;
+    display: block;
+    border:1px solid #e5e5e5;
+    border-radius: 0.3em;
+    width: 100%;
+    height:200rpx;
+    padding:10rpx;
+}

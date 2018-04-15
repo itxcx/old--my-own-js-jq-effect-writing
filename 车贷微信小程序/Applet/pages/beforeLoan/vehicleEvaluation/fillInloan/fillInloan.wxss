@@ -1,0 +1,48 @@
+page{
+  height:100%;
+}
+form{
+  display:block;
+  height:100%;
+}
+.inputbox{
+  margin:20rpx 0 0;
+}
+navigator{
+  text-align: center;
+  font-size: 36rpx;
+  background: #4e8dee;
+  color:#fff;
+}
+button{
+   border:0;
+   border-radius: 0;
+   color:#fff;
+   line-height: inherit;
+   border-left:1px solid #fff;
+}
+button::after{
+  border:0;
+}
+.button-hover{
+  color:#fff;
+  background: inherit;
+}
+.blueText{
+  color: #4e8dee;
+}
+
+.messBox{
+ margin-top:20rpx;
+  padding:20rpx;
+  background: #fff;
+  border:1px solid #e5e5e5;
+}
+.messBox .messFrom{
+  color:#999;
+  font-size:26rpx;
+}
+
+.messBox .messFrom .yellow{
+    font-size:30rpx;
+}

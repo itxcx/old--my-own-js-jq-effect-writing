@@ -1,0 +1,60 @@
+
+  <view class='inputbox mt20 pd'>  
+      <view class='ub'>
+        <view class="name">身份认证</view>
+        <navigator class='ub-f1 chooseMore' url="/pages/beforeLoan/idAuthen/idAuthen"> 
+          <text class='pd_tit'>身份证正反</text>       
+          <icon class='iconfont icon-right more'></icon>
+          <icon wx:if="{{IsDoneSFRZ}}" class='progress iconfont icon-over1'></icon>
+          <icon wx:else class='progress iconfont icon-unfinish'></icon>
+        </navigator>
+      </view>      
+       <view class='ub'>
+        <view class="name">基本信息</view>
+        <navigator class='ub-f1 chooseMore' url="/pages/beforeLoan/basicInfo/basicInfo"> 
+          <text class='pd_tit'>个人信息+紧急联系人</text>       
+          <icon class='iconfont icon-right more'></icon>
+          <icon wx:if="{{IsDoneJBXX}}" class='progress iconfont icon-over1'></icon>
+          <icon wx:else class='progress iconfont icon-unfinish'></icon>
+        </navigator>
+      </view>   
+       <view class='ub'>
+        <view class="name">车辆信息</view>
+        <navigator class='ub-f1 chooseMore' url="/pages/beforeLoan/perfectCarMess/perfectCar"> 
+          <text class='pd_tit'>出厂年月+违章信息+保险...</text>       
+          <icon class='iconfont icon-right more'></icon>
+          <icon wx:if="{{IsDoneCLXX}}" class='progress iconfont icon-over1'></icon>
+          <icon wx:else class='progress iconfont icon-unfinish'></icon>
+        </navigator>
+      </view>     
+       <view class='ub'>
+        <view class="name">车身照片</view>
+        <navigator class='ub-f1 chooseMore' url="/pages/beforeLoan/carBodyPic/carBodyPic"> 
+          <text class='pd_tit'>正前+前左+前右+正后...</text>       
+          <icon class='iconfont icon-right more'></icon>
+          <icon wx:if="{{IsDoneCSZP}}" class='progress iconfont icon-over1'></icon>
+          <icon wx:else class='progress iconfont icon-unfinish'></icon>
+        </navigator>
+      </view>     
+        <!-- <view class='ub'>
+        <view class="name">证书资料</view>
+        <navigator class='ub-f1 chooseMore' url="/pages/beforeLoan/certificate/certificate"> 
+          <text class='pd_tit'>登记证书+驾驶证+行驶证...</text>       
+          <icon class='iconfont icon-right more'></icon>
+          <icon wx:if="{{IsDoneZSZL}}" class='progress iconfont icon-over1'></icon>
+          <icon wx:else class='progress iconfont icon-unfinish'></icon>
+        </navigator>
+      </view>      -->
+       <view class='ub'>
+        <view class="name">附加信息</view>
+        <navigator class='ub-f1 chooseMore' url="/pages/beforeLoan/addInfo/addInfo"> 
+          <text class='pd_tit'>选填（可提升贷款额度）</text>       
+          <icon class='iconfont icon-right more'></icon>
+          <!-- <icon wx:if="{{IsDoneFJXX}}" class='progress iconfont icon-over1'></icon>
+          <icon wx:else class='progress iconfont icon-unfinish'></icon> -->
+        </navigator>
+      </view>     
+  </view>
+<view class="btnBox">
+  <button type='primary' bindtap='nextStep' class=''>提交</button>
+</view>

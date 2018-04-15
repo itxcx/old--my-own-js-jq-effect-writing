@@ -1,0 +1,65 @@
+
+  <view class='content'>
+    <view class="listMode">
+      <view class='messBox'>
+        <view class='mess'>
+          {{carMess.ModelName}}
+        </view>
+        <view class='messFrom'>
+          {{carMess.FirstLicenceTime}}上牌 / {{carMess.CarNum}}
+        </view>
+      </view>
+      <view class='messBox ub'>
+        <view class='ub-f1'>
+          <view>{{carMess.ApparentMileage}}万公里</view>
+          <view class='c999'>行驶里程</view>
+        </view>
+        <view class='ub-f1'>
+          <view>{{carMess.CarColor}}</view>
+          <view class='c999'>车身颜色</view>
+        </view>
+        <view class='ub-f1'>
+          <view>{{carMess.ManufactureDate}}</view>
+          <view class='c999'>出厂年月</view>
+        </view>
+        <view class='ub-f1'>
+          <view>{{carMess.EmissionStandard}}</view>
+          <view class='c999'>排放标准</view>
+        </view>
+      </view>
+    </view>
+    <view class="listMode">
+      <view class="messBox ub">
+        <view class='ub-f1'>
+          <view class='fs16'>系统估价(万)</view>
+          <view class='yellow'>{{carMess.SystemAssAmount}}</view>
+        </view>
+        <view class='ub-f1'>
+          <view class='fs16'>评估师估价(万)</view>
+          <view class='yellow' style="font-size:{{fontSize}}rpx" wx:if='{{carMess.IsAssessment!=1}}'>{{carMess.OfflineAssAmount}}</view>
+          <view class='yellow fs28' wx:if='{{carMess.IsAssessment==1}}'>评估师正在收集数据评估中！</view>
+        </view>
+      </view>
+      <view class='prompt'>
+      系统估价与真实情况有差异，最终结果以评估师的为准
+      </view>
+    </view>
+    <view class='material'>
+        <view class='title'>
+        <view class='line'></view>
+        <text>您可先准备下以下资料</text>
+        </view>
+    </view>
+    <view class='materialList'>
+    <image src='{{demoPic}}' mode='aspectFit'></image>
+    </view>
+  </view>
+  <view class='footBtn ub' wx:if="{{btnShow}}">
+    
+    <view bindtap='noApply' class='ub-f1'>暂不申请</view>
+    <view bindtap='apply' class='ub-f1'>申请贷款</view>    
+  </view>
+  <view class='footBtn ub' wx:else>
+
+    <view bindtap='detailLink' class='ub-f1'>下一步</view>    
+  </view>

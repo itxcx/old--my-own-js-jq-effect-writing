@@ -1,0 +1,86 @@
+<view class='listMode'>
+  <view class='messBox'>
+    <view class='mess'>{{carinfo.ModelName}}</view>
+    <view class='messFrom'>
+      <text>{{carinfo.FirstLicenceTime}}上牌/{{carinfo.CarNumArea}}{{carinfo.CarNum}}</text>
+      <text class='float-right'>车辆估价： <text class='yellow'>{{carinfo.OfflineAssAmount}}万</text></text>
+    </view>
+  </view>
+</view>
+<form bindsubmit='formSubmit'>
+  <view class='inputbox'>
+    <view class='ub'>
+      <view class="name">出厂年月</view>
+      <view class='ub-f1  text-right'>
+            <input name="ManufactureDate" value='{{carinfo.ManufactureDate}}' disabled='disabled'></input>
+      </view>
+    </view>
+    <view class='ub'>
+      <view class="name">抵押次数</view>
+      <view class='ub-f1'>
+        <input name="MortgageNum" type='number' placeholder='请输入抵押次数' placeholder-class='c999' bindinput='inputChange' value='{{MortgageNum}}'></input>
+      </view>
+      <view class="text">次</view>
+    </view>
+    <view class='ub'>
+      <view class="name">最近抵押时间</view>
+      <view class='ub-f1 text-right'>
+        <picker wx:if="{{morShow}}" name="LastMortgageTime" mode="date" value="{{mortgage}}" start="2000-01-01" end="{{nowdate}}" bindchange="mortgageDate">
+          <view style="color:{{c2}}">{{mortgage}}</view>
+          <icon class='iconfont icon-down more'></icon>
+        </picker>
+        <input name="LastMortgageTime" wx:else value='无' disabled='disabled'></input>
+      </view>
+    </view>
+    <view class='ub'>
+      <view class="name">最近上牌时间</view>
+      <view class='ub-f1'>
+        <picker wx:if="{{LicenceTime}}" name="LastLicenceTime" mode="date" value="{{card}}" start="2000-01-01" end="{{nowdate}}" bindchange="cardDate">
+          <view style="color:{{c3}}">{{card}}</view>
+          <icon class='iconfont icon-down more'></icon>
+        </picker>
+        <input name="LastLicenceTime" wx:else value='无' disabled='disabled'></input>
+      </view>
+    </view>
+    <view class='ub'>
+      <view class="name">商业险到期时间</view>
+      <view class='ub-f1'>
+        <picker name="CommercialImaturitydate" mode="date" value="{{business}}" start="2000-01-01" end="{{nowdate}}" bindchange="businessDate">
+          <view style="color:{{c4}}">{{business}}</view>
+          <icon class='iconfont icon-down more'></icon>
+        </picker>
+      </view>
+    </view>
+    <view class='ub'>
+      <view class="name">交强险到期时间</view>
+      <view class='ub-f1'>
+        <picker name="CompulsoryImaturitydate" mode="date" value="{{insurance}}" start="2000-01-01" end="{{nowdate}}" bindchange="insuranceDate">
+          <view style="color:{{c5}}">{{insurance}}</view>
+          <icon class='iconfont icon-down more'></icon>
+        </picker>
+      </view>
+    </view>
+    <view class='ub'>
+      <view class="name">违章信息</view>
+      <view class='ub-f1' bindtap='illegalMsg'>
+        <view class=' text-right'>
+          <text class="blue" wx:if="{{illegal.illegal}}">有违章</text>
+          <text class="blue" wx:else style='height:88rpx;line-height:44rpx;'>无违章</text>
+        </view>
+        <icon class='iconfont icon-right more'></icon>
+      </view>
+    </view>
+    <view class='ub'>
+      <view class="name">保险单</view>
+      <view class='ub-f1' bindtap='insList'>
+        <view class='mess' >
+           <text wx:for="{{insArr}}" wx:for-item="item" wx:key="this" class='yellow'>{{item}}</text> 
+        </view>
+        <icon class='iconfont icon-right more'></icon>
+      </view>
+    </view>
+  </view>
+  <view class='btnBox'>
+  <button type='primary' form-type='submit'>保存</button>
+</view>
+</form>
